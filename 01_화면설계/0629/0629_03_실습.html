@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>목록 메뉴 - 실습</title>
+    <style>
+		nav > ul > li > a { }
+	/*	세부메뉴*/
+		nav > ul > li > ul { display: none; }
+		nav > ul > li:hover > ul { display: block; } /* :hover - 마우스 위치시 세부메뉴가 보여지게 함 */
+  </style>
+ </head>
+
+ <body>
+  <!-- 로고 -->
+	<h1><a href="#">CAFFEBENE</a></h1>
+	<!-- 메인메뉴 -->
+	<nav>
+		<ul>
+			<li><a href="http://www.caffebene.co.kr/caffebene/brand.html">Caffebene</a>
+				<ul>
+					<li><a href="#">브랜드 스토리</a></li>
+					<li><a href="#">베네캣 스토리</a></li>
+					<li><a href="#">카페베네 원두</a></li>
+					<li><a href="#">카페베네 소식</a></li>
+				</ul>
+			</li>
+			<li><a href="http://www.caffebene.co.kr/menu/index.html">Menu</a>
+				<ul>
+					<li><a href="#">신메뉴</a></li>
+					<li><a href="#">커피</a></li>
+					<li><a href="#">음료</a></li>
+					<li><a href="#">디저트</a></li>
+					<li><a href="#">MD상품</a></li>
+					<li><a href="#">Retail</a>l</li>
+				</ul>
+			</li>
+			<li><a href="http://www.caffebene.co.kr/store/local.html">Store</a>
+				<ul>
+					<li><a href="#">국내</a></li>
+					<li><a href="#">해외</a></li>
+				</ul>
+			</li>
+			<li><a href="http://www.caffebene.co.kr/caffebene/grand.html">Membership</a>
+				<ul>
+					<li><a href="#">등급 & 혜택</a></li>
+					<li><a href="#">가입방법안내</a></li>
+					<li><a href="#">서비스</a></li>
+					<li><a href="#">FAQ</a></li>
+				</ul>
+			</li>
+			<li><a href="http://www.caffebene.co.kr/caffebene/store.html">Global</a>
+				<ul>
+					<li><a href="#">해외매장안내</a></li>
+					<li><a href="#">해외사업소개</a></li>
+					<li><a href="#">해외가맹&유통문의</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+ </body>
+</html>

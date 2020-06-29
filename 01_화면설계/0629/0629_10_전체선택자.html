@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>전체선택자</title>
+  <style>
+  * {
+		font-size: 20px;
+		margin: 0;		/* 주변여백 */
+		padding: 0;	/* 안쪽여백 */
+	}
+	ul {
+		border: 1px solid red;
+		margin: 20px;
+		list-style: none; /* 안쪽여백 패딩을 0으로 적용하더라도 안쪽여백에 위치한 목록표식기호(동그라미)는 사라지지 않는다.
+		따라서 list-style속성을 이용해서 지워야 함*/
+	}
+  </style>
+ </head>
+
+ <body>
+	<h1>전체선택자 - *</h1> <!-- 여백을 없앨 때 전체선택자를 사용 -->
+	<ul>
+		<li>HTML 내부의 모든 태그 선택</li>
+		<li>html 태그를 포함하여 head, title, body, h1, h2, ul, li 등...</li>
+	</ul>
+
+ </body>
+</html>

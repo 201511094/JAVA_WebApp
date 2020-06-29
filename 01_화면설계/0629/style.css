@@ -1,0 +1,3 @@
+/* style.css */
+/* 방법3. @import url(style.css); */
+p { border: 2px dashed pink; }
