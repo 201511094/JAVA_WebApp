@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<meta charset="UTF-8">
+	<title>가시속성</title>
+	<style>
+		* {margin:0; padding:0}
+		span {background-color: skyblue;}	/* 글자 크기만큼만 차지함 */
+		#box {
+			background-color: pink;	/* div크기지정을 하지 않으면 한 행을 다 차지함 */
+			width:300px;	height: 100px;
+
+			display: block;
+			/*
+			display: inline;
+			display: none
+			*/
+			visibility: visible;
+			/* visibility: hidden */
+			opacity: 0.5
+		}
+	</style>
+	</head>
+
+	<body>
+	<span>text</span>
+	<span>text</span>
+	<div id="box">BOX MODEL</div>
+	<span>text</span>
+	<span>text</span>
+
+	<h1>가시속성</h1>
+	태그가 화면에 보여지는 방식을 지정<br>
+	display, visibility, opacity
+
+	<h2>display 속성</h2>
+	block: 블럭형식, 공간개념으로 행단위 영역을 차지하며 폭과 높이 설정이 가능<br>
+	inline-block: 인라인-블럭형식, 이미지같이 폭과 높이를 가지면서 자리는 글자처럼 차지<br>
+	inline: 인라인형식, text(입력된 만큼만 자리잡고 있음)<br>
+	none: 화면에 보이지 않게<br>
+	
+	<h2>visibility 속성</h2>
+	visible: 화면에 보이게<br>
+	hidden: 화면에 보이지 않게<br>
+
+	<h2>opacity 속성</h2>
+	투명도, 0~1사이의 정수로 표현
+
+	</body>
+</html>

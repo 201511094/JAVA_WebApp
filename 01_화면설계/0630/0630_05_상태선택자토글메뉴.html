@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>상태선택자를 활용한 토글메뉴</title>
+  <style>
+  	#main_nav {
+		width: 0;
+		overflow: hidden;	/* 여러 기능 존재, 메인 기능은 영역밖을 벗어난 요소들을 숨김처리 하는 것 */
+		transition-duration: 0.3s;
+	}
+	#main_nav > ul {
+		width: 300px;
+		box-sizing: border-box;
+		border: 2px solid pink;
+	}
+	/* 토글 선택(checked)시 리스트(id가 main_nav인 nav구역)가 보이게 함 */
+	input#toggle:checked + #main_nav {
+		width: 300px;
+	}
+	/* 체크박스 안보이게 */
+	input#toggle { display: none; }
+	/* 현재 체크박스가 하나이므로 위와 같은 코드 */
+	input[type=checkbox] { display: none; }
+
+  </style>
+
+ </head>
+ <body>
+	<!--  이미지 클릭 시 체크박스가 선택된다, label과 input의 id가 일치해야 함 -->
+ 	<label for="toggle"><img src="IMAGES/toggle_btn.png" alt="햄버거버튼"></label>
+ 	<input id="toggle" type="checkbox" />
+
+	<nav id="main_nav">
+  	<ul>
+		<li>
+			<a href="#">MENU1</a>
+			<ul>
+				<li><a href="#">SUB MENU 1-1</a></li>
+				<li><a href="#">SUB MENU 1-2</a></li>
+				<li><a href="#">SUB MENU 1-3</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">MENU2</a>
+			<ul>
+				<li><a href="#">SUB MENU 2-1</a></li>
+				<li><a href="#">SUB MENU 2-2</a></li>
+				<li><a href="#">SUB MENU 2-3</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">MENU3</a>
+			<ul>
+				<li><a href="#">SUB MENU 3-1</a></li>
+				<li><a href="#">SUB MENU 3-2</a></li>
+				<li><a href="#">SUB MENU 3-3</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">MENU4</a>
+			<ul>
+				<li><a href="#">SUB MENU 4-1</a></li>
+				<li><a href="#">SUB MENU 4-2</a></li>
+				<li><a href="#">SUB MENU 4-3</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">MENU5</a>
+			<ul>
+				<li><a href="#">SUB MENU 5-1</a></li>
+				<li><a href="#">SUB MENU 5-2</a></li>
+				<li><a href="#">SUB MENU 5-3</a></li>
+			</ul>
+		</li>
+	</ul>
+  </nav>
+
+ </body>
+</html>
