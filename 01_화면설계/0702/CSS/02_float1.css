@@ -1,0 +1,41 @@
+/* 02_float1.css */
+
+* {margin: 0; padding: 0;}
+.outer {width:400px; border:2px solid red; margin:5px;}
+.outer > div{width:100px;height:100px; margin:5px; border:2px solid orange;}
+.outer2 {border:2px solid yellow;}
+
+/*** 1. BOX MODEL 
+.outer{overflow: hidden;}
+.box1{float:left;}
+.box2{float:left;}
+.box3{float: left;}
+***/
+
+/**** 2. BOX MODEL
+.outer{float:right;}
+.box1{float:left;}
+.box2{float:left;}
+.box3{float: left;}
+.outer2 {clear: right;}
+***/
+
+/*** 3. BOX MODEL
+.outer{overflow:hidden;}
+.box1{float:right;}
+.box2{float:right;}
+.box3{float: right;}
+***/
+
+/***4. BOX MODEL
+.outer{overflow:hidden;}
+.box1{float:left;}
+.box2{float:left;}
+.box3{float:right;}
+***/
+
+/***5. BOX MODEL*/
+.outer{overflow:hidden;}
+.box1{float:left;}
+.box2{float:right;}
+.box3{float:right; clear:right;}

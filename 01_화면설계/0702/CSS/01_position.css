@@ -1,0 +1,9 @@
+/* 01_position.css */
+* {margin: 0; padding: 0;}
+.outer {width:500px; height:500px;
+	border:5px solid orange;
+	margin:50px;}
+.outer > div{width:200px;height:200px;}
+.outer > div.box1{background:pink; position:absolute; left:0; top:0;}
+.outer > div.box2{background:skyblue; position:fixed; right:0; top:0;}
+.outer > div.box3{background:tomato; position:absolute; :0; bottom:0;}

@@ -1,0 +1,16 @@
+/* 04_float3.css */
+* {margin:0; padding:0;}
+.clear_temp{clear:both;}
+
+#wrap{width:800px; border:2px solid red; margin:0 auto;}
+.container{width:100%; border: 1px solid orange;}
+.left{float:left; width: 655px; border: 1px solid yellow;}
+#side-a{float:left; width:165px; background-color:skyblue;}
+#contents{float: right; width:485px; background-color:green;}
+#side-b{float:right; width: 140px; background-color:blue;}
+#footer{background-color:purple; clear: both;}
+
+
+/*
+.container { ... overflow:hidden;}
+*/
