@@ -1,0 +1,77 @@
+/* common.css - 초기화*/
+@import
+url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@font-face {
+	font-family: 'NanumBarunGothic';
+	font-style: normal;
+	font-weight: 400;
+	src: url('http://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+	src: url('http://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'),	url('http://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('http://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype'); }
+@font-face {
+	font-family: 'NanumBarunGothic';
+	font-style: normal;
+	font-weight: 700;
+	src: url('http://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot');
+	src: url('http://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix') format('embedded-opentype'), url('http://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff') format('woff'), url('http://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf') format('truetype') }
+@font-face {
+	font-family: 'NanumBarunGothic';
+	font-style: normal;
+	font-weight: 300;
+	src: url('http://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot');
+	src: url('http://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix') format('embedded-opentype'), url('http://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff') format('woff'), url('http://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf') format('truetype'); }
+
+* {
+	margin:0;
+	padding:0;}
+
+html, body {
+	font: 11px / 150%'Nanum Gothic', sans-serif; /* 폰트크기 11px, 줄간격 150% 적용*/
+	color: #000;
+	letter-spacing: -1px;}
+
+table, tr, th, td {
+	font: 11px / 150%'Nanum Gothic', sans-serif;
+	color: #000;
+	letter-spacing: -1px;}
+
+h1,h2,h3,h4,h5,h6 {
+	font-size: 1.0em;
+	font-weight: normal;}
+
+ul, ol, li {
+	list-style:none;}
+
+a, img, label {
+	display: block;}
+
+hr, caption, legend {
+	display: none;}
+
+input, select, option, textarea, button {
+	border: none;
+	background: transparent;
+	border-radius: 0;
+	outline: none;}
+
+img, fieldset, frameset, iframe {
+	border: none;}
+
+strong, b {
+	font-weight: normal;}
+
+em, i, address {
+	font-style: normal;}
+
+a {
+	text-decoration: none;
+	color: #000;}
+
+/*** CLASS STYLE ***/
+.skip, .blind {
+	display: block; 	/* 확실하게 지우기 위해1 */
+	height: 0;
+	overflow: hidden;
+	
+	/* 확실하게 지우기 위해2 */
+	position: absolute;
+	top: -6000px;}
