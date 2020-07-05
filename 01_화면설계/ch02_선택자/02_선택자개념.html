@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+ 		<meta charset="UTF-8">
+ 		<title>선택자</title>
+ 		<style>
+ 		* {
+			font-size: 20px;
+			margin: 0;		/*주변여백*/
+			padding: 0;	}/*안쪽여백*/
+		ul {
+			border: 1px solid red;
+			margin: 20px;
+			list-style: none;} /*안쪽여백 패딩을 0으로 적용하더라도 안쪽여백에 위치한 목록표식기호(동그라미)는 사라지지 않음, 따라서 list-style속성을 이용해서 지워야 함*/
+
+		h2 { background-color: beige;}
+		p { background-color: pink;}
+
+		#p1 { color: red; }
+		.p2 { color: green; }
+		.p3 { background: cyan; }
+	 	</style>
+ 	</head>
+	<body>
+		<h1>0629 수업내용</h1>
+		<!--선택자-->
+		<h1>2.선택자</h1>
+		<h2>전체선택자 - *</h2> <!--여백을 없앨 때 사용-->
+		<ul>
+			<li>HTML 내부의 모든 태그 선택</li>
+			<li>html 태그를 포함하여 head, title, body, h1, h2, ul, li 등...</li>
+		</ul>
+
+		<br><h2>태그선택자 - 태그명</h2>
+		<h2>제목(h2태그)</h2>
+		<p>특정 태그를 선택할 때(p태그)</p><br>
+
+		<h1>아이디선택자 - #</h1>
+		태그에 id속성을 가진 선택자<br>
+		id는 동일한 아이디명을 한 곳에서만 사용 가능<br>
+		layout 구성 시 주요 영역에 id명을 적용하는 경우가 많음, 특정 강조하고 싶은 영역에 id명을 쓰기도 함<br>
+		<p id="p1">아이디 선택자 적용(id=p1)</p><br>
+
+		<h1>클래스선택자 - .</h1>
+		태그에 class속성을 가진 선택자<br>
+		html문서 어디든 동일한 클래스명 사용 가능, class속성에 여러 개의 클래스명을 적용할 수 있음<br>
+		콘텐츠박스처럼 내용은 다르지만 디자인이 같을 경우 클래스적용이 가능<br>
+		<p class="p2 p3">클래스 선택자 적용(class=p2 p3)</p>		
+	</body>
+</html>
