@@ -1,0 +1,165 @@
+/* master.css */
+@import url( common.css);
+
+body{ 
+	width: 960px;
+	margin: 0 auto;
+	background: url(../images/bg_body.gif) repeat-x;
+}
+
+/**** HEADER AREA ********************/
+#main_header{
+	width: 100%;
+	height: 60px;
+	background: url(../images/bg_header.gif) no-repeat 50% 0;
+}
+	/** 로고 **/
+	#main_header > .logo{
+		float: left;
+		margin-left: 34px;
+		margin-top: 10px;
+	}
+
+	/** 상단메뉴 **/
+	#top_nav{
+		float: right;
+		margin-top: 30px;
+		margin-right: 33px;
+	}
+		#top_nav > ul{
+			overflow: hidden;
+		}
+			#top_nav > ul > li{
+				float: left;
+				margin-left: 11px;
+			}
+				#top_nav > ul > li > a{
+					color: #464646;
+					font-size: 16px;
+					height: 19px;
+					line-height: 19px;
+				}
+				#top_nav > ul > li.book > a{
+					background: url(../images/sprites.gif) no-repeat;
+					padding-left: 7px;
+				}
+
+
+/**** VISUAL IMAGE AREA ********************/
+#visual_image{
+	width: 100%;
+	height: 397px;
+}
+
+/**** CONTENTS AREA ********************/
+#wrap{
+	margin-top: 34px;
+	margin-bottom: 76px;
+	overflow: hidden;
+}
+	#wrap > article{
+		float: left;
+		width: 425px;
+		height: 199px;
+	}
+		/** 콘텐츠 박스 제목 **/
+		#wrap > article > h3{
+			height: 48px;
+			margin-bottom: 10px;
+		}
+
+		/** 콘텐츠 내용 **/
+		#wrap > article > .thumb{
+			float: left;
+		}
+			#wrap > article > .thumb > a{
+				width: 154px; height: 141px;
+				text-indent: -6000px; overflow: hidden;
+			}
+			a#refund{ background: url(../images/thumb_refund.jpg);}
+			a#shelf{background: url(../images/thumb_shelf.jpg);}
+			a#library{background: url(../images/thumb_library.jpg);}
+			a#bus{background: url(../images/thumb_bus.jpg);}
+		#wrap > article > .description{
+			float: right;
+			width: 247px;
+		}
+			#wrap > article > .description > p{}
+				#wrap > article > .description > p > strong{
+					display: block;
+					font: 13px 'NanumBarunGothic', sans-serif;
+					font-weight: 700;
+					margin-bottom: 5px;
+				}
+				#wrap > article > .description > p > span{
+					display: block;
+					color: #878787;
+				}
+			#wrap > article > .description > a.more{
+				font-weight: 700;
+				background: url(../images/icon.gif) no-repeat left center;
+				margin: 8px 0;
+				padding-left: 7px;
+			}
+			#wrap > article > .description > dl{
+				float: left;
+				height: 35px;
+				line-height: 35px;
+				border-top: 1px solid #cbcbcb;
+				border-bottom: 1px solid #cbcbcb;
+			}
+				#wrap > article > .description > dl > dt{
+					float: left;
+				}
+				#wrap > article > .description > dl > dd{
+					float: left;
+				}
+					#wrap > article > .description > dl > dd > em{
+						color: #ff3c0c;
+						font: bold 26px Verdana;
+						margin: 0 5px;
+					}
+
+/**** FOOTER AREA ********************/
+#main_footer{
+	padding: 21px 0 25px;
+	border-top: 1px solid #000;
+	overflow: hidden;
+}
+	#main_footer > h1.logo{
+		float: left;
+		margin-left: 244px;
+	}
+	#main_footer > ul{
+		float: right;
+		margin-right: 283px;
+	}
+		#main_footer > ul > li{
+			float: left;
+			margin-left: 6px;
+			padding-left: 8px;
+			background: url(../images/line.gif) no-repeat left center;
+		}
+		#main_footer > ul > li:first-child{
+			background: none;
+		}
+			#main_footer > ul > li > a{}
+				#main_footer > ul > li > a > img{}
+
+	#main_footer > address{
+		clear: both;/* margin-top 적용이 안됨 */
+		text-align: center;
+		padding-top: 12px;
+		font-size: 15px;
+		font-weight: 700;
+	}
+		#main_footer > address > a{
+			display: inline;
+			color: #0275c5;
+			font-family: Verdana;
+			letter-spacing: 0;
+		}
+
+/**** CLASS STYLE ************************/
+.m_r_98{ margin-right: 98px;}
+.m_b_56{ margin-bottom: 56px;}
