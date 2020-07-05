@@ -1,7 +1,0 @@
-/* 03_float2.css */
-* {margin:0; padding:0;}
-#wrap {width:800px; border:2px solid red; margin:0 auto;}
-#side-a{width:165px; background-color:skyblue; float:left;}
-#side-b{width:140px; background-color:blue; float:right;}
-#contents{background-color:green; margin-left:170px; margin-right:145px;}
-#footer{background-color:purple; clear: both;} /* float의 영향 없애기 */

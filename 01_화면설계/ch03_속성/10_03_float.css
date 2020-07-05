@@ -1,0 +1,23 @@
+/* 10_03_float.css */
+* {margin: 0; padding: 0;}
+
+#wrap{
+	width: 800px;
+	border: 2px solid red;
+	margin: 0 auto;}
+
+#side-a{
+	float: left;
+	width: 165px;
+	background-color: skyblue;}
+#side-b{
+	float: right;
+	width: 140px;
+	background-color: blue;}
+	
+#contents{
+	margin-left: 170px;
+	margin-right: 145px;
+	background-color: green;}
+
+#footer{background-color: purple;}

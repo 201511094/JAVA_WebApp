@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+ 		<meta charset="UTF-8">
+ 		<title>박스속성, 그림자속성</title>
+ 		<style>
+ 			h1#shadow {width: 300px; height: 300px;
+				border: 5px solid #fff;
+				border-radius: 150px;
+				box-shadow: 5px 5px 2px rgba(0,0,0,0.5);
+				background: #f00;
+				text-align: center; line-height: 300px; color: #fff;
+				text-shadow: 2px 2px 2px rgba(0,0,0,0.5);}
+ 		</style>
+ 	</head>
+	<body>
+		<h1>0701 수업내용</h1>
+		<h1>5. 박스속성</h1>
+		<h2>종류</h2>
+		width - 폭(너비)<br>
+		height - 높이<br>
+		padding - 안쪽 여백<br>
+		border - 테두리<br>
+		margin - 주변 여백<br>
+
+		<h2>width, height 속성</h2>
+		크기단위 입력 (px % em vw vh)
+
+		<h2>padding 속성</h2>
+		padding-top/right/bottom/left<br>
+		padding: 0 --> 상우하좌 10px<br>
+		padding: 0 10px; --> 상하0 우좌10px<br>
+		padding: 0 10px 20px; --> 상0 우좌10px 하20px<br>
+		padding: 0 10px 20px 30px --> 상0 우10px 하20px 좌30px
+
+		<h2>margin 속성</h2>
+		padding과 입력방법 같음
+
+		<h2>border 속성</h2>
+		3가지 속성이 모두 입력되어야 정확히 출력됨<br>
+		1) border-width - 두께(크기단위 입력)<br>
+		2) border-color - 색상(색상단위 입력)<br>
+		3) border-style - 테두리 스타일
+		주로 한번에 입력, 순서는 상관 없음<br>
+		입력 방식 - border: width style color --> ex) border: 2px solid #f00;<br>
+		방향별 border 설정 시 border-top border-right border-bottom border-left <br>
+
+		<h3>border-style</h3>
+		none - 없음<br>
+		solid - 실선<br>
+		dashed - 대시선<br>
+		dotted - 점선<br>
+		double - 이중선<br>
+		outset - 양각선<br>
+		inset - 음각선<br>
+		ridge - 테두리만 양각선<br>
+		groove - 테두리만 음각선<br>
+
+		<h3>border-radius</h3>
+		박스모델 모서리부분을 둥글게 만들때, 동일한 값일 경우 하나의 값만 입력<br>
+		border-radius: 좌상 우상 우하 좌하; 왼쪽 상단기준으로 4개 값을 시계방향으로 차례대로 적음
+
+		<h1 id="shadow">6. 그림자 속성</h1>
+		<h2>박스 그림자</h2>
+		box-shadow: x축 y축 blur 그림자색상;
+		<h2>텍스트 그림자</h2>
+		text-shadow: x축 y축 blur 그림자색상;
+	</body>
+</html>

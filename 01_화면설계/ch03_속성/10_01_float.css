@@ -1,5 +1,4 @@
-/* 02_float1.css */
-
+/* 10_01_float.css */
 * {margin: 0; padding: 0;}
 .outer {width:400px; border:2px solid red; margin:5px;}
 .outer > div{width:100px;height:100px; margin:5px; border:2px solid orange;}
