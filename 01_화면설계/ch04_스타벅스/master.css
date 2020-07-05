@@ -15,24 +15,25 @@ body {width: 100%;}
 
 #main_bean{
 	height: 573px;
-	background: url(../IMG/19_christmas1_coffee_bg_1.jpg) center; }
+	background: url(IMG/19_christmas1_coffee_bg_1.jpg) center; }
 #reserve{
 	height: 400px;
-	background: url(../IMG/19_christmas_main_res_bean.png) no-repeat right center #0f0f0f; }
+	background: url(IMG/19_christmas_main_res_bean.png) no-repeat right center #0f0f0f; }
 #favorite{
 	height: 862px;
-	background: url(../IMG/fav_prod_bg_new.jpg) center fixed;
+	background: url(IMG/fav_prod_bg_new.jpg) center fixed;
 	background-size: cover;}
 #store{
-	height: 590px; /*높이 수정 */
-	background: url(../IMG/reserve_bg.jpg) center fixed;
+	height: 590px; /*높이 수정*/
+	background: url(IMG/reserve_bg.jpg) center fixed;
 	background-size: cover;
 	padding-top: 132px; /*마진 대신 패딩값 사용*/
 	box-sizing: border-box;/*padding border값이 포함됨*/}
+
 #store_search{
 	height: 400px;
-/* 먼저 적으면 우선순위 높음 */
-	background: url(../IMG/store_exp_img03.png) no-repeat 50% -58px, url(../IMG/store_bg.jpg) 50% 50%;}
+	background: url(IMG/store_exp_img03.png) no-repeat 50% -58px,
+	url(IMG/store_bg.jpg) 50% 50%;} /*먼저 적으면 우선순위 높음*/
 
 #wrap > section > div{
 	width:1232px;
@@ -41,12 +42,12 @@ body {width: 100%;}
 	overflow: hidden;}
 
 /*** 시즌원두 ***/
-#main_bean .main_image{
+#main_bean .main_image {
 		float: left;
 		width: 511px;
 		margin-top: 73px;}
 
-#main_bean .text{
+#main_bean .text {
 		float: right;
 		width:556px;
 		margin-top: 177px;}
@@ -55,22 +56,22 @@ body {width: 100%;}
 
 #main_bean .text_detail > h2{
 	width: 556px; height: 63px;
-	background: url(../IMG/19_christmas1_bean_ttl.png);
+	background: url(IMG/19_christmas1_bean_ttl.png);
 	margin-bottom: 25px;}
 
 #main_bean .text_detail > p{
 	width:568px; height:125px;
-	background: url(../IMG/19_christmas1_bean_txt.png);
+	background: url(IMG/19_christmas1_bean_txt.png);
 	margin-bottom: 19px;}
 
-/***더보기 클래스***/
+/*** 더보기 클래스 ***/
 a.more{
 	width: 125px; height: 38px;
-	box-sizing: border-box; /* padding border값이 width height에 포함되도록 해주는 속성 */
+	box-sizing: border-box; /*padding border값이 width height에 포함되도록 해주는 속성*/
 	border: 2px solid #000;
 	border-radius: 3px;
 	text-align: center;
-	line-height: 34px; /* 줄간격 */
+	line-height: 34px; /*줄간격*/
 	font-size: 14px;}
 
 /*** 리저브 ***/
@@ -87,7 +88,7 @@ a.more{
 
 #reserve .text_detail{
 	width: 380px; height: 171px;
-	background: url(../IMG/19_christmas_reserve_txt1.png);
+	background: url(IMG/19_christmas_reserve_txt1.png);
 	margin-bottom: 30px;}
 
 #reserve .more {
@@ -112,13 +113,13 @@ a.more{
 #favorite .text_detail > h2 {
 	float: right;
 	width: 258px; height: 204px;
-	background: url(../IMG/fav_prod_txt01.png);
+	background: url(IMG/fav_prod_txt01.png);
 	margin-bottom: 46px;}
 
 #favorite .text_detail > p {
 	float: right;
 	width: 362px; height: 156px;
-	background: url(../IMG/fav_prod_txt02.png);
+	background: url(IMG/fav_prod_txt02.png);
 	margin-bottom: 44px;
 	margin-right: 4px;}
 
@@ -132,13 +133,13 @@ a.more{
 	width:334px; height: 334px;
 	margin-left: auto;
 	margin-right: auto;
-	position: relative; /* 기준 */}
+	position: relative; /*기준*/}
 
 #store_logo >  .front, #store_logo > .back {
 	position: absolute;
 	left: 0; top: 0;
 	transition-duration: 0.3s;
-	backface-visibility: hidden; /* back이 뒤에 작성되어 있어도 뒤집어진 모습이 보이지 않음*/}
+	backface-visibility: hidden; /*back이 뒤에 작성되어 있어도 뒤집어진 모습이 보이지 않음*/}
 
 #store_logo > .front{
 	transform: rotateY(0deg)}
@@ -157,9 +158,9 @@ a.more{
 /*** 매장 찾기 ***/
 #store_search > div{
 	height: 400px;
-/* 왼쪽사진, 그 옆의 사진 */
-	background: url(../IMG/store_exp_img02.png) no-repeat, url(../IMG/store_exp_img04.png) no-repeat;
-	background-position: 103px 0, 963px 298px; }
+	background: url(IMG/store_exp_img02.png) no-repeat,
+	url(IMG/store_exp_img04.png) no-repeat; /*왼쪽사진, 그 옆의 사진*/
+	background-position: 103px 0, 963px 298px;}
 
 #store_search .main_image{
 	 float: left;
@@ -175,12 +176,12 @@ a.more{
 
 #store_search .text_detail > h2 {
 width: 385px; height: 54px;
-background: url(../IMG/store_txt01.png);
+background: url(IMG/store_txt01.png);
 margin-bottom: 14px;}
 
 #store_search .text_detail > p {
 width: 366px; height: 61px;
-background: url(../IMG/store_txt02.png);
+background: url(IMG/store_txt02.png);
 margin-bottom: 29px;}
 
 #store_search .more {
@@ -188,5 +189,5 @@ margin-bottom: 29px;}
 
 /*** CLASS STYLE ***/
 .text_detail > h2,.text_detail > p {
-	text-indent: -6000px; /* 영역 내의 글자를 왼쪽으로 이동 */
-	overflow: hidden; /* 영역 밖을 벗어난 글자 숨김 */}
+	text-indent: -6000px; /*영역 내의 글자를 왼쪽으로 이동*/
+	overflow: hidden;} /*영역 밖을 벗어난 글자 숨김*/
