@@ -5,8 +5,7 @@
 	width: 1020px;
 	height: 111px;
 	margin: 0 auto 9px;
-	position: relative; /* 포지션 기준, 브라우저 기준이 아니라 중심을 기준으로 함 */
-	border: 2px solid pink;}
+	position: relative;} /* 포지션 기준, 브라우저 기준이 아니라 중심을 기준으로 함 */
 
 /*** 로고 ***/
 .logo {
@@ -26,7 +25,8 @@
 .global_wrap > ul > li > a {
 	height:26px;
 	line-height:26px;
-	font-size:15px;}
+	font-size:15px;
+	letter-spacing: -1px;}
 
 .global_wrap > ul > li {float: left;}
 .global_wrap > ul > li.en {
@@ -62,16 +62,18 @@
 	height: 26px;
 	line-height: 26px;
 	font-weight: 700;
-	font-size: 13px;}
+	font-size: 13px;
+	letter-spacing: -1px;}
 
-#top_nav  li.search > a, #top_nav li.facebook > a{
+#top_nav li.search > a,
+#top_nav li.facebook > a{
 	width: 28px; height: 26px;
 	text-indent: -6000px;
 	overflow: hidden;}
 
-#top_nav  li.search > a {
+#top_nav li.search > a {
 	background: url(../images/btn_search.png) no-repeat left center;}
-#top_nav  li.facebook > a {
+#top_nav li.facebook > a {
 	background: url(../images/btn_facebook.png) no-repeat left center;}
 
 

@@ -26,13 +26,11 @@ url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 
 html, body {
 	font: 12px / 150%'Nanum Gothic', sans-serif; /* 폰트크기 11px, 줄간격 150% 적용*/
-	color: #000;
-	letter-spacing: -1px;}
+	color: #000;}
 
 table, tr, th, td {
 	font: 12px / 150%'Nanum Gothic', sans-serif;
-	color: #000;
-	letter-spacing: -1px;}
+	color: #000;}
 
 h1,h2,h3,h4,h5,h6 {
 	font-size: 1.0em;
