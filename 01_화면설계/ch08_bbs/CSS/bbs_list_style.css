@@ -1,0 +1,40 @@
+/* bbs_list_style.css */
+
+@import url(common.css);
+
+#board_wrap {
+	width: 690px;
+	margin: 50px;
+	border: 2px solid red;}
+
+/*** 검색 ***/
+#search_form {
+	width: 100%;
+	margin-bottom: 10px;}
+
+#search_form > form {
+	width: 100%;
+	overflow: hidden;}
+
+#search_form fieldset {
+	float: right;
+	margin-top:31px;
+	margin-right: 10px;}
+
+#search_form label {
+	float: left;
+	margin-top: 7px;}
+
+input#search_txt {
+	float: left;
+	width: 133px; height: 19px;
+	box-sizing: border-box;
+	border: 1px solid #d1d1d1;
+	background-color: #fff;
+	margin: 0 4px;}
+
+input#search_btn {float: left;}
+
+
+/*** 게시판 ***/
+#board {width: 100%;}
