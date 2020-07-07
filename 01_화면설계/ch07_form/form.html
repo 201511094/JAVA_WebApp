@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<title>form - 회원가입</title>
+		<link rel="stylesheet" href="CSS/master.css"/>
+	</head>
+	<body>
+		<div id="join">
+			<form>
+			<!-- [s] 필수입력항목 -->
+				<fieldset class="required">
+					<legend>필수 입력 항목</legend>
+					<p>
+						<label class="label" for="name">
+							<span class="req"></span>이름: 
+						</label>
+						<input id="name" class="w_200" type="text"/>
+					</p>
+					<div class="info">
+						<strong class="warning">주의!</strong>
+						아이디는 영문자와 숫자만을 사용하여 4글자이상 16글자 이하로 작성해 주세요.
+					</div>
+					<p>
+						<label class="label" for="ID">
+							<span class="req"></span>아이디:
+						</label>
+						<input id="ID" class="w_200" type="text"/>
+					</p>
+					<div class="info">
+						<strong class="warning">주의!</strong>
+						비밀번호는 보안을 위해 영문자, 숫자 및 특수문자등을 조합하여 작성하시기 바랍니다.
+					</div>
+					<div class="info">
+						<strong class="warning">주의!</strong>
+						비밀번호는 보안을 위해 4글자이상으로 작성해 주세요.
+					</div>
+					<p>
+						<label class="label" for="PW">
+							<span class="req"></span>비밀번호:
+						</label>
+						<input id="PW" class="w_200" type="password"/>
+					</p>
+					<p>
+						<label class="label" for="PWconfirm">
+							<span class="req"></span>비밀번호확인:
+						</label>
+						<input id="PWconfirm" class="w_200" type="password"/>
+					</p>
+					<div class="info">
+						<strong class="information">안내!</strong>
+						우편번호를 모를 경우에는 빈칸으로 두고 주소만 제대로 입력하시면 됩니다.
+					</div>
+					<p>
+						<label class="label" for="zipcode">우편번호:</label>
+						<input id="zipcode" class="w_128" type="text"/>
+					</p>
+					<div class="info">
+						<strong class="warning">주의!</strong>
+						주소는 [시/도] [시/구/군] [읍/면/리] [번지] [건물/아파트명] 순서로 입력 해 주세요.
+					</div>
+					<p>
+						<label class="label" for="address">
+							<span class="req"></span>주소:
+						</label>
+						<input id="address" class="w_368" type="text"/>
+					</p>
+					<p>
+						<label class="label" for="tel">
+							<span class="req"></span>전화번호: 
+						</label>
+						<input id="tel" type="text" class="w_68" title="전화번호 앞자리" maxlength="3"/>
+						-
+						<input type="text" class="w_68" title="전화번호 중간자리" maxlength="4"/>
+						-
+						<input type="text" class="w_68" title="전화번호 뒷자리" maxlength="4"/>
+					</p>
+				</fieldset>
+			<!-- [e] 필수입력항목 -->
+
+			<!-- [s] 비밀번호 찾는방법 선택 -->
+				<fieldset class="passSearch">
+					<legend>비밀번호 찾는 방법 선택</legend>
+					<div class="info">
+							<strong class="information">안내!</strong>
+							비밀번호를 잊어버렸을 경우 비밀번호 수신 방법을 선택해 주세요.
+					</div>
+					<p>
+						<label class="label">
+							<span class="req"></span>수신방법
+						</label>
+						<label class="radio_label"><input id="sms" type="radio" name="receive"/>휴대전화 SMS문자  /</label>
+						<label class="radio_label"><input id="mail" type="radio" name="receive"/>자주사용하는 이메일</label>
+					</p>
+					<p>
+						<label class="label">휴대전화번호: </label>
+						<span class="tel2">
+							<select title="앞자리" class="w_68">
+								<option>010</option>
+								<option>02</option>
+								<option>031</option>
+								<option>032</option>
+							</select>
+							-
+							<input type="text" maxlength="4" class="w_68"title="중간자리"/>
+							-
+							<input type="text" maxlength="4" class="w_68" title="뒷자리"/>
+						</span>
+					</p>
+					<p>
+						<label class="label" for="email">이메일: </label>
+						<input id="email" class="w_368" type="text"/>
+					</p>
+				</fieldset>
+			<!-- [e] 비밀번호 찾는방법 선택 -->
+
+			<!-- [s] 메일링 수신여부 -->
+				<fieldset class="mailing">
+					<legend>메일링 수신여부</legend>
+					<p>
+						<label class="label">의성군청에서 제공하는 소식을 이메일로 받아 보시겠습니까?</label>
+						<label class="radio_label"><input id="yes" type="radio" name="mailReceive"/>예  /</label>
+						<label class="radio_label"><input id="no" type="radio" name="mailReceive"/>아니오</label>
+					</p>
+				</fieldset>
+			<!-- [e] 메일링 수신여부 -->
+
+			<!-- [s] 버튼 -->
+				<div class="submit">
+					<p><input type="image" src="images/ok.gif" alt="ok"/></p>
+					<p><input type="image" src="images/cancel.gif" alt="cancel"/></p>
+				</div>
+			<!-- [e] 버튼 -->
+			</form>
+		</div>
+	</body>
+</html>

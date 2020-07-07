@@ -1,0 +1,114 @@
+/* master.css */
+@import url(common.css);/* ';' 빼먹지 않기!!*/
+
+#join {
+	width: 630px;
+	margin: 50px;}
+
+#join > form {}
+
+#join fieldset {
+	width: 100%;
+	box-sizing: border-box;
+	border: 1px dashed #fe0000;
+	margin-bottom: 18px;
+	padding: 6px;}
+
+#join fieldset.required{}
+
+#join fieldset.passSearch{border-color: #ff8003;}
+
+#join fieldset.mailing{
+	border-color: #808080;
+	margin-bottom: 13px;}
+
+#join fieldset > legend {
+	color: #fff;
+	font-weight: 500;
+	margin-left: 13px;
+	padding: 3px 6px;
+	border-right: 1px outset #fe0000;
+	border-bottom: 1px outset #fe0000;}
+
+#join fieldset.required > legend {
+	background-color: #fe0000;}
+
+#join fieldset.passSearch > legend {
+	background-color: #ff8003;
+	border-color: #ff8003;}
+
+#join fieldset.mailing > legend {
+	background-color: #808080;
+	border-color: #808080;}
+
+#join fieldset > p {margin-top: 8px;}
+
+#join fieldset > p > span.tel2 {display: inline-block;} /*div를 span태그로 교체*/
+
+#join fieldset > p > span.tel2 > select {float: left;} /*select위치*/
+
+#join fieldset.required > p:nth-of-type(1),
+#join fieldset.mailing > p:nth-of-type(1) {
+	margin-top: 0;}
+
+.label { 
+	color: #55553b;
+	font-weight: 700;
+	display: inline-block;
+	width: 110px;
+	margin-right: 8px;
+	text-align: right;}
+
+/*radio버튼 위치*/
+.radio_label {display: inline-block;} 
+.radio_label > input {
+	float: left;
+	margin-top: 4px;
+	margin-right: 3px;
+	margin-left: 4px;}
+
+fieldset.mailing .label {width: 380px;}
+
+/*빨간점 위치*/
+.req {
+	display: inline-block;
+	width: 7px; height: 10px;
+	background: url(../images/req.jpg) no-repeat left top;}
+
+#join input[type=text],
+#join input[type=password],
+#join select {
+	height: 21px;
+	border: 1px solid #7e9db9;}
+
+#join fieldset > .info {
+	background-color: #f4f0ed;
+	border: 1px solid #aca99a;
+	padding: 4px 10px;
+	margin-top: 6px;}
+
+#join fieldset.passSearch > .info {
+	margin-top: 0;}
+
+.warning{
+	font-weight: 500;
+	color: #fe0000;}
+
+.information{
+	font-weight: 500;
+	color: #017f01;}
+
+/*** 버튼 ***/
+.submit {
+	width: 100%;
+	text-align: center;}
+
+.submit > p {display: inline-block;}
+
+
+/**** CLASS STYLE ****/
+/*** label 및 input 크기 조정 ***/
+.w_200 {width: 200px;} /*이름,아이디,비번,비번확인*/
+.w_128 {width: 128px;} /*우편번호*/
+.w_368 {width: 368px;} /*주소,이메일*/
+.w_68 {width: 68px;} /*전화번호*/
