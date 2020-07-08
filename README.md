@@ -31,9 +31,10 @@
 
 		07.07 화: 실습form(회원가입 입력양식) 완성, 실습mainBBS(게시판_table) 완성
 
+		07.08 수: 실습mainBBS(게시판_list) 완성, 미디어쿼리를 활용한 반응형웹
+
 
 	#참고사이트
-
 		dbcut.co.kr - 디자인, 레이아웃 참고 사이트
 		www.w3schools.com  - HTML 관련 사이트
 		color.adobe.com - 색상 관련 사이트
