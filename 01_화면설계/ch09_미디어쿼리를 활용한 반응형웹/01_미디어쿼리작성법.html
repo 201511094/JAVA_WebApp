@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- 요소검사 -->
+		<title>미디어쿼리 작성법</title>
+	<!-- 방법1 - 단 크기가 겹치면 안됨 -->
+		<!--
+		<link rel="stylesheet" href="CSS/style1.css" media="screen and (min-width: 1367px)"/>
+		<link rel="stylesheet" href="CSS/style2.css" media="screen and (max-width: 1366px) and (min-width: 768px)"/>
+		<link rel="stylesheet" href="CSS/style3.css" media="screen and (max-width: 767px)"/>
+		-->
+
+	<!-- 방법2 -->
+		<style>
+			@media screen and (min-width: 1367px) {
+				h1 {color: white;}}
+			@media screen and (max-width: 1366px) and (min-width: 768px) {
+			h1 {color: red;}}
+			@media screen and (max-width: 767px) {
+			h1 {color: yellow;}}
+		</style>
+
+	<!-- 방법3 -->
+		<style>
+			@import url(CSS/style1.css) screen and (min-width: 1367px);
+			@import url(CSS/style2.css) screen and (max-width: 1366px) and (min-width: 768px);
+			@import url(CSS/style3.css) screen and (max-width: 767px);
+		</style>
+	</head>
+	<body>
+		<h1>미디어 쿼리</h1>
+		<h2>@media 규칙</h2>
+		1. link태그의 media 속성에 장치의 종류나 크기를 입력<br/>
+		2. @media 규칙에 장치의 종류나 크기를 입력<br/>
+		3. @import 규칙에 장치의 종류나 크기를 입력<br/>
+
+	</body>
+</html>
