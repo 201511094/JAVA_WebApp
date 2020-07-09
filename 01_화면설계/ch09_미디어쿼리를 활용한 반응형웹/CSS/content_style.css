@@ -1,0 +1,52 @@
+/* content_style.css */
+
+#container {
+	width: 1400px;
+	margin: 0 auto;}
+
+@media screen and (max-width: 1366px) {
+	#container {
+		width: 100%;}
+}
+
+#container > section{
+	width: 100%;
+	margin-top: 50px;
+	overflow: hidden;}
+
+#container h2.con_title{
+	border-bottom: 2px solid #999;
+	font-weight: 900;
+	font-size: 24px;
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+	margin-bottom: 20px;}
+
+#container > section > article {
+	float: left;
+	width: 335px; height: 300px;
+	background: #dfdfdf;
+	margin-right: 20px;}
+
+@media screen and (max-width: 1366px){
+	#container > section > article {
+		width: 23.5%;
+		margin-right: 2%;}
+}
+
+@media screen and (max-width: 767px){
+	#container > section > article {
+		width: 45%;
+		margin: 0 2.5%;
+		margin-bottom: 10px;}
+}
+
+@media screen and (max-width: 413px){
+	#container > section > article {
+		width: 95%;
+		margin: 0 2.5%;
+		margin-bottom: 10px;}
+}
+
+#container > section > article:last-child {margin-right: 0;}
