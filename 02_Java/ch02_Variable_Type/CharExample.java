@@ -9,7 +9,6 @@ public class CharExample {
 		char c4='°¡';
 		char c5=44032;
 		char c6='\uac00';
-		
 		int uniCode=c1;
 		
 		System.out.println(c1);

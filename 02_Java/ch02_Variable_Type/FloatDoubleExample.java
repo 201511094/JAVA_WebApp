@@ -4,13 +4,13 @@ public class FloatDoubleExample {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		double var1=3.14;
-		//float var2=3.14;
+		float var2=(float)3.14;	//강제 형변환, 데이터손실 있음
 		float var3=3.14F;
-		
 		double var4=0.1234567890123456789;
 		float var5=0.1234567890123456789F;
 		
 		System.out.println("var1: "+var1);
+		System.out.println("var2: "+var2);
 		System.out.println("var3: "+var3);
 		System.out.println("var4: "+var4);
 		System.out.println("var5: "+var5);
