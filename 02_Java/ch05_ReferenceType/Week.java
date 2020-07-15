@@ -1,0 +1,10 @@
+
+public enum Week {
+	MONDAY,
+	TUESDAY,
+	WEDNESDAY,
+	THURSDAY,
+	FRIDAY,
+	SATURDAY,
+	SUNDAY
+}	//열거 타입
