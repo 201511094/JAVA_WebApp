@@ -3,6 +3,7 @@ public class CarExample {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		/*
 				Car myCar = new Car();	//객체 생성
 				
 				System.out.println("제작회사: " + myCar.company);
@@ -13,6 +14,9 @@ public class CarExample {
 				
 				myCar.speed = 60;	//필드 값 변경
 				System.out.println("수정된 속도: " + myCar.speed);
-				
+		*/
+		
+		Car myCar=new Car("검정", 3000);
+		
 	}
 }
