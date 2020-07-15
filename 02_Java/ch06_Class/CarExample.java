@@ -64,11 +64,11 @@ public class CarExample {
 //		System.out.println("ÇöÀç ¼Óµµ: "+speed+"km/h");
 		
 		
-		Car myCar=new Car("Æ÷¸£½¦");
-		Car yourCar=new Car("º¥Ã÷");
-		
-		myCar.run();
-		yourCar.run();
+//		Car myCar=new Car("Æ÷¸£½¦");
+//		Car yourCar=new Car("º¥Ã÷");
+//		
+//		myCar.run();
+//		yourCar.run();
 		
 	}
 }

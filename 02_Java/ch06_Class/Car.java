@@ -91,21 +91,35 @@ public class Car {
 	
 	
 	//인스턴스 멤버와 this
-	String model;
+//	String model;
+//	int speed;
+//	
+//	Car(String model) {
+//		this.model=model;
+//	}
+//	
+//	void setSpeed(int speed) {
+//		this.speed=speed;
+//	}
+//	void run() {
+//		for (int i=0;i<50;i+=10) {
+//			this.setSpeed(i);
+//			System.out.println(this.model+"이/가 달립니다. 시속: "+this.speed+"km/h");
+//		}
+//	}
+	
+	
+	//정적 메소드와 블록 선언
+	//CarExample.java 주석처리 필요
 	int speed;
 	
-	Car(String model) {
-		this.model=model;
-	}
-	
-	void setSpeed(int speed) {
-		this.speed=speed;
-	}
 	void run() {
-		for (int i=0;i<50;i+=10) {
-			this.setSpeed(i);
-			System.out.println(this.model+"이/가 달립니다. 시속: "+this.speed+"km/h");
-		}
+		System.out.println(speed+"으로 달립니다.");
+	}
+	public static void main(String[] args) {
+		Car myCar=new Car();
+		myCar.speed=60;
+		myCar.run();
 	}
 	
 }
