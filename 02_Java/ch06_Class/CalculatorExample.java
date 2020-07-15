@@ -19,11 +19,21 @@ public class CalculatorExample {
 //		Calculator myCalc=new Calculator();
 //		myCalc.execute();	//execute메소드 호출
 		
-		Calculator myCalcu=new Calculator();
-		double result1=myCalcu.areaRectangle(10);
-		double result2=myCalcu.areaRectangle(10, 20);
+//		Calculator myCalcu=new Calculator();
+//		double result1=myCalcu.areaRectangle(10);
+//		double result2=myCalcu.areaRectangle(10, 20);
+//		
+//		System.out.println("정사각형 넓이: "+result1);
+//		System.out.println("직사각형 넓이: "+result2);
 		
-		System.out.println("정사각형 넓이: "+result1);
-		System.out.println("직사각형 넓이: "+result2);
+		
+		double result1=10*10*Calculator.pi;	//바로 사용 가능
+		int result2=Calculator.plus(10, 5);
+		int result3=Calculator.minus(10, 5);
+		
+		System.out.println("result1: "+result1);
+		System.out.println("result2: "+result2);
+		System.out.println("result3: "+result3);
+		
 	}
 }
