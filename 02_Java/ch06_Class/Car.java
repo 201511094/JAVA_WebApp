@@ -74,18 +74,37 @@ public class Car {
 	
 	
 	//클래스 외부에서 메소드 호출
+//	int speed;
+//	
+//	int getSpeed() {
+//		return speed;
+//	}
+//	void keyTurnOn() {
+//		System.out.println("키를 돌립니다.");
+//	}
+//	void run() {
+//		for (int i=10; i<=50; i+=10) {
+//			speed=i;
+//			System.out.println("달립니다. 시속: "+speed+"km/h");
+//		}
+//	}
+	
+	
+	//인스턴스 멤버와 this
+	String model;
 	int speed;
 	
-	int getSpeed() {
-		return speed;
+	Car(String model) {
+		this.model=model;
 	}
-	void keyTurnOn() {
-		System.out.println("키를 돌립니다.");
+	
+	void setSpeed(int speed) {
+		this.speed=speed;
 	}
 	void run() {
-		for (int i=10; i<=50; i+=10) {
-			speed=i;
-			System.out.println("달립니다. 시속: "+speed+"km/h");
+		for (int i=0;i<50;i+=10) {
+			this.setSpeed(i);
+			System.out.println(this.model+"이/가 달립니다. 시속: "+this.speed+"km/h");
 		}
 	}
 	

@@ -16,9 +16,7 @@ public class CarExample {
 				System.out.println("수정된 속도: " + myCar.speed);
 		*/
 		
-		
 		//Car myCar=new Car("검정", 3000);
-		
 		
 //		Car car1 = new Car();
 //		System.out.println("car1.company : " + car1.company);
@@ -59,11 +57,18 @@ public class CarExample {
 //		}
 		
 		
-		Car myCar = new Car();
-		myCar.keyTurnOn();	//keyTurnOn메소드
-		myCar.run();	//run메소드
-		int speed=myCar.getSpeed();	//getSpeed메소드
-		System.out.println("현재 속도: "+speed+"km/h");
+//		Car myCar = new Car();
+//		myCar.keyTurnOn();	//keyTurnOn메소드
+//		myCar.run();	//run메소드
+//		int speed=myCar.getSpeed();	//getSpeed메소드
+//		System.out.println("현재 속도: "+speed+"km/h");
+		
+		
+		Car myCar=new Car("포르쉐");
+		Car yourCar=new Car("벤츠");
+		
+		myCar.run();
+		yourCar.run();
 		
 	}
 }
