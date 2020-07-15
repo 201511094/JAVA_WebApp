@@ -13,6 +13,7 @@ public class Car {
 //	String color;
 //	int maxSpeed;
 	
+	
 	//생성자
 //	Car() {}
 //	Car(String model) {
@@ -28,6 +29,7 @@ public class Car {
 //		this.maxSpeed=maxSpeed;
 //	}
 	
+	
 	//생성자 중복 지우기
 //	Car() {}
 //	Car(String model){
@@ -42,32 +44,48 @@ public class Car {
 //		this.maxSpeed=maxSpeed;
 //	}
 	
-	int gas;
+	//메소드 리턴값
+//	int gas;
+//	
+//	void setGas(int gas) {
+//		this.gas=gas;
+//	}
+//	boolean isLeftGas() {
+//		if (gas == 0) {
+//			System.out.println("gas가 없습니다.");
+//			return false;
+//		}
+//		System.out.println("gas가 있습니다.");
+//		return true;
+//		
+//	}
+//	void run() {
+//		while(true) {
+//			if (gas>0) {
+//				System.out.println("달립니다. gas잔량: "+gas);
+//				gas -= 1;
+//			}
+//			else {
+//				System.out.println("멈춥니다. gas잔량: "+gas);
+//				return;
+//			}
+//		}
+//	}
 	
-	void setGas(int gas) {
-		this.gas=gas;
+	
+	//클래스 외부에서 메소드 호출
+	int speed;
+	
+	int getSpeed() {
+		return speed;
 	}
-	
-	boolean isLeftGas() {
-		if (gas == 0) {
-			System.out.println("gas가 없습니다.");
-			return false;
-		}
-		System.out.println("gas가 있습니다.");
-		return true;
-		
+	void keyTurnOn() {
+		System.out.println("키를 돌립니다.");
 	}
-	
 	void run() {
-		while(true) {
-			if (gas>0) {
-				System.out.println("달립니다. gas잔량: "+gas);
-				gas -= 1;
-			}
-			else {
-				System.out.println("멈춥니다. gas잔량: "+gas);
-				return;
-			}
+		for (int i=10; i<=50; i+=10) {
+			speed=i;
+			System.out.println("달립니다. 시속: "+speed+"km/h");
 		}
 	}
 	

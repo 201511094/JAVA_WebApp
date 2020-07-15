@@ -16,7 +16,9 @@ public class CarExample {
 				System.out.println("수정된 속도: " + myCar.speed);
 		*/
 		
+		
 		//Car myCar=new Car("검정", 3000);
+		
 		
 //		Car car1 = new Car();
 //		System.out.println("car1.company : " + car1.company);
@@ -39,21 +41,29 @@ public class CarExample {
 //		System.out.println("car4.color : " + car4.color);
 //		System.out.println("car4.maxSpeed : " + car4.maxSpeed);
 		
+		
+//		Car myCar = new Car();
+//		myCar.setGas(5);	//setGas메소드
+//		boolean gasState = myCar.isLeftGas();	//isLeftGas메소드
+//		
+//		if (gasState) {
+//			System.out.println("출발합니다.");
+//			myCar.run();	//run메소드
+//		}
+//		
+//		if (myCar.isLeftGas()) {	//isLeftGas메소드
+//			System.out.println("gas를 주입할 필요가 없습니다.");
+//		}
+//		else {
+//			System.out.println("gas를 주입하세요.");
+//		}
+		
+		
 		Car myCar = new Car();
-		myCar.setGas(5);	//setGas메소드
-		boolean gasState = myCar.isLeftGas();	//isLeftGas메소드
-		
-		if (gasState) {
-			System.out.println("출발합니다.");
-			myCar.run();	//run메소드
-		}
-		
-		if (myCar.isLeftGas()) {	//isLeftGas메소드
-			System.out.println("gas를 주입할 필요가 없습니다.");
-		}
-		else {
-			System.out.println("gas를 주입하세요.");
-		}
+		myCar.keyTurnOn();	//keyTurnOn메소드
+		myCar.run();	//run메소드
+		int speed=myCar.getSpeed();	//getSpeed메소드
+		System.out.println("현재 속도: "+speed+"km/h");
 		
 	}
 }
