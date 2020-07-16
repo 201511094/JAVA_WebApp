@@ -30,9 +30,9 @@ public class ArrayCreateByNewExample {
 		for (int i=0; i<3; i++) {
 			System.out.println("arr3[" + i + "] : " + arr3[i]);
 		}
-		arr3[0] = "1¿ù";
-		arr3[1] = "2¿ù";
-		arr3[2] = "3¿ù";
+		arr3[0] = "1ì›”";
+		arr3[1] = "2ì›”";
+		arr3[2] = "3ì›”";
 		for (int i=0; i<3; i++) {
 			System.out.println("arr3[" + i + "] : " + arr3[i]);
 		}

@@ -6,11 +6,11 @@ public class AccuracyExample2 {
 		int apple = 1;
 		int totalPieces = apple * 10;
 		int number = 7;
-		int temp = totalPieces - number;	//Á¤¼ö¿¬»êÀ¸·Î º¯°æ
+		int temp = totalPieces - number;	//ì •ìˆ˜ì—°ì‚°ìœ¼ë¡œ ë³€ê²½
 		double result = temp/10.0;
 		
-		System.out.println("»ç°ú ÇÑ°³¿¡¼­ ");
-		System.out.println("0.7 Á¶°¢À» »©¸é, ");
-		System.out.println(result + " Á¶°¢ÀÌ ³²´Â´Ù.");
+		System.out.println("ì‚¬ê³¼ í•œ ê°œì—ì„œ ");
+		System.out.println("0.7ì¡°ê°ì„ ë¹¼ë©´, ");
+		System.out.println(result + " ì¡°ê°ì´ ë‚¨ëŠ”ë‹¤.");
 	}
 }

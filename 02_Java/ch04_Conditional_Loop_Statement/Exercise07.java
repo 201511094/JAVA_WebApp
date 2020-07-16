@@ -10,56 +10,56 @@ public class Exercise07 {
 		
 		while(run) {
 			System.out.println("==========");
-			System.out.println("1. ¿¹±Ý | 2. Ãâ±Ý | 3. ÀÜ°í | 4. Á¾·á");
+			System.out.println("1. ì˜ˆê¸ˆ | 2. ì¶œê¸ˆ | 3. ìž”ê³  | 4. ì¢…ë£Œ");
 			System.out.println("==========");
-			System.out.print("¼±ÅÃ> ");
+			System.out.print("ì„ íƒ> ");
 			
 			int choice=sc.nextInt();
 			int money;
 			
 			switch(choice) {
 			case 1:
-				System.out.print("¿¹±Ý¾×> ");
+				System.out.print("ì˜ˆê¸ˆì•¡> ");
 				money=sc.nextInt();
 				balance += money;
 				break;
 			case 2:
-				System.out.print("Ãâ±Ý¾×> ");
+				System.out.print("ì¶œê¸ˆì•¡> ");
 				money=sc.nextInt();
 				balance -= money;
 				break;
 			case 3:
-				System.out.println("ÀÜ°í> "+balance);
+				System.out.println("ìž”ê³ > "+balance);
 				break;
 			case 4:
 				run = false;
 				break;
 			default:
-				System.out.println("¿Ã¹Ù¸¥ ¹øÈ£¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+				System.out.println("ì˜¬ë°”ë¥¸ ë²ˆí˜¸ë¥¼ ìž…ë ¥í•´ì£¼ì„¸ìš”.");
 				break;
 			}
 		/*
 			if (choice == 1) {
-				System.out.print("¿¹±Ý¾×> ");
+				System.out.print("ì˜ˆê¸ˆì•¡> ");
 				int input=System.in.read();
 				balance += input;
 				
 			} else if (choice == 2) {
-				System.out.print("Ãâ±Ý¾×> ");
+				System.out.print("ì¶œê¸ˆì•¡> ");
 				int input=System.in.read();
 				balance -= input;
 				
 			} else if (choice == 3) {
-				System.out.println("ÀÜ°í> "+balance);
+				System.out.println("ìž”ê³ > "+balance);
 				
 			} else if (choice == 4) {
 				run = false;
 			}
 			else {
-				System.out.println("¿Ã¹Ù¸¥ ¹øÈ£¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+				System.out.println("ì˜¬ë°”ë¥¸ ë²ˆí˜¸ë¥¼ ìž…ë ¥í•´ì£¼ì„¸ìš”.");
 			}
 		*/
 		}
-		System.out.println("ÇÁ·Î±×·¥ Á¾·á");
+		System.out.println("í”„ë¡œê·¸ëž¨ ì¢…ë£Œ");
 	}
 }

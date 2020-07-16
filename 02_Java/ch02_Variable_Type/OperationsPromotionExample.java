@@ -18,8 +18,8 @@ public class OperationsPromotionExample {
 		char charValue3=(char)(charValue1+charValue2);
 		int intValue2=charValue1+charValue2;
 		
-		System.out.println("À¯´ÏÄÚµå="+intValue2);
-		System.out.println("Ãâ·Â¹®ÀÚ="+(char)intValue2);
+		System.out.println("ìœ ë‹ˆì½”ë“œ="+intValue2);
+		System.out.println("ì¶œë ¥ë¬¸ì="+(char)intValue2);
 		System.out.println(charValue3);
 		
 		int intValue3=10;

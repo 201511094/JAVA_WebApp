@@ -10,7 +10,7 @@ public class WhileSumForm1To100Example {
 			sum += i;
 			i++;
 		}
-		System.out.println("1 ~ " + (i-1) + "±îÁöÀÇ ÇÕ: " + sum);
+		System.out.println("1 ~ " + (i-1) + "ê¹Œì§€ì˜ í•©: " + sum);
 		
 	}
 }

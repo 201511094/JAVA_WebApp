@@ -7,4 +7,4 @@ public enum Week {
 	FRIDAY,
 	SATURDAY,
 	SUNDAY
-}	//¿­°Å Å¸ÀÔ
+}	//ì—´ê±° íƒ€ìž…

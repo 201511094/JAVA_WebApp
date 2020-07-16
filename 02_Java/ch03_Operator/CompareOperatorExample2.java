@@ -10,7 +10,7 @@ public class CompareOperatorExample2 {
 		double v4 = 0.1;
 		float v5 = 0.1f;
 		System.out.println(v4 == v5);
-		System.out.println((float)v4 == v5);	//°­Á¦Å¸ÀÔº¯È¯
-		System.out.println((int)(v4*10) == (int)(v5*10));	//Á¤¼ö·Î º¯È¯
+		System.out.println((float)v4 == v5);	//ê°•ì œíƒ€ìž…ë³€í™˜
+		System.out.println((int)(v4*10) == (int)(v5*10));	//ì •ìˆ˜ë¡œ ë³€í™˜
 	}
 }

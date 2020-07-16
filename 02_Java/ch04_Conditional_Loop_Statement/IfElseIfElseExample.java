@@ -6,17 +6,17 @@ public class IfElseIfElseExample {
 		int score = 75;
 		
 		if(score >= 90) {
-			System.out.println("Á¡¼ö°¡ 100~90 ÀÔ´Ï´Ù.");
-			System.out.println("µî±ŞÀº AÀÔ´Ï´Ù.");
+			System.out.println("ì ìˆ˜ê°€ 100~90 ì…ë‹ˆë‹¤.");
+			System.out.println("ë“±ê¸‰ì€ Aì…ë‹ˆë‹¤.");
 		} else if(score >= 80) {	
-			System.out.println("Á¡¼ö°¡ 80~89 ÀÔ´Ï´Ù.");
-			System.out.println("µî±ŞÀº BÀÔ´Ï´Ù.");
+			System.out.println("ì ìˆ˜ê°€ 80~89 ì…ë‹ˆë‹¤.");
+			System.out.println("ë“±ê¸‰ì€ Bì…ë‹ˆë‹¤.");
 		} else if(score >= 70) {
-			System.out.println("Á¡¼ö°¡ 70~79 ÀÔ´Ï´Ù.");
-			System.out.println("µî±ŞÀº CÀÔ´Ï´Ù.");
+			System.out.println("ì ìˆ˜ê°€ 70~79 ì…ë‹ˆë‹¤.");
+			System.out.println("ë“±ê¸‰ì€ Cì…ë‹ˆë‹¤.");
 		} else {
-			System.out.println("Á¡¼ö°¡ 70 ¹Ì¸¸ ÀÔ´Ï´Ù.");
-			System.out.println("µî±ŞÀº DÀÔ´Ï´Ù.");
+			System.out.println("ì ìˆ˜ê°€ 70 ë¯¸ë§Œ ì…ë‹ˆë‹¤.");
+			System.out.println("ë“±ê¸‰ì€ Dì…ë‹ˆë‹¤.");
 		}
 	}
 }

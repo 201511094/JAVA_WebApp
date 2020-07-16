@@ -4,10 +4,10 @@ public class EnumMethodExample {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Week today=Week.SUNDAY;
-		String name=today.name();	//¿­°Å °´Ã¼°¡ °¡Áö°í ÀÖ´Â ¹®ÀÚ¿­À» ¸®ÅÏ
+		String name=today.name();	//ì—´ê±° ê°ì²´ê°€ ê°€ì§€ê³  ìˆëŠ” ë¬¸ìì—´ì„ ë¦¬í„´
 		System.out.println(name);
 		
-		int ordinal=today.ordinal();	//¸î ¹øÂ° ¿­°Å °´Ã¼ÀÎÁö
+		int ordinal=today.ordinal();	//ëª‡ ë²ˆì§¸ ì—´ê±° ê°ì²´ì¸ì§€
 		System.out.println(ordinal);
 		
 		Week day1=Week.MONDAY;
@@ -19,16 +19,16 @@ public class EnumMethodExample {
 		
 		if (args.length==1) {
 			String strDay=args[0];
-			Week weekDay=Week.valueOf(strDay);	//¸Å°³°ªÀ¸·Î ÁÖ¾îÁö´Â ¹®ÀÚ¿­°ú µ¿ÀÏÇÑ ¹®ÀÚ¿­À» °¡Áö´Â ¿­°Å °´Ã¼¸¦ ¸®ÅÏ
+			Week weekDay=Week.valueOf(strDay);	//ë§¤ê°œê°’ìœ¼ë¡œ ì£¼ì–´ì§€ëŠ” ë¬¸ìì—´ê³¼ ë™ì¼í•œ ë¬¸ìì—´ì„ ê°€ì§€ëŠ” ì—´ê±° ê°ì²´ë¥¼ ë¦¬í„´
 			if (weekDay==Week.SATURDAY || weekDay==Week.SUNDAY) {
-				System.out.println("ÁÖ¸»");
+				System.out.println("ì£¼ë§");
 			}
 			else {
-				System.out.println("ÆòÀÏ");
+				System.out.println("í‰ì¼");
 			}
 		}
 		
-		Week[] days=Week.values();	//¿­°Å Å¸ÀÔÀÇ ¸ğµç ¿­°Å °´Ã¼µéÀ» ¹è¿­·Î ¸®ÅÏ
+		Week[] days=Week.values();	//ì—´ê±° íƒ€ì…ì˜ ëª¨ë“  ì—´ê±° ê°ì²´ë“¤ì„ ë°°ì—´ë¡œ ë¦¬í„´
 		for (Week day : days) {
 			System.out.println(day);
 		}

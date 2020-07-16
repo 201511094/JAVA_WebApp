@@ -3,26 +3,26 @@ public class CheckOverflowExample {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println("Integer.MIN_VALUE°ª: "+Integer.MIN_VALUE);
-		System.out.println("Integer.MAX_VALUE°ª: "+Integer.MAX_VALUE);
+		System.out.println("Integer.MIN_VALUEê°’: "+Integer.MIN_VALUE);
+		System.out.println("Integer.MAX_VALUEê°’: "+Integer.MAX_VALUE);
 		
 		try {
 			int result = safeAdd(2000000000, 2000000000);
 			System.out.println(result);
 		} catch(ArithmeticException e) {
-			System.out.println("¿À¹öÇÃ·Î¿ì°¡ ¹ß»ıÇÏ¿© Á¤È®ÇÏ°Ô °è»êÇÒ ¼ö ¾øÀ½");
+			System.out.println("ì˜¤ë²„í”Œë¡œìš°ê°€ ë°œìƒí•˜ì—¬ ì •í™•í•˜ê²Œ ê³„ì‚°í•  ìˆ˜ ì—†ìŒ");
 		}
 	}
-	//¾ÈÀüÇÑ °ª¸¸ °è»ê
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 	public static int safeAdd(int left, int right)  {
 		if(right > 0) { 
 			if(left > (Integer.MAX_VALUE - right)) {
-				throw new ArithmeticException("¿À¹öÇÃ·Î¿ì ¹ß»ı");
+				throw new ArithmeticException("ì˜¤ë²„í”Œë¡œìš° ë°œìƒ");
 			}
 		}
 		else {
 			if(left < (Integer.MIN_VALUE - right)) {
-				throw new ArithmeticException("¿À¹öÇÃ·Î¿ì ¹ß»ı");
+				throw new ArithmeticException("ì˜¤ë²„í”Œë¡œìš° ë°œìƒ");
 			}
 		}
 		

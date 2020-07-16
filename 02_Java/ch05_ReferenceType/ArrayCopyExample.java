@@ -6,7 +6,7 @@ public class ArrayCopyExample {
 		String[] oldIntArray = { "Java", "array", "copy" };
 		String[] newIntArray = new String[5];
 		
-		//¿øº» ¹è¿­, ¿øº» ¹è¿­ ½ÃÀÛÀÎµ¦½º, »õ ¹è¿­, »õ ¹è¿­ ½ÃÀÛÀÎµ¦½º, º¹»çÇÒ °³¼ö
+		//ì›ë³¸ ë°°ì—´, ì›ë³¸ ë°°ì—´ ì‹œì‘ì¸ë±ìŠ¤, ìƒˆ ë°°ì—´, ìƒˆ ë°°ì—´ ì‹œì‘ì¸ë±ìŠ¤, ë³µì‚¬í•  ê°œìˆ˜
 		System.arraycopy(oldIntArray, 0, newIntArray, 0, oldIntArray.length);
 		
 		for (int i=0;i<newIntArray.length; i++) {

@@ -7,7 +7,7 @@ public class ForPrintFrom1To10Example {
 //			System.out.println(i);
 //		}
 		
-		//´ë°¢¼±À¸·Î Ãâ·Â
+		//ëŒ€ê°ì„ ìœ¼ë¡œ ì¶œë ¥
 		for (int i=0; i<10; i++) {
 			for (int j=0; j<i; j++) {
 				System.out.print(" ");

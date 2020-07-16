@@ -7,12 +7,12 @@ public class StringEqualsExample {
 		String strVar2 = "kjh";
 		String strVar3 = new String("kjh");
 
-		//º¯¼ö¿¡ ÀúÀåµÈ °ª¸¸ ºñ±³
+		//ë³€ìˆ˜ì— ì €ì¥ëœ ê°’ë§Œ ë¹„êµ
 		System.out.println(strVar1 == strVar2);
 		System.out.println(strVar1 == strVar3);	//false
 		
-		//°´Ã¼¿¡ »ó°ü¾øÀÌ String°´Ã¼ÀÇ ¹®ÀÚ¿­¸¸ ºñ±³
-		//equals¸Ş¼Òµå´Â ¿øº»¹®ÀÚ¿­°ú ¸Å°³°ªÀ¸·Î ÁÖ¾îÁø ºñ±³¹®ÀÚ¿­ÀÌ µ¿ÀÏÇÑÁö ºñ±³
+		//ê°ì²´ì— ìƒê´€ì—†ì´ Stringê°ì²´ì˜ ë¬¸ìì—´ë§Œ ë¹„êµ
+		//equalsë©”ì†Œë“œëŠ” ì›ë³¸ë¬¸ìì—´ê³¼ ë§¤ê°œê°’ìœ¼ë¡œ ì£¼ì–´ì§„ ë¹„êµë¬¸ìì—´ì´ ë™ì¼í•œì§€ ë¹„êµ
 		System.out.println(strVar1.equals(strVar2));
 		System.out.println(strVar1.equals(strVar3));
 	}

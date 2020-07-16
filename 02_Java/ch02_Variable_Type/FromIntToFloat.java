@@ -5,7 +5,7 @@ public class FromIntToFloat {
 		// TODO Auto-generated method stub
 		int num1=123456780;
 		int num2=123456780;
-		float num3=num2;	//자동변환
+		float num3=num2;
 		num2=(int)num3;
 		
 		int result=num1-num2;	//num1 != num2

@@ -4,16 +4,16 @@ public class ForMultiplicationTableExample {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 //		for (int m=2; m<=9; m++) {
-//			System.out.println("*** ±¸±¸´Ü " + m + "´Ü ***");
-//			
+//			System.out.println("*** êµ¬êµ¬ë‹¨ " + m + "ë‹¨ ***");
+//		
 //			for (int n=1; n<=9; n++) {
-//				System.out.println(m + " x " + n + " = " + (m*n));
-//			}
+//			System.out.println(m + " x " + n + " = " + (m*n));
 //		}
+//	}
 		
-		//Ãâ·ÂÆ÷¸Ë
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		for (int i=2; i<10; i++) {
-			System.out.printf("%-15s", "*** "+i+"´Ü ***");
+			System.out.printf("%-15s", "*** "+i+"ï¿½ï¿½ ***");
 		}
 		System.out.println();
 		

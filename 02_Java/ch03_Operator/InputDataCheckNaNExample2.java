@@ -7,9 +7,9 @@ public class InputDataCheckNaNExample2 {
 		double val = Double.valueOf(userInput);
 		double currentBalance = 10000.0;
 		
-		//NaN Ã¼Å©
-		if(Double.isNaN(val)) {
-			System.out.println("NaNÀÌ ÀÔ·ÂµÇ¾î Ã³¸®ÇÒ ¼ö ¾øÀ½");
+		//NaN ì²´í¬
+		if (Double.isNaN(val)) {
+			System.out.println("NaNì´ ì…ë ¥ë˜ì–´ ì²˜ë¦¬í•  ìˆ˜ ì—†ìŒ");
 			val = 0.0;
 		} 
 		

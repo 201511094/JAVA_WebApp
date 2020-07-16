@@ -9,10 +9,10 @@ public class SingletonExample {
 		Singleton obj2=Singleton.getInstance();
 		
 		if (obj1==obj2) {
-			System.out.println("°°Àº Singleton °´Ã¼ÀÔ´Ï´Ù.");
+			System.out.println("ê°™ì€ Singleton ê°ì²´ì…ë‹ˆë‹¤.");
 		}
 		else {
-			System.out.println("´Ù¸¥ Singleton °´Ã¼ÀÔ´Ï´Ù.");
+			System.out.println("ë‹¤ë¥¸ Singleton ê°ì²´ì…ë‹ˆë‹¤.");
 		}
 		
 	}

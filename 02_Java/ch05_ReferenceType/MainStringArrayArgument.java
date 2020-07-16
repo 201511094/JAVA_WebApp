@@ -4,7 +4,7 @@ public class MainStringArrayArgument {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		if (args.length != 2) {
-			System.out.println("ÇÁ·Î±×·¥ÀÇ »ç¿ë¹ı");
+			System.out.println("í”„ë¡œê·¸ë¨ì˜ ì‚¬ìš©ë²•");
 			System.out.println("java MainStringArrayArgument num1 num2");
 			System.exit(0);
 		}

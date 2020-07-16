@@ -4,7 +4,7 @@ public class FloatDoubleExample {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		double var1=3.14;
-		float var2=(float)3.14;	//°­Á¦ Çüº¯È¯, µ¥ÀÌÅÍ¼Õ½Ç ÀÖÀ½
+		float var2=(float)3.14;	//í˜• ë³€í™˜
 		float var3=3.14F;
 		double var4=0.1234567890123456789;
 		float var5=0.1234567890123456789F;

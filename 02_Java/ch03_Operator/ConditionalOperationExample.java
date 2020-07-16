@@ -5,10 +5,10 @@ public class ConditionalOperationExample {
 		// TODO Auto-generated method stub
 		int score = 85;
 		char grade = (score>90)?'A':(score>80)?'B':'C';
-		System.out.println(score+"Á¡: "+grade+"µî±ŞÀÔ´Ï´Ù.");
+		System.out.println(score+"ì : "+grade+"ë“±ê¸‰ì…ë‹ˆë‹¤.");
 		
 		score = 94;
 		grade = (score>90)?'A':(score>80)?'B':'C';
-		System.out.println(score+"Á¡: "+grade+"µî±ŞÀÔ´Ï´Ù.");
+		System.out.println(score+"ì : "+grade+"ë“±ê¸‰ì…ë‹ˆë‹¤.");
 	}
 }

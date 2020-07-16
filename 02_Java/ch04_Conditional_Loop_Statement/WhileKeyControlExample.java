@@ -2,35 +2,35 @@ import java.io.IOException;
 
 public class WhileKeyControlExample {
 
-	//throw ExceptionÀº System.in.read()¸Ş¼Òµå¿¡ ´ëÇÑ  ¿¹¿ÜÃ³¸®ÄÚµå
+	//throw Exceptionì€ System.in.read()ë©”ì†Œë“œì— ëŒ€í•œ  ì˜ˆì™¸ì²˜ë¦¬ì½”ë“œ
 	public static void main(String[] args) throws Exception {	
 		// TODO Auto-generated method stub
 		boolean run = true;		
 		int speed = 0;
 		int keyCode = 0;
 		
-		//¸Ş´º
+		//ë©”ë‰´
 		while (run) {
-			if (keyCode!=13 && keyCode!=10) {	//13Àº Ä³¸®Áö¸®ÅÏ, 10Àº ¶óÀÎÇÇµå
+			if (keyCode!=13 && keyCode!=10) {	//13ì€ ìºë¦¬ì§€ë¦¬í„´, 10ì€ ë¼ì¸í”¼ë“œ
 				System.out.println("==========");
-				System.out.println("1. Áõ¼Ó | 2. °¨¼Ó | 3. ÁßÁö");
+				System.out.println("1. ì¦ì† | 2. ê°ì† | 3. ì¤‘ì§€");
 				System.out.println("==========");
-				System.out.print("¼±ÅÃ: ");
+				System.out.print("ì„ íƒ: ");
 			}
 			
 			keyCode = System.in.read();
 			
 			if (keyCode == 49) {		//1
 				speed++;
-				System.out.println("ÇöÀç ¼Óµµ=" + speed);
+				System.out.println("í˜„ì¬ ì†ë„=" + speed);
 			} else if (keyCode == 50) {	//2
 				speed--;
-				System.out.println("ÇöÀç ¼Óµµ=" + speed);
+				System.out.println("í˜„ì¬ ì†ë„=" + speed);
 			} else if (keyCode == 51) { //3
 				run = false;
 			}
 		}			
-		System.out.println("ÇÁ·Î±×·¥ Á¾·á");
+		System.out.println("í”„ë¡œê·¸ë¨ ì¢…ë£Œ");
 		
 	}
 }

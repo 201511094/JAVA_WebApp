@@ -31,13 +31,13 @@ public class EnumWeekExample {
 			today=Week.SATURDAY;
 			break;
 		}
-		System.out.println("¿À´Ã: "+today);
+		System.out.println("ì˜¤ëŠ˜: "+today);
 		
 		if (today == Week.SUNDAY) {
-			System.out.println("ÀÏ¿äÀÏ¿¡´Â Ãà±¸¸¦ ÇÕ´Ï´Ù.");
+			System.out.println("ì¼ìš”ì¼ì—ëŠ” ì¶•êµ¬ë¥¼ í•©ë‹ˆë‹¤.");
 		}
 		else {
-			System.out.println("¿À´ÃÀº ÀÚ¹Ù¸¦ °øºÎÇÕ´Ï´Ù.");
+			System.out.println("ì˜¤ëŠ˜ì€ ìë°”ë¥¼ ê³µë¶€í•©ë‹ˆë‹¤.");
 		}
 	}
 }

@@ -5,10 +5,10 @@ public class BooleanExample {
 		// TODO Auto-generated method stub
 		boolean stop=true;
 		if(stop) {
-			System.out.println("ÁßÁöÇÕ´Ï´Ù.");
+			System.out.println("ì¤‘ì§€í•©ë‹ˆë‹¤.");
 		}
 		else {
-			System.out.println("½ÃÀÛÇÕ´Ï´Ù.");
+			System.out.println("ì‹œìž‘í•©ë‹ˆë‹¤");
 		}
 	}
 }

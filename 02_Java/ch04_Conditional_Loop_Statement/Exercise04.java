@@ -11,7 +11,7 @@ public class Exercise04 {
 			
 			System.out.println("("+dice1+", "+dice2+")");
 			
-			//µÎ ´«ÀÇ ÇÕÀÌ 5°¡ µÇ¸é ¸ØÃã
+			//ë‘ ëˆˆì˜ í•©ì´ 5ê°€ ë˜ë©´ ë©ˆì¶¤
 			if (dice1+dice2 == 5) {
 				break;
 			}

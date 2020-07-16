@@ -8,16 +8,16 @@ public class SwitchCharExample {
 		switch(grade) {
 			case 'A':
 			case 'a':
-				System.out.println(grade+": ¿ì¼ö È¸¿øÀÔ´Ï´Ù.");
+				System.out.println(grade+": ìš°ìˆ˜ íšŒì›ì…ë‹ˆë‹¤.");
 				break;
 				
 			case 'B':
 			case 'b':
-				System.out.println(grade+": ÀÏ¹İ È¸¿øÀÔ´Ï´Ù.");
+				System.out.println(grade+": ì¼ë°˜ íšŒì›ì…ë‹ˆë‹¤.");
 				break;
 				
 			default:
-				System.out.println(grade+": ¼Õ´ÔÀÔ´Ï´Ù.");
+				System.out.println(grade+": ì†ë‹˜ì…ë‹ˆë‹¤.");
 		}
 	}
 }

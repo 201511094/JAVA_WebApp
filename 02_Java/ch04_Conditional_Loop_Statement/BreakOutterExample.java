@@ -3,7 +3,7 @@ public class BreakOutterExample {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//ÁßÃ¸µÈ ¹İº¹¹®À» ¸ğµÎ Á¾·áÇÏ±â À§ÇØ ÀÌ¸§(¶óº§)À» ºÙÀÓ
+		//ì¤‘ì²©ëœ ë°˜ë³µë¬¸ì„ ëª¨ë‘ ì¢…ë£Œí•˜ê¸° ìœ„í•´ ì´ë¦„(ë¼ë²¨)ì„ ë¶™ì„
 		Outter: for (char upper='A'; upper<='Z'; upper++) {
 			for (char lower='a'; lower<='z'; lower++) {
 				System.out.println(upper+"-"+lower);
@@ -12,6 +12,6 @@ public class BreakOutterExample {
 				}
 			}
 		}
-		System.out.println("ÇÁ·Î±×·¥ ½ÇÇà Á¾·á");
+		System.out.println("í”„ë¡œê·¸ë¨ ì‹¤í–‰ ì¢…ë£Œ");
 	}
 }

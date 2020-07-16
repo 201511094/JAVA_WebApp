@@ -3,7 +3,7 @@ public class InputDataCheckNaNExample1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String userInput = "NaN";	//¾ÇÀÇÀû ÀÔ·Â
+		String userInput = "NaN";	//ì•…ì˜ì  ì…ë ¥
 		double val = Double.valueOf( userInput );
 		double currentBalance = 10000.0;
 		

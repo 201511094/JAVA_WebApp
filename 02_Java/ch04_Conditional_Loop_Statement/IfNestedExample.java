@@ -7,7 +7,7 @@ public class IfNestedExample {
 		//int score = (int)(Math.random()*20) + 81;	//0+81 ~ 19+81
 		int score = (int)(Math.random()*100) + 1;	//1 ~ 100
 		
-		System.out.println("Á¡¼ö: " + score);
+		System.out.println("ì ìˆ˜: " + score);
 		
 		if (score >= 90) {
 			if (score >= 95) {
@@ -42,7 +42,7 @@ public class IfNestedExample {
 		else {
 			grade="F";
 		}
-		System.out.println("ÇĞÁ¡: " + grade);
+		System.out.println("í•™ì : " + grade);
 		
 	}
 }

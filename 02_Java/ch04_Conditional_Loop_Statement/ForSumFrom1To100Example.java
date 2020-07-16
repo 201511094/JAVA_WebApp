@@ -8,7 +8,7 @@ public class ForSumFrom1To100Example {
 		for(int i=1; i<=100; i++) {
 			sum += i;
 		}
-		System.out.println("1~100±îÁöÀÇ ÇÕ : " + sum);
+		System.out.println("1~100ê¹Œì§€ì˜ í•© : " + sum);
 	
 	/*
 		int sum = 0; 
@@ -16,8 +16,8 @@ public class ForSumFrom1To100Example {
 		
 		for(i=1; i<=100; i++) {
 			sum += i;
-		}	//for¹®À» ºüÁ®³ª¿À¸é¼­ i=101ÀÌ µÊ
-		System.out.println("1 ~ " + (i-1) + "±îÁöÀÇ ÇÕ: " + sum);
+		}	//forë¬¸ì„ ë¹ ì ¸ë‚˜ì˜¤ë©´ì„œ i=101ì´ ë¨
+		System.out.println("1 ~ " + (i-1) + "ê¹Œì§€ì˜ í•©: " + sum);
 	*/
 		
 	}

@@ -6,22 +6,22 @@ public class LogicalOperatorExample {
 		int charCode = 'A';	
 		
 		if( (charCode>=65) & (charCode<=90) ) {
-			System.out.println(charCode+": ´ë¹®ÀÚ");
+			System.out.println(charCode+": ëŒ€ë¬¸ì");
 		}
 		if( (charCode>=97) && (charCode<=122) ) {
-			System.out.println(charCode+": ¼Ò¹®ÀÚ");
+			System.out.println(charCode+": ì†Œë¬¸ì");
 		}	
 		if( !(charCode<48) && !(charCode>57) ) {
-			System.out.println(charCode+": 0~9 ¼ıÀÚ");
+			System.out.println(charCode+": 0~9 ìˆ«ì");
 		}
 		
 		int value = 6;
 		
 		if( (value%2==0) | (value%3==0) ) {
-			System.out.println(value+": 2 ¶Ç´Â 3ÀÇ ¹è¼ö");
+			System.out.println(value+": 2 ë˜ëŠ” 3ì˜ ë°°ìˆ˜");
 		}
 		if( (value%2==0) || (value%3==0) ) {
-			System.out.println(value+": 2 ¶Ç´Â 3ÀÇ ¹è¼ö");
+			System.out.println(value+": 2 ë˜ëŠ” 3ì˜ ë°°ìˆ˜");
 		}
 	}
 }

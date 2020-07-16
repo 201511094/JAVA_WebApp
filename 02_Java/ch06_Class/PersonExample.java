@@ -3,7 +3,7 @@ public class PersonExample {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Person p1=new Person("123456-1234567", "°è¹é");
+		Person p1=new Person("123456-1234567", "ê³„ë°±");
 		
 		System.out.println(p1.nation);
 		System.out.println(p1.ssn);
@@ -11,7 +11,7 @@ public class PersonExample {
 		
 		//p1.nation="USA";
 		//p1.ssn="654321-7654321";
-		p1.name="À»Áö¹®´ö";
+		p1.name="ì„ì§€ë¬¸ë•";
 		
 		System.out.println(p1.nation);
 		System.out.println(p1.ssn);

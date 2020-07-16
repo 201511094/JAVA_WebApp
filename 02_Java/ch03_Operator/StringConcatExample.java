@@ -4,7 +4,7 @@ public class StringConcatExample {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		String str1 = "JDK" + 6.0;
-		String str2 = str1 + " Ư¡";
+		String str2 = str1 + "특징";
 		String str3 = "JDK" + 3 + 3.0;	//JDK3 + 3.0
 		String str4 = 3 + 3.0 + "JDK";	//6.0 + JDK
 		

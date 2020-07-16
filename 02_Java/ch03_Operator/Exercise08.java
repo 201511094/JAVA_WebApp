@@ -8,11 +8,11 @@ public class Exercise08 {
 		double z=x%y;
 		
 		if (Double.isNaN(z) == true) {
-			System.out.println("0.0À¸·Î ³ª´­ ¼ö ¾ø½À´Ï´Ù.");
+			System.out.println("0.0ìœ¼ë¡œ ë‚˜ëˆŒ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 		}
 		else {
 			double result=z+10;
-			System.out.println("°á°ú: "+result);
+			System.out.println("ê²°ê³¼: "+result);
 		}
 	}
 }

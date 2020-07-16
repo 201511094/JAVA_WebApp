@@ -9,10 +9,10 @@ public class ArrayLengthExample {
 		for (int i=0; i<scores.length; i++) {
 			sum += scores[i];
 		}
-		System.out.println("ÃÑÇÕ: " + sum);
+		System.out.println("ì´í•©: " + sum);
 		
 		double avg = (double) sum / scores.length;	//sum / (double)scores.length;
-		System.out.println("Æò±Õ: " + avg);
+		System.out.println("í‰ê· : " + avg);
 		
 	}
 }

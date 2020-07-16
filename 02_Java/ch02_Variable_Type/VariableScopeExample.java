@@ -5,7 +5,7 @@ public class VariableScopeExample {
 		if (v1 > 10) {
 			int v2 = v1-10;
 		}
-		//int v3 = v1+v2+5;	//v2°¡ ¾øÀ¸¹Ç·Î ¿¡·¯
+		//int v3 = v1+v2+5;	//v2 ì‚¬ìš©ë¶ˆê°€
 		int v3 = v1+5;
 		
 		System.out.println("v3: "+v3);

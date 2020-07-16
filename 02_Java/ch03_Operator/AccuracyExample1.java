@@ -6,10 +6,10 @@ public class AccuracyExample1 {
 		int apple = 1;
 		double pieceUnit = 0.1;
 		int number = 7;
-		double result = apple - number*pieceUnit;	//±Ù»çÄ¡
+		double result = apple - number*pieceUnit;	//ï¿½Ù»ï¿½Ä¡
 		
-		System.out.println("»ç°ú ÇÑ °³¿¡¼­ ");
-		System.out.println("0.7Á¶°¢À» »©¸é, ");
-		System.out.println(result + " Á¶°¢ÀÌ ³²´Â´Ù.");
+		System.out.println("ì‚¬ê³¼ í•œ ê°œì—ì„œ ");
+		System.out.println("0.7ì¡°ê°ì„ ë¹¼ë©´, ");
+		System.out.println(result + " ì¡°ê°ì´ ë‚¨ëŠ”ë‹¤.");
 	}
 }

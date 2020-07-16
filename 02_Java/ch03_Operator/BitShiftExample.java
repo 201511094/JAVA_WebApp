@@ -4,11 +4,11 @@ public class BitShiftExample {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println("1 << 3 = " + (1<<3));	//1 * 2^3	
-		System.out.println("-8 >> 3 = " + (-8>>3));	//ºó°ø°£¿¡ Ã¤¿ö³Ö´Â °ªÀÌ 1(MSB)
-		System.out.println("-8 >>> 3 = " + (-8>>>3));	//0À¸·Î Ã¤¿ö³Ö±â
+		System.out.println("-8 >> 3 = " + (-8>>3));	//ë¹ˆê³µê°„ì— ì±„ì›Œë„£ëŠ” ê°’ì´ 1(MSB)
+		System.out.println("-8 >>> 3 = " + (-8>>>3));	//0ìœ¼ë¡œ ì±„ì›Œë„£ê¸°
 
 		System.out.println("3 << 5 = " + (3<<5));		//3 * 2^5
-		System.out.println("-21 >> 4 = " + (-21>>4));	//ºó°ø°£¿¡ Ã¤¿ö³Ö´Â °ªÀÌ 1(MSB)
-		System.out.println("-21 >>> 4 = " + (-21>>>4));	//0À¸·Î Ã¤¿ö³Ö±â
+		System.out.println("-21 >> 4 = " + (-21>>4));	//ë¹ˆê³µê°„ì— ì±„ì›Œë„£ëŠ” ê°’ì´ 1(MSB)
+		System.out.println("-21 >>> 4 = " + (-21>>>4));	//0ìœ¼ë¡œ ì±„ì›Œë„£ê¸°
 	}
 }
