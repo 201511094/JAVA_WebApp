@@ -14,8 +14,8 @@ public class ArrayCreateByValueListExample1 {
 			sum += scores[i];
 		}
 		
-		System.out.println("ÃÑÇÕ : " + sum);		
+		System.out.println("ì´í•©: " + sum);		
 		double avg = (double) sum / 3;	//double avg=sum / 3.0
-		System.out.println("Æò±Õ : " + avg);
+		System.out.println("í‰ê· : " + avg);
 	}
 }
