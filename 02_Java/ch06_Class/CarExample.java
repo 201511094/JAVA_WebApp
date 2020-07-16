@@ -3,72 +3,18 @@ public class CarExample {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		/*
-				Car myCar = new Car();	//°´Ã¼ »ı¼º
-				
-				System.out.println("Á¦ÀÛÈ¸»ç: " + myCar.company);
-				System.out.println("¸ğµ¨¸í: " + myCar.model);
-				System.out.println("»ö±ò: " + myCar.color);
-				System.out.println("ÃÖ°í¼Óµµ: " + myCar.maxSpeed);
-				System.out.println("ÇöÀç¼Óµµ: " + myCar.speed);
-				
-				myCar.speed = 60;	//ÇÊµå °ª º¯°æ
-				System.out.println("¼öÁ¤µÈ ¼Óµµ: " + myCar.speed);
-		*/
+		Car myCar=new Car();
 		
-		//Car myCar=new Car("°ËÁ¤", 3000);
+		myCar.setSpeed(-50);
+		System.out.println("í˜„ì¬ì†ë„: "+myCar.getSpeed());
 		
-//		Car car1 = new Car();
-//		System.out.println("car1.company : " + car1.company);
-//		System.out.println();
-//		
-//		Car car2 = new Car("ÀÚ°¡¿ë");
-//		System.out.println("car2.company : " + car2.company);
-//		System.out.println("car2.model : " + car2.model);
-//		System.out.println();
-//		
-//		Car car3 = new Car("ÀÚ°¡¿ë", "»¡°­");
-//		System.out.println("car3.company : " + car3.company);
-//		System.out.println("car3.model : " + car3.model);
-//		System.out.println("car3.color : " + car3.color);
-//		System.out.println();
-//		
-//		Car car4 = new Car("ÅÃ½Ã", "°ËÁ¤", 200);
-//		System.out.println("car4.company : " + car4.company);
-//		System.out.println("car4.model : " + car4.model);
-//		System.out.println("car4.color : " + car4.color);
-//		System.out.println("car4.maxSpeed : " + car4.maxSpeed);
-		
-		
-//		Car myCar = new Car();
-//		myCar.setGas(5);	//setGas¸Ş¼Òµå
-//		boolean gasState = myCar.isLeftGas();	//isLeftGas¸Ş¼Òµå
-//		
-//		if (gasState) {
-//			System.out.println("Ãâ¹ßÇÕ´Ï´Ù.");
-//			myCar.run();	//run¸Ş¼Òµå
-//		}
-//		
-//		if (myCar.isLeftGas()) {	//isLeftGas¸Ş¼Òµå
-//			System.out.println("gas¸¦ ÁÖÀÔÇÒ ÇÊ¿ä°¡ ¾ø½À´Ï´Ù.");
-//		}
-//		else {
-//			System.out.println("gas¸¦ ÁÖÀÔÇÏ¼¼¿ä.");
-//		}
-		
-		
-//		Car myCar = new Car();
-//		myCar.keyTurnOn();	//keyTurnOn¸Ş¼Òµå
-//		myCar.run();	//run¸Ş¼Òµå
-//		int speed=myCar.getSpeed();	//getSpeed¸Ş¼Òµå
-//		System.out.println("ÇöÀç ¼Óµµ: "+speed+"km/h");
-		
-		
-//		Car myCar=new Car("Æ÷¸£½¦");
-//		Car yourCar=new Car("º¥Ã÷");
-//		
-//		myCar.run();
-//		yourCar.run();
+		myCar.setSpeed(60);
+		System.out.println("í˜„ì¬ì†ë„: "+myCar.getSpeed());
+
+		if (!myCar.isStop()) {
+			myCar.setStop(true);
+		}
+		System.out.println("í˜„ì¬ì†ë„: "+myCar.getSpeed());
 		
 	}
 }

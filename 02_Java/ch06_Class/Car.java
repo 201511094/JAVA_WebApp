@@ -1,125 +1,30 @@
 
 public class Car {
+	//ÌïÑÎìú
+	private int speed;
+	private boolean stop;
 	
-//	String company="«ˆ¥Î¿⁄µø¬˜";
-//	String model="±◊∑£¿˙";
-//	String color="∞À¡§";
-//	int maxSpeed=350;
-//	int speed;
-	 
-	//« µÂ
-//	String company="«ˆ¥Î¿⁄µø¬˜";
-//	String model;
-//	String color;
-//	int maxSpeed;
+	//ÏÉùÏÑ±Ïûê
 	
-	
-	//ª˝º∫¿⁄
-//	Car() {}
-//	Car(String model) {
-//		this.model=model;
-//	}
-//	Car(String model, String color) {
-//		this.model=model;
-//		this.color=color;
-//	}
-//	Car(String model, String color, int maxSpeed) {
-//		this.model=model;
-//		this.color=color;
-//		this.maxSpeed=maxSpeed;
-//	}
-	
-	
-	//ª˝º∫¿⁄ ¡ﬂ∫π ¡ˆøÏ±‚
-//	Car() {}
-//	Car(String model){
-//		this(model, "¿∫ªˆ", 250);		//∏« πÿ¿« ª˝º∫¿⁄ »£√‚
-//	}
-//	Car(String model, String color) {
-//		this(model, color, 250);	//∏« πÿ¿« ª˝º∫¿⁄ »£√‚
-//	}
-//	Car(String model, String color, int maxSpeed) {
-//		this.model=model;
-//		this.color=color;
-//		this.maxSpeed=maxSpeed;
-//	}
-	
-	//∏ﬁº“µÂ ∏Æ≈œ∞™
-//	int gas;
-//	
-//	void setGas(int gas) {
-//		this.gas=gas;
-//	}
-//	boolean isLeftGas() {
-//		if (gas == 0) {
-//			System.out.println("gas∞° æ¯Ω¿¥œ¥Ÿ.");
-//			return false;
-//		}
-//		System.out.println("gas∞° ¿÷Ω¿¥œ¥Ÿ.");
-//		return true;
-//		
-//	}
-//	void run() {
-//		while(true) {
-//			if (gas>0) {
-//				System.out.println("¥ﬁ∏≥¥œ¥Ÿ. gas¿‹∑Æ: "+gas);
-//				gas -= 1;
-//			}
-//			else {
-//				System.out.println("∏ÿ√‰¥œ¥Ÿ. gas¿‹∑Æ: "+gas);
-//				return;
-//			}
-//		}
-//	}
-	
-	
-	//≈¨∑°Ω∫ ø‹∫Œø°º≠ ∏ﬁº“µÂ »£√‚
-//	int speed;
-//	
-//	int getSpeed() {
-//		return speed;
-//	}
-//	void keyTurnOn() {
-//		System.out.println("≈∞∏¶ µπ∏≥¥œ¥Ÿ.");
-//	}
-//	void run() {
-//		for (int i=10; i<=50; i+=10) {
-//			speed=i;
-//			System.out.println("¥ﬁ∏≥¥œ¥Ÿ. Ω√º”: "+speed+"km/h");
-//		}
-//	}
-	
-	
-	//¿ŒΩ∫≈œΩ∫ ∏‚πˆøÕ this
-//	String model;
-//	int speed;
-//	
-//	Car(String model) {
-//		this.model=model;
-//	}
-//	
-//	void setSpeed(int speed) {
-//		this.speed=speed;
-//	}
-//	void run() {
-//		for (int i=0;i<50;i+=10) {
-//			this.setSpeed(i);
-//			System.out.println(this.model+"¿Ã/∞° ¥ﬁ∏≥¥œ¥Ÿ. Ω√º”: "+this.speed+"km/h");
-//		}
-//	}
-	
-	
-	//¡§¿˚ ∏ﬁº“µÂøÕ ∫Ì∑œ º±æ
-	//CarExample.java ¡÷ºÆ√≥∏Æ « ø‰
-	int speed;
-	
-	void run() {
-		System.out.println(speed+"¿∏∑Œ ¥ﬁ∏≥¥œ¥Ÿ.");
+	//Î©îÏÜåÎìú
+	public int getSpeed() {
+		return speed;
 	}
-	public static void main(String[] args) {
-		Car myCar=new Car();
-		myCar.speed=60;
-		myCar.run();
+	public void setSpeed(int speed) {
+		if (speed < 0) {
+			this.speed=0;
+			return;
+		}
+		else {
+			this.speed=speed;
+		}
 	}
 	
+	public boolean isStop() {
+		return stop;
+	}
+	public void setStop(boolean stop) {
+		this.stop=stop;
+		this.speed=0;
+	}
 }
