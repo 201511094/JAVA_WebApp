@@ -9,7 +9,7 @@ public class Child extends Parent {
 	}
 	public Child(String name) {
 		this.name=name;
-		System.out.println("child(String name) call");
+		System.out.println("Child(String name) call");
 	}
 	
 } 
