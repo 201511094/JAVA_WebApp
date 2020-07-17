@@ -1,4 +1,4 @@
-
+﻿
 public class InstanceofExample {
 
 	public static void main(String[] args) {
@@ -24,6 +24,6 @@ public class InstanceofExample {
 	}
 	public static void method2(Parent parent) {
 		Child child = (Child) parent;
-		System.out.println("method2 = Child로 변환 성공");
+		System.out.println("method2 - Child로 변환 성공");
 	}
 }
