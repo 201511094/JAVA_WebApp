@@ -4,8 +4,24 @@ public class StudentExample {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Student s1=new Student();
-		System.out.println("s1 º¯¼ö°¡ Student °´Ã¼¸¦ ÂüÁ¶ÇÕ´Ï´Ù.");
+		System.out.println("s1 ë³€ìˆ˜ê°€ Studentê°ì²´ë¥¼ ì°¸ì¡°í•©ë‹ˆë‹¤.");
+		
+		System.out.println("==========");
 		Student s2=new Student();
-		System.out.println("s2 º¯¼ö°¡ ¶Ç ´Ù¸¥ Student °´Ã¼¸¦ ÂüÁ¶ÇÕ´Ï´Ù.");
+		System.out.println("s2ì˜ ë‚˜ì´: "+s2.age);
+		System.out.println("s2ì˜ ì´ë¦„: "+s2.name);
+		
+		System.out.println("==========");
+		Student s3=new Student(20);
+		System.out.println("s3ì˜ ë‚˜ì´: "+s3.age);
+		System.out.println("s3ì˜ ì´ë¦„: "+s3.name);
+		
+		System.out.println("==========");
+		Student s4=new Student();
+		s4.setAge(27);
+		s4.setName("ezen");
+		System.out.println("s4ì˜ ë‚˜ì´: "+s4.age);
+		System.out.println("s4ì˜ ì´ë¦„: "+s4.name);
+		
 	}
 }
