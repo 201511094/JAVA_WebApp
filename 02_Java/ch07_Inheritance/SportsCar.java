@@ -1,9 +1,9 @@
 
 public class SportsCar extends Car {
-	@Override
-	public void speedUp() {
-		speed += 10;
-	}
+//	@Override
+//	public void speedUp() {
+//		speed += 10;
+//	}
 	
 	//오버라이드 불가능
 //	@Override
