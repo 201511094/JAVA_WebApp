@@ -9,10 +9,20 @@ public class RemoteControlExample {
 //		rc = new Audio();
 		
 		//익명 구현 클래스 - bin\RemoteControlExample$1
-		RemoteControl rc = new RemoteControl() {
-			public void turnOn() {}
-			public void turnOff() {}
-			public void setVolume(int volume) {}
-		};
+//		RemoteControl rc = new RemoteControl() {
+//			public void turnOn() {}
+//			public void turnOff() {}
+//			public void setVolume(int volume) {}
+//		};
+		
+		//인터페이스 사용
+		RemoteControl rc = null;
+		rc = new Television();
+		rc.turnOn();
+		rc.turnOff();
+		
+		rc = new Audio();
+		rc.turnOn();
+		rc.turnOff();
 	}
 }
