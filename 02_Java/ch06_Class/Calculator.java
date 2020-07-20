@@ -1,8 +1,8 @@
 
 public class Calculator {
-	//¸Ş¼Òµå
+	//ë©”ì†Œë“œ
 //	void powerOn() {
-//		System.out.println("Àü¿øÀ» ÄÕ´Ï´Ù.");
+//		System.out.println("ì „ì›ì„ ì¼­ë‹ˆë‹¤.");
 //	}
 //	int plus(int x, int y) {
 //		int result = x + y;
@@ -12,31 +12,31 @@ public class Calculator {
 //		double result = (double)x / (double)y;
 //		return result;
 //	}
-//	//¸®ÅÏ°ª ¾øÀ½
+//	//ë¦¬í„´ê°’ ì—†ìŒ
 //	void powerOff() {
-//		System.out.println("Àü¿øÀ» ²ü´Ï´Ù.");
+//		System.out.println("ì „ì›ì„ ë•ë‹ˆë‹¤.");
 //	}
 	
-	//Å¬·¡½º ³»ºÎ¿¡¼­ ¸Ş¼Òµå È£Ãâ
+	//í´ë˜ìŠ¤ ë‚´ë¶€ì—ì„œ ë©”ì†Œë“œ í˜¸ì¶œ
 //	int plus(int x, int y) {
 //		int result=x+y;
 //		return result;
 //	}
 //	double avg(int x, int y) {
-//		double sum=plus(x,y);	//plus¸Ş¼Òµå È£Ãâ
+//		double sum=plus(x,y);	//plusë©”ì†Œë“œ í˜¸ì¶œ
 //		double result=sum/2;
 //		return result;
 //	}
 //	void execute() {
-//		double result=avg(7,10);	//avg¸Ş¼Òµå È£Ãâ
-//		println("½ÇÇà°á°ú: "+result);
+//		double result=avg(7,10);	//avgë©”ì†Œë“œ í˜¸ì¶œ
+//		println("ì‹¤í–‰ê²°ê³¼: "+result);
 //	}
 //	void println(String message) {
 //		System.out.println(message);
 //	}
 	
 	
-	//¸Ş¼Òµå ¿À¹ö·Îµù
+	//ë©”ì†Œë“œ ì˜¤ë²„ë¡œë”©
 //	double areaRectangle(double width) {
 //		return width*width;
 //	}
@@ -47,12 +47,17 @@ public class Calculator {
 	
 	//static
 	static double pi=3.14159;
+	int width, height;	//ì¸ìŠ¤í„´ìŠ¤ë©¤ë²„
 	
 	static int plus(int x, int y) {
 		return x+y;
 	}
 	static int minus(int x, int y) {
 		return x-y;
+	}
+	
+	int mul(int x, int y) {		//staticì—†ìŒ, ì¸ìŠ¤í„´ìŠ¤ ë©”ì†Œë“œ
+		return x*y;
 	}
 	
 }

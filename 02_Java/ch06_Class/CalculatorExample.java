@@ -7,33 +7,51 @@ public class CalculatorExample {
 //		myCalc.powerOn();
 //		
 //		int result1 = myCalc.plus(5, 6);
-//		System.out.println("ÇÕÇÑ °á°ú°ª: " + result1);
+//		System.out.println("í•©í•œ ê²°ê³¼ê°’: " + result1);
 //		
 //		byte x = 10;
 //		byte y = 4;
 //		double result2 = myCalc.divide(x, y);
-//		System.out.println("³ª´« °á°ú°ª: " + result2);
+//		System.out.println("ë‚˜ëˆˆ ê²°ê³¼ê°’: " + result2);
 //		
 //		myCalc.powerOff();
 		
 //		Calculator myCalc=new Calculator();
-//		myCalc.execute();	//execute¸Ş¼Òµå È£Ãâ
+//		myCalc.execute();	//executeë©”ì†Œë“œ í˜¸ì¶œ
 		
 //		Calculator myCalcu=new Calculator();
 //		double result1=myCalcu.areaRectangle(10);
 //		double result2=myCalcu.areaRectangle(10, 20);
 //		
-//		System.out.println("Á¤»ç°¢Çü ³ĞÀÌ: "+result1);
-//		System.out.println("Á÷»ç°¢Çü ³ĞÀÌ: "+result2);
+//		System.out.println("ì •ì‚¬ê°í˜• ë„“ì´: "+result1);
+//		System.out.println("ì§ì‚¬ê°í˜• ë„“ì´: "+result2);
 		
 		
-		double result1=10*10*Calculator.pi;	//¹Ù·Î »ç¿ë °¡´É
+		double result1=10*10*Calculator.pi;	//ë°”ë¡œ ì‚¬ìš© ê°€ëŠ¥
 		int result2=Calculator.plus(10, 5);
 		int result3=Calculator.minus(10, 5);
+		//int result4=Calculator.mul(10, 5);	//staticì´ ì•„ë‹ˆë¯€ë¡œ ì´ë ‡ê²Œ ì‚¬ìš© ë¶ˆê°€
+
 		
 		System.out.println("result1: "+result1);
 		System.out.println("result2: "+result2);
 		System.out.println("result3: "+result3);
+		//System.out.println("result4: "+result4);
 		
+		//System.out.println(Calculator.width+1);
+		//System.out.println(Calculator.height+1);
+		
+		
+		//ê°ì²´ë¡œë„ ì ‘ê·¼ì´ ê°€ëŠ¥, staticì´ë¯€ë¡œ ê°ì²´ë¥¼ ë§Œë“¤ì§€ ì•Šì•„ë„ ì ‘ê·¼ ê°€ëŠ¥
+		Calculator c = new Calculator();
+		result2=c.plus(1,2);
+		result3=c.minus(3,2);
+		int result4=c.mul(10, 5);
+		
+		System.out.println("result2: "+result2);
+		System.out.println("result3: "+result3);
+		System.out.println("result4: "+result4);
+		System.out.println(c.width+1);	//ì¸ìŠ¤í„´ìŠ¤ ë©¤ë²„ë“¤ì€ ê°ì²´ ìƒì„± í›„ ì ‘ê·¼ ê°€ëŠ¥
+		System.out.println(c.height+1);
 	}
 }
