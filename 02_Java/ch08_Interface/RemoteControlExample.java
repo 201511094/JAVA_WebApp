@@ -16,15 +16,19 @@ public class RemoteControlExample {
 //		};
 		
 		//인터페이스 사용
-		RemoteControl rc = null;
-		rc = new Television();
-		rc.turnOn();
-		//rc.turnOff();
-		rc.setMute(true);
+//		RemoteControl rc = null;
+//		rc = new Television();
+//		rc.turnOn();
+//		//rc.turnOff();
+//		rc.setMute(true);
+//		
+//		rc = new Audio();
+//		rc.turnOn();
+//		//rc.turnOff();
+//		rc.setMute(true);
 		
-		rc = new Audio();
-		rc.turnOn();
-		//rc.turnOff();
-		rc.setMute(true);
+		//정적 메소드 사용
+		RemoteControl.changeBattery();
+		
 	}
 }
