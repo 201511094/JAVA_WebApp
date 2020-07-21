@@ -1,3 +1,4 @@
+package sec02;
 
 /* 바깥 클래스 */
 public class A {
