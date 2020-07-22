@@ -1,4 +1,4 @@
-﻿
+
 public class InstanceofExample {
 
 	public static void main(String[] args) {
@@ -7,9 +7,18 @@ public class InstanceofExample {
 		method1(parentA);
 		method2(parentA);
 		
-		Parent parentB = new Parent();
-		method1(parentB);
-		//method2(parentB);	//클래스 형 변환 예외발생
+//		Parent parentB = new Parent();
+//		method1(parentB);
+//		method2(parentB);	//클래스 형 변환 예외발생
+		
+		//예외처리
+		try {
+			Parent parentB = new Parent();
+			method1(parentB);
+			method2(parentB);
+		} catch (ClassCastException e){
+			System.out.println("클래스 캐스팅 예외발생");
+		}
 	}
 	
 	public static void method1(Parent parent) {
