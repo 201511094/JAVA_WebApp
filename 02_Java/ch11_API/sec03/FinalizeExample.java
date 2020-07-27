@@ -8,7 +8,7 @@ public class FinalizeExample {
 		for (int i=0; i<50; i++) {
 			counter = new Counter(i);
 			
-			counter = null;
+			counter = null;	//counter객체를 쓰레기로 만듦
 			System.gc();//Garbage Collector 실행 요청
 		}
 	}
