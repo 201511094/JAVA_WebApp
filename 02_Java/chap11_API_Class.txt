@@ -187,7 +187,22 @@
  - String클래스에는 매개 변수의 타입별로 valueOf()메소드가 오버로딩되어 있음: boolean, char, int, long, double, float
 
 [11.8] StringTokenizer클래스
+* 문자열이 특정 구분자(delimiter)로 연결되어 있을 경우 구분자를 기준으로 부분 문자열을 분리할 수 있다.
+ - String의 split()메소드 또는 java.util패키지의 StringTokenizer클래스 이용
+ - 차이점: split()는 정규 표현식으로 구분, StringTokenizer는 문자로 구분
 
+* split()메소드
+ - 정규 표현식을 구분자로 해서 문자열을 분리한 후 배열에 저장하고 리턴함
+ - String[] result = str.split("정규표현식");
+
+* StringTokenizer클래스
+ - 문자열이 한 종류의 구분자로 연결되어 있을 경우 StringTokenizer클래스를 사용하여 문자열(토큰)을 분리할 수 있음
+ - StringTokenizer객체를 생성할 때 (전체 문자열, 구분자) 2개의 매개값을 줌
+ - 매개값에서 구분자 생략 시 공백(Space)이 기본 구분자가 됨
+* StringTokenizer객체가 생성되면 다음 메소드들을 이용해서 부분 문자열을 분리해 낼 수 있다.
+ - int countTokens(): 남아 있는 토큰 수
+ - boolean hasMoreTokens(): 토큰이 남아있는지 여부
+ - String nextToken(): 토큰을 하나씩 꺼냄
 
 [11.9] StringBuffer, StringBuilder클래스
 
