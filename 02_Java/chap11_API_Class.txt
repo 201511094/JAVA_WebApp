@@ -193,7 +193,7 @@
 
 * split()메소드
  - 정규 표현식을 구분자로 해서 문자열을 분리한 후 배열에 저장하고 리턴함
- - String[] result = str.split("정규표현식");
+ - String[] result = str.split("정규표현식");, 정규표현식은 파이프(|)기호로 연결한 형태
 
 * StringTokenizer클래스
  - 문자열이 한 종류의 구분자로 연결되어 있을 경우 StringTokenizer클래스를 사용하여 문자열(토큰)을 분리할 수 있음
@@ -205,4 +205,28 @@
  - String nextToken(): 토큰을 하나씩 꺼냄
 
 [11.9] StringBuffer, StringBuilder클래스
+* 문자열을 저장하는 String은 내부의 문자열을 수정할 수 없다.
+ - 문자열을 결합하는 +연산자를 많이 사용하면 할수록 그만큼 String객체의 수가 늘어나기 때문에 프로그램 성능을 느리게 한다.
+* 문자열을 변경하는 작업이 많을 경우에는 java.lang패키지의 StringBuffer나 StringBuilder클래스를 사용하는 것이 좋다.
+ - 내부 버퍼에 문자열을 저장해 두고 그 안에서 추가, 수정, 삭제 작업을 할 수 있도록 설계되어 있음
+ - String처럼 새로운 객체를 만들지 않고도 문자열 조작 가능
 
+* StringBuffer
+ - 멀티 스레드 환경에서 사용할 수 있도록 동기화가 적용되어 있어 스레드에 안전
+* StringBuilder
+ - 단일 스레드 환경에서만 사용하도록 설계됨
+ - StringBuilder() 기본 생성자: 16개의 문자를 저장할 수 있는 초기 버퍼
+ - StringBuilder(int capacity): capacity로 주어진 개수만큼 문자들을 저장할 수 있는 초기 버퍼
+ - StringBuilder(String str): str로 주어진 매개값ㅇ르 버퍼의 초기값으로 저장
+ - 버퍼가 부족할 경우 자동으로 버퍼 크기를 늘려주기 때문에 초기 버퍼의 크기는 중요하지 않음
+ - StringBuilder객체가 생성되면 버퍼 내에서 문자 추가, 삽입, 삭제 등의 작업을 메소드를 통해 할 수 있음
+
+[11.10] 정규 표현식과 Pattern클래스
+* 정규 표현식은 문자 또는 숫자 기호와 반복 기호가 결합된 문자열이다.
+ - java.util.regex.Pattern클래스 Summary of regular-expression constructs
+
+* Pattern클래스
+ - 정규 표현식으로 문자열을 검증할 때 java.util.regex.Pattern클래스의 정적 메소드인 matches()메소드 사용
+ - boolean result = Pattern.matches("정규표현식", "검증할 문자열");
+
+[11.11] Arrays클래스
