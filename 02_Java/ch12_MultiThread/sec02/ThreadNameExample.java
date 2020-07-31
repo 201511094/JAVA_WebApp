@@ -1,19 +1,20 @@
 package sec02;
 
 public class ThreadNameExample {
+	public class ThreadNameExample {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Thread mainThread = Thread.currentThread();
-		System.out.println("ÇÁ·Î±×·¥ ½ÃÀÛ ½º·¹µå ÀÌ¸§: " + mainThread.getName());
-		
-		ThreadA threadA = new ThreadA();
-		System.out.println("ÀÛ¾÷ ½º·¹µå ÀÌ¸§: " + threadA.getName());
-		threadA.start();
-		
-		ThreadB threadB = new ThreadB();
-		System.out.println("ÀÛ¾÷ ½º·¹µå ÀÌ¸§: " + threadB.getName());
-		threadB.start();
-		
+		public static void main(String[] args) {
+			// TODO Auto-generated method stub
+			Thread mainThread = Thread.currentThread();
+			System.out.println("í”„ë¡œê·¸ë¨ ì‹œì‘ ìŠ¤ë ˆë“œ ì´ë¦„: " + mainThread.getName());
+			
+			ThreadA threadA = new ThreadA();
+			System.out.println("ì‘ì—… ìŠ¤ë ˆë“œ ì´ë¦„: " + threadA.getName());
+			threadA.start();
+			
+			ThreadB threadB = new ThreadB();
+			System.out.println("ì‘ì—… ìŠ¤ë ˆë“œ ì´ë¦„: " + threadB.getName());
+			threadB.start();
+			
+		}
 	}
-}

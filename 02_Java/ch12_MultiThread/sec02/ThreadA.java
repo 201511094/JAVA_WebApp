@@ -2,12 +2,12 @@ package sec02;
 
 public class ThreadA extends Thread {
 	public ThreadA() {
-		setName("ThreadA");	//½º·¹µå ÀÌ¸§ ¼³Á¤
+		setName("ThreadA");	//ìŠ¤ë ˆë“œ ì´ë¦„ ì„¤ì •
 	}
 	
 	public void run() {		
 		for(int i=0; i<2; i++) {		
-			System.out.println(getName() + "°¡ Ãâ·ÂÇÑ ³»¿ë");
+			System.out.println(getName() + "ê°€ ì¶œë ¥í•œ ë‚´ìš©");
 		}
 	}
 

@@ -10,7 +10,7 @@ public class DaemonExample {
 		
 		try {Thread.sleep(3000);}
 		catch (InterruptedException e) {}
-		System.out.println("¸ŞÀÎ½º·¹µå Á¾·á");
+		System.out.println("ë©”ì¸ìŠ¤ë ˆë“œ ì¢…ë£Œ");
 		
 	}
 }

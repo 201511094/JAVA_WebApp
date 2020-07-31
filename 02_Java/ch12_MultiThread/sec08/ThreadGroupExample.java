@@ -10,14 +10,14 @@ public class ThreadGroupExample {
 		
 		workThreadA.start();
 		workThreadB.start();
-		System.out.println("[main½º·¹µå ±×·ìÀÇ list()¸Ş¼Òµå Ãâ·Â³»¿ë]");
+		System.out.println("[mainìŠ¤ë ˆë“œ ê·¸ë£¹ì˜ list()ë©”ì†Œë“œ ì¶œë ¥ë‚´ìš©]");
 		ThreadGroup mainGroup=Thread.currentThread().getThreadGroup();
 		System.out.println();
 		
 		try {Thread.sleep(3000);}
 		catch (InterruptedException e) {}
 		
-		System.out.println("[myGroup½º·¹µå ±×·ìÀÇ interrupt()¸Ş¼Òµå È£Ãâ]");
+		System.out.println("[myGroupìŠ¤ë ˆë“œ ê·¸ë£¹ì˜ interrupt()ë©”ì†Œë“œ í˜¸ì¶œ]");
 		myGroup.interrupt();
 		
 	}

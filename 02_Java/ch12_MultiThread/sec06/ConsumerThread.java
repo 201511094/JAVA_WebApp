@@ -4,13 +4,13 @@ public class ConsumerThread extends Thread {
 	private DataBox dataBox;
 
 	public ConsumerThread(DataBox dataBox) {
-		this.dataBox = dataBox;	//°øÀ¯°´Ã¼¸¦ ÇÊµå¿¡ ÀúÀå
+		this.dataBox = dataBox;	//ê³µìœ ê°ì²´ë¥¼ í•„ë“œì— ì €ì¥
 	}
 	
 	@Override
 	public void run() {
 		for(int i=1; i<=3; i++) {
-			String data = dataBox.getData();	//»õ·Î¿î µ¥ÀÌÅÍ¸¦ ÀĞÀ½
+			String data = dataBox.getData();	//ìƒˆë¡œìš´ ë°ì´í„°ë¥¼ ì½ìŒ
 		}
 	}
 	

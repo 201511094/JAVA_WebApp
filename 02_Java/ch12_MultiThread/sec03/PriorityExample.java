@@ -6,7 +6,7 @@ public class PriorityExample {
 		// TODO Auto-generated method stub
 		for (int i=1;i<=10;i++) {
 			Thread thread=new CalcThread("thread" + i);
-			//¿ì¼±¼øÀ§ ¼³Á¤
+			//Â¿Ã¬Â¼Â±Â¼Ã¸Ã€Â§ Â¼Â³ÃÂ¤
 			if (i != 10) {
 				thread.setPriority(Thread.MIN_PRIORITY);
 			}

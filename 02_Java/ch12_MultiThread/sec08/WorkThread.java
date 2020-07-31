@@ -10,11 +10,11 @@ public class WorkThread extends Thread {
 		while (true) {
 			try {Thread.sleep(1000);}
 			catch (InterruptedException e) {
-				System.out.println(getName()+" interruped");
+				System.out.println(getName()+" interrupted");
 				break;
 			}
 		}
-		System.out.println(getName()+" Á¾·áµÊ");
+		System.out.println(getName()+"ì¢…ë£Œë¨");
 	}
 	
 }

@@ -7,11 +7,11 @@ public class JoinExample {
 		SumThread sumThread=new SumThread();
 		sumThread.start();
 		
-		try {sumThread.join();}	//sumThreadÁ¾·áÇÒ ¶§±îÁö ¸ŞÀÎ½º·¹µå ÀÏ½ÃÁ¤Áö
+		try {sumThread.join();}	//sumThreadì¢…ë£Œí•  ë•Œê¹Œì§€ ë©”ì¸ìŠ¤ë ˆë“œ ì¼ì‹œì •ì§€
 		catch (InterruptedException e) {}
 		
-		System.out.println("1 ~ 100 ÇÕ: "+sumThread.getSum());
+		System.out.println("1 ~ 100 í•©: "+sumThread.getSum());
 		
 	}
-	//´Ù¸¥ ½º·¹µå°¡ Á¾·áµÉ ¶§±îÁö ÀÏ½ÃÁ¤Áö »óÅÂ À¯Áö
+	//ë‹¤ë¥¸ ìŠ¤ë ˆë“œê°€ ì¢…ë£Œë  ë•Œê¹Œì§€ ì¼ì‹œì •ì§€ ìƒíƒœ ìœ ì§€
 }

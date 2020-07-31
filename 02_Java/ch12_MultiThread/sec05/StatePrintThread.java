@@ -7,20 +7,20 @@ public class StatePrintThread extends Thread {
 		this.targetThread=targetThread;
 	}
 	
-	//½º·¹µå »óÅÂ Ãâ·Â
+	//ìŠ¤ë ˆë“œ ìƒíƒœ ì¶œë ¥
 	public void run() {
 		while (true) {
 			Thread.State state=targetThread.getState();
-			System.out.println("Å¸°Ù ½º·¹µå »óÅÂ: "+state);
+			System.out.println("íƒ€ê²Ÿ ìŠ¤ë ˆë“œ ìƒíƒœ: "+state);
 			
 			if (state==Thread.State.NEW) {
-				targetThread.start();	//°´Ã¼ »ı¼º »óÅÂ -> ½ÇÇà ´ë±â »óÅÂ
+				targetThread.start();	//ê°ì²´ ìƒì„± ìƒíƒœ -> ì‹¤í–‰ ëŒ€ê¸° ìƒíƒœ
 			}
 			if (state==Thread.State.TERMINATED) {
-				break;	//Á¾·á »óÅÂ -> while-loop Á¾·á
+				break;	//ì¢…ë£Œ ìƒíƒœ -> while-loop ì¢…ë£Œ
 			}
 			
-			try {Thread.sleep(500);}	//0.5s ÀÏ½ÃÁ¤Áö
+			try {Thread.sleep(500);}	//0.5s ì¼ì‹œì •ì§€
 			catch (Exception e) {}
 		}
 	}

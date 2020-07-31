@@ -17,8 +17,8 @@ public class ThreadInfoExample {
 		Map<Thread, StackTraceElement[]> map = Thread.getAllStackTraces();
 		Set<Thread> threads = map.keySet();
 		for (Thread thread: threads) {
-			System.out.println("Name: " + thread.getName() + ((thread.isDaemon())?"(µ¥¸ó)": "(ÁÖ)"));
-			System.out.println("¼Ò¼Ó±×·ì: " + thread.getThreadGroup().getName());
+			System.out.println("Name: " + thread.getName() + ((thread.isDaemon())?"(ë°ëª¬)": "(ì£¼)"));
+			System.out.println("ì†Œì†ê·¸ë£¹: " + thread.getThreadGroup().getName());
 			System.out.println();
 		}
 		

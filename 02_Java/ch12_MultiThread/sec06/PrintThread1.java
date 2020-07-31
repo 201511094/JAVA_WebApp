@@ -9,10 +9,10 @@ public class PrintThread1 extends Thread {
 	
 	public void run() {	
 		while(!stop) {
-			System.out.println("½ÇÇà Áß");
+			System.out.println("ì‹¤í–‰ ì¤‘");
 		}	
-		System.out.println("ÀÚ¿ø Á¤¸®");
-		System.out.println("½ÇÇà Á¾·á");
+		System.out.println("ìì› ì •ë¦¬");
+		System.out.println("ì‹¤í–‰ ì¢…ë£Œ");
 	}
 	
 }

@@ -2,16 +2,16 @@ package sec06;
 
 public class WorkObject {
 	public synchronized void methodA() {
-		System.out.println("ThreadAÀÇ methodA() ÀÛ¾÷ ½ÇÇà");
-		notify();	//ThreadB¸¦ ½ÇÇà´ë±â»óÅÂ·Î ¸¸µê
-		try {wait();}	//ThreadA¸¦ ÀÏ½ÃÁ¤Áö»óÅÂ·Î ¸¸µê
+		System.out.println("ThreadAì˜ methodA() ì‘ì—… ì‹¤í–‰");
+		notify();	//ThreadBë¥¼ ì‹¤í–‰ëŒ€ê¸°ìƒíƒœë¡œ ë§Œë“¦
+		try {wait();}	//ThreadAë¥¼ ì¼ì‹œì •ì§€ìƒíƒœë¡œ ë§Œë“¦
 		catch (InterruptedException e) {}
 	}
 	
 	public synchronized void methodB() {
-		System.out.println("ThreadBÀÇ methodB() ÀÛ¾÷ ½ÇÇà");
-		notify();	//ThreadA¸¦ ½ÇÇà´ë±â»óÅÂ·Î ¸¸µê
-		try {wait();}	//ThreadB¸¦ ÀÏ½ÃÁ¤Áö»óÅÂ·Î ¸¸µê
+		System.out.println("ThreadBì˜ methodB() ì‘ì—… ì‹¤í–‰");
+		notify();	//ThreadAë¥¼ ì‹¤í–‰ëŒ€ê¸°ìƒíƒœë¡œ ë§Œë“¦
+		try {wait();}	//ThreadBë¥¼ ì¼ì‹œì •ì§€ìƒíƒœë¡œ ë§Œë“¦
 		catch (InterruptedException e) {}
 	}
 	

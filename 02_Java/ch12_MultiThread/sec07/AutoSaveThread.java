@@ -2,7 +2,7 @@ package sec07;
 
 public class AutoSaveThread extends Thread {
 	public void save() {
-		System.out.println("ÀÛ¾÷³»¿ëÀ» ÀúÀåÇÔ");
+		System.out.println("ì‘ì—… ë‚´ìš©ì„ ì €ì¥í•¨");
 	}
 	
 	@Override

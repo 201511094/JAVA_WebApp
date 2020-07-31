@@ -7,13 +7,13 @@ public class ThreadB extends Thread {
 //	public void run() {
 //		while (!stop) {
 //			if (work) {
-//				System.out.println("ThreadB ÀÛ¾÷³»¿ë");
+//				System.out.println("ThreadB ì‘ì—…ë‚´ìš©");
 //			}
 //			else {
-//				Thread.yield();	//work°¡ falseÀÌ¸é ½º·¹µå ½ÇÇà ¾çº¸
+//				Thread.yield();	//workê°€ falseì´ë©´ ìŠ¤ë ˆë“œ ì‹¤í–‰ ì–‘ë³´
 //			}
 //		}
-//		System.out.println("ThreadB Á¾·á");
+//		System.out.println("ThreadB ì¢…ë£Œ");
 //	}
 
 	

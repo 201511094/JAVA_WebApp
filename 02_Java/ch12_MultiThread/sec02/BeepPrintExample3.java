@@ -8,10 +8,10 @@ public class BeepPrintExample3 {
 		thread.start();
 		
 		for (int i=0;i<5;i++) {
-			System.out.println("¶ò");
+			System.out.println("ï¿½ï¿½");
 			try {Thread.sleep(500);}
 			catch (Exception e) {}
 		}
 	}
-	//¸ÞÀÎ°ú ÀÛ¾÷ ½º·¹µå°¡ µ¿½Ã ½ÇÇà
+	//ë©”ì¸ê³¼ ìž‘ì—… ìŠ¤ë ˆë“œê°€ ë™ì‹œ ì‹¤í–‰
 }

@@ -4,14 +4,14 @@ import java.awt.Toolkit;
 
 public class BeepPrintExample2 {
 
-	public static void main(String[] args) {	//¸ÞÀÎ ½º·¹µå
+	public static void main(String[] args) {	//ë©”ì¸ ìŠ¤ë ˆë“œ
 		// TODO Auto-generated method stub
-		//¹æ¹ý1
-		Runnable beepTask=new BeepTask();	//°´Ã¼ »ý¼º
-		Thread thread=new Thread(beepTask);	//ÀÛ¾÷ ½º·¹µå »ý¼º
-		thread.start();	//BeepTask°´Ã¼ÀÇ run()¸Þ¼Òµå ½ÇÇà
+		//ë°©ë²•1
+		Runnable beepTask=new BeepTask();	//ê°ì²´ ìƒì„±
+		Thread thread=new Thread(beepTask);	//ìž‘ì—… ìŠ¤ë ˆë“œ ìƒì„±
+		thread.start();	//BeepTaskê°ì²´ì˜ run()ë©”ì†Œë“œ ì‹¤í–‰
 
-		//¹æ¹ý2 - Runnable ÀÍ¸í°´Ã¼
+		//ë°©ë²•2 - Runnable ìµëª…ê°ì²´
 //		Thread thread=new Thread(new Runnable() {
 //			@Override
 //			public void run() {
@@ -25,7 +25,7 @@ public class BeepPrintExample2 {
 //			}	
 //		});
 		
-		//¹æ¹ý3 - ¶÷´Ù½Ä
+		//ë°©ë²•3 - ëžŒë‹¤ì‹
 //		Thread thread=new Thread(() -> {
 //			Toolkit toolkit=Toolkit.getDefaultToolkit();
 //			for (int i=0;i<5;i++) {
@@ -36,10 +36,10 @@ public class BeepPrintExample2 {
 //		});
 		
 		for (int i=0;i<5;i++) {
-			System.out.println("¶ò");
+			System.out.println("ëµ");
 			try {Thread.sleep(500);}
 			catch (Exception e) {}
 		}
-		//¸ÞÀÎ°ú ÀÛ¾÷ ½º·¹µå°¡ µ¿½Ã ½ÇÇà
+		//ë©”ì¸ê³¼ ìž‘ì—… ìŠ¤ë ˆë“œê°€ ë™ì‹œ ì‹¤í–‰
 	}
 }

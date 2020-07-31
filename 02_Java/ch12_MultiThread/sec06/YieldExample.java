@@ -11,15 +11,15 @@ public class YieldExample {
 //		
 //		try {Thread.sleep(3000);}
 //		catch (InterruptedException e) {}
-//		threadA.work=false;	//½º·¹µåB¸¸ ½ÇÇà
+//		threadA.work=false;	//ìŠ¤ë ˆë“œBë§Œ ì‹¤í–‰
 //		
 //		try {Thread.sleep(3000);}
 //		catch (InterruptedException e) {}
-//		threadA.work=true;	//½º·¹µå ¸ğµÎ ½ÇÇà
+//		threadA.work=true;	//ìŠ¤ë ˆë“œ ëª¨ë‘ ì‹¤í–‰
 //		
 //		try {Thread.sleep(3000);}
 //		catch (InterruptedException e) {}
-//		threadA.stop=true;	//½º·¹µå ¸ğµÎ Á¾·á
+//		threadA.stop=true;	//ìŠ¤ë ˆë“œ ëª¨ë‘ ì¢…ë£Œ
 //		threadB.stop=true;
 	}
 }

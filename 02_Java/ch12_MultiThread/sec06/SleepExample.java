@@ -13,5 +13,5 @@ public class SleepExample {
 			catch (InterruptedException e) {}
 		}
 	}
-	//3цй аж╠Б╥н 10╧Ь ╨Ягаю╫ ╧ъ╩Щ
+	//3Л╢┬ К▐≥Л∙┬ К╘■Л²╦Л┼╓К═┬К⌠°К╔╪ Л²╪Л▀°Л═∙Л╖─ Л┐│М┐°К║° К╖▄К⌠╕
 }

@@ -4,7 +4,7 @@ package sec06;
 //
 //	public static void main(String[] args) {
 //		// TODO Auto-generated method stub
-//		WorkObject sharedObject = new WorkObject();	//°øÀ¯°´Ã¼ »ý¼º
+//		WorkObject sharedObject = new WorkObject();	//ê³µìœ ê°ì²´ ìƒì„±
 //		
 //		ThreadA threadA = new ThreadA(sharedObject);
 //		ThreadB threadB = new ThreadB(sharedObject);
@@ -13,8 +13,8 @@ package sec06;
 //		threadB.start();
 //		
 //	}
-//	//°øÀ¯°´Ã¼´Â µÎ ½º·¹µå°¡ ÀÛ¾÷ÇÒ ³»¿ëÀ» µ¿±âÈ­ ¸Þ¼Òµå·Î ±¸ºÐÇØ³õÀ½
-//	//ÇÑ ½º·¹µå°¡ ÀÛ¾÷À» ¿Ï·áÇÏ¸é notify()¸Þ¼Òµå È£Ãâ -> ´Ù¸¥ ½º·¹µå¸¦ ½ÇÇà ´ë±â »óÅÂ·Î ¸¸µé°í wait()¸Þ¼Òµå¸¦ È£ÃâÇÏ¿© ÀÏ½ÃÁ¤Áö »óÅÂ·Î ¸¸µê
+//	//ê³µìœ ê°ì²´ëŠ” ë‘ ìŠ¤ë ˆë“œê°€ ìž‘ì—…í•  ë‚´ìš©ì„ ë™ê¸°í™” ë©”ì†Œë“œë¡œ êµ¬ë¶„í•´ë†“ìŒ
+//	//í•œ ìŠ¤ë ˆë“œê°€ ìž‘ì—…ì„ ì™„ë£Œí•˜ë©´ notify()ë©”ì†Œë“œ í˜¸ì¶œ -> ë‹¤ë¥¸ ìŠ¤ë ˆë“œë¥¼ ì‹¤í–‰ ëŒ€ê¸° ìƒíƒœë¡œ ë§Œë“¤ê³  wait()ë©”ì†Œë“œë¥¼ í˜¸ì¶œí•˜ì—¬ ì¼ì‹œì •ì§€ ìƒíƒœë¡œ ë§Œë“¦
 //}
 
 

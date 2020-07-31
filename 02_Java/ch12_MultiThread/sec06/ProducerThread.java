@@ -4,14 +4,14 @@ public class ProducerThread extends Thread {
 	private DataBox dataBox;
 
 	public ProducerThread(DataBox dataBox) {
-		this.dataBox = dataBox;	//°øÀ¯°´Ã¼¸¦ ÇÊµå¿¡ ÀúÀå
+		this.dataBox = dataBox;	//ê³µìœ ê°ì²´ë¥¼ í•„ë“œì— ì €ì¥
 	}
 	
 	@Override
 	public void run() {
 		for(int i=1; i<=3; i++) {
 			String data = "Data-" + i;
-			dataBox.setData(data);	//»õ·Î¿î µ¥ÀÌÅÍ¸¦ ÀúÀå
+			dataBox.setData(data);	//ìƒˆë¡œìš´ ë°ì´í„°ë¥¼ ì €ì¥
 		}
 	}
 	

@@ -8,16 +8,16 @@ public class Calculator {
 	}
 	
 	//public void setMemory(int memory) {
-//	public synchronized void setMemory(int memory) {		//∞¥√º ¿·±›
+//	public synchronized void setMemory(int memory) {		//Í∞ùÏ≤¥ Ïû†Í∏à
 //		this.memory=memory;
 //		try {Thread.sleep(2000);} 
 //		catch (InterruptedException e) {}
 //		System.out.println(Thread.currentThread().getName()+": "+this.memory);
 //	}
 	
-	//µø±‚»≠ ∫Ì∑œ
+	//ÎèôÍ∏∞Ìôî Î∏îÎ°ù
 	public void setMemory(int memory) {
-		synchronized(this) {	//this∏¶ ¿·±›
+		synchronized(this) {	//thisÎ•º Ïû†Í∏à
 			this.memory=memory;
 			try {Thread.sleep(2000);} 
 			catch (InterruptedException e) {}

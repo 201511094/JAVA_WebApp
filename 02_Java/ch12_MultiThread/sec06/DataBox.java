@@ -4,15 +4,15 @@ public class DataBox {
 	private String data;
 	
 	public synchronized String getData() {
-		if(this.data == null) {	//data°¡ nullÀÌ¸é ÀÏ½ÃÁ¤Áö»óÅÂ·Î ¸¸µê
+		if(this.data == null) {	//dataê°€ nullì´ë©´ ì¼ì‹œì •ì§€ìƒíƒœë¡œ ë§Œë“¦
 			try {wait();}
 			catch(InterruptedException e) {}
 		}
 		String returnValue = data;
-		System.out.println("ConsummerThread°¡ ÀĞÀº µ¥ÀÌÅÍ: " + returnValue);
+		System.out.println("ConsummerThreadê°€ ì½ì€ ë°ì´í„°: " + returnValue);
 		data = null;	
 		notify();
-		return returnValue;	//»ı»êÀÚ ½º·¹µå¸¦ ½ÇÇà´ë±â»óÅÂ·Î ¸¸µê
+		return returnValue;	//ìƒì‚°ì ìŠ¤ë ˆë“œë¥¼ ì‹¤í–‰ëŒ€ê¸°ìƒíƒœë¡œ ë§Œë“¦
 	}
 	
 	public synchronized void setData(String data) {
@@ -21,7 +21,7 @@ public class DataBox {
 			catch(InterruptedException e) {}
 		}
 		this.data = data;
-		System.out.println("ProducerThread°¡ »ı¼ºÇÑ µ¥ÀÌÅÍ: " + data);
+		System.out.println("ProducerThreadê°€ ìƒì„±í•œ ë°ì´í„°: " + data);
 		notify();
 	}
 	

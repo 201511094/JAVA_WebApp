@@ -5,22 +5,22 @@ public class PrintThread2 extends Thread {
 	public void run() {
 //		try {
 //			while(true) {
-//				System.out.println("½ÇÇàÁß");
-//				Thread.sleep(1);	//¿¹¿Ü ¹ß»ı
+//				System.out.println("ì‹¤í–‰ ì¤‘");
+//				Thread.sleep(1);	//ì˜ˆì™¸ë°œìƒ
 //			}
 //		} catch (InterruptedException e) {}
 //		
-//		System.out.println("ÀÚ¿ø Á¤¸®");
-//		System.out.println("½ÇÇà Á¾·á");
+//		System.out.println("ìì› ì •ë¦¬");
+//		System.out.println("ì‹¤í–‰ ì¢…ë£Œ");
 		
 		while(true) {
-			System.out.println("½ÇÇà Áß");
+			System.out.println("ì‹¤í–‰ ì¤‘");
 			if (Thread.interrupted()) {
 				break;
 			}
 		}
-		System.out.println("ÀÚ¿ø Á¤¸®");
-		System.out.println("½ÇÇà Á¾·á");
+		System.out.println("ìì› ì •ë¦¬");
+		System.out.println("ì‹¤í–‰ ì¢…ë£Œ");
 		
 	}
 	

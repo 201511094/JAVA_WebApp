@@ -7,20 +7,20 @@ public class ThreadA extends Thread {
 //	public void run() {
 //		while (!stop) {
 //			if (work) {
-//				System.out.println("ThreadA ÀÛ¾÷³»¿ë");
+//				System.out.println("ThreadA ì‘ì—…ë‚´ìš©");
 //			}
 //			else {
-//				Thread.yield();	//work°¡ falseÀÌ¸é ½º·¹µå ½ÇÇà ¾çº¸
+//				Thread.yield();	//workê°€ falseì´ë©´ ìŠ¤ë ˆë“œ ì‹¤í–‰ ì–‘ë³´
 //			}
 //		}
-//		System.out.println("ThreadA Á¾·á");
+//		System.out.println("ThreadA ì¢…ë£Œ");
 //	}
 	
 	
 	private WorkObject workObject;
 
 	public ThreadA(WorkObject workObject) {
-		this.workObject = workObject;	//°øÀ¯°´Ã¼¸¦ ¸Å°³°ªÀ¸·Î ¹Ş¾Æ ÇÊµå¿¡ ÀúÀå
+		this.workObject = workObject;	//ê³µìœ ê°ì²´ë¥¼ ë§¤ê°œê°’ìœ¼ë¡œ ë°›ì•„ í•„ë“œì— ì €ì¥
 	}
 	
 	@Override
