@@ -1,4 +1,4 @@
-package sec09;
+﻿package sec09;
 
 import java.util.concurrent.*;
 
@@ -10,6 +10,7 @@ public class ResultByRunnableExample {
 		
 		System.out.println("[작업 처리 요청]");
 		class Task implements Runnable {
+			//외부 Result객체를 필드에 저장
 			Result result;
 			Task(Result result) { 
 				this.result = result;
@@ -20,10 +21,10 @@ public class ResultByRunnableExample {
 				for(int i=1; i<=10; i++) {
 					sum += i;
 				}
-				result.addValue(sum);
+				result.addValue(sum);	//Result객체에 작업결과를 저장
 			}
 		}
-		
+		//두 가지 작업처리를 요청
 		Result result = new Result();
 		Runnable task1 = new Task(result);
 		Runnable task2 = new Task(result);
@@ -31,6 +32,7 @@ public class ResultByRunnableExample {
 		Future<Result> future2 = executorService.submit(task2, result);
 		
 		try {
+			//두 가지 작업결과를 취합
 			result = future1.get();
 			result = future2.get();
 			System.out.println("[처리 결과] " + result.accumValue);
@@ -44,6 +46,7 @@ public class ResultByRunnableExample {
 	}
 }
 
+//처리 결과를 저장하는 클래스
 class Result { 
 	int accumValue;
 	synchronized void addValue(int value) {
