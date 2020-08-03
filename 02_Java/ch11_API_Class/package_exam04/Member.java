@@ -1,4 +1,4 @@
-package package_exam04;
+ï»¿package package_exam04;
 
 public class Member {
 	private String id;
@@ -9,7 +9,7 @@ public class Member {
 		this.name = name;
 	}
 	
-	//ObjectÀÇ toString() ¿À¹ö¶óÀÌµù
+	//Objectì˜ toString() ì˜¤ë²„ë¼ì´ë”©
 	@Override
 	public String toString() {
 		String str = id + ": " + name;

@@ -1,4 +1,4 @@
-package package_exam13;
+ï»¿package package_exam13;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -8,7 +8,7 @@ public class DatePrintExample {
 		// TODO Auto-generated method stub
 		Date now=new Date();
 		
-		SimpleDateFormat sdf=new SimpleDateFormat("yyyy³â MM¿ù ddÀÏ E¿äÀÏ HH½Ã mmºĞ");
+		SimpleDateFormat sdf=new SimpleDateFormat("yyyyë…„ MMì›” ddì¼ Eìš”ì¼ HHì‹œ mmë¶„");
 		System.out.println(sdf.format(now));
 		
 	}

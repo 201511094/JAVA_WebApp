@@ -1,9 +1,9 @@
-package package_exam04;
+ï»¿package package_exam04;
 
 public class MemberExample {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Member member = new Member("blue", "ÀÌÆÄ¶õ");
+		Member member = new Member("blue", "ì´íŒŒë€");
 		System.out.println(member);
 		
 	}
