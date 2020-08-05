@@ -147,7 +147,7 @@
 * 패키지는 클래스를 유일하게 만들어주는 식별자 역할을 한다. 패키지가 다르면 클래스 이름이 같아도 다른 클래스로 인식한다.
 
 [6.13] 접근 제한자
-* 접근 제한자: public protected, default, private (>>접근제한이 강화>>)
+* 접근 제한자: public, protected, default, private (>>접근제한이 강화>>)
 
 * 클래스에 적용할 수 있는 접근 제한은 public과 default 두 가지이다.
  - default: 다른 패키지에서 사용 불가
