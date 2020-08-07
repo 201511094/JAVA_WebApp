@@ -217,7 +217,7 @@
  - 단일 스레드 환경에서만 사용하도록 설계됨
  - StringBuilder() 기본 생성자: 16개의 문자를 저장할 수 있는 초기 버퍼
  - StringBuilder(int capacity): capacity로 주어진 개수만큼 문자들을 저장할 수 있는 초기 버퍼
- - StringBuilder(String str): str로 주어진 매개값ㅇ르 버퍼의 초기값으로 저장
+ - StringBuilder(String str): str로 주어진 매개값을 버퍼의 초기값으로 저장
  - 버퍼가 부족할 경우 자동으로 버퍼 크기를 늘려주기 때문에 초기 버퍼의 크기는 중요하지 않음
  - StringBuilder객체가 생성되면 버퍼 내에서 문자 추가, 삽입, 삭제 등의 작업을 메소드를 통해 할 수 있음
 
