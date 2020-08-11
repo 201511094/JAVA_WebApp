@@ -236,9 +236,32 @@
  - 데이터 제어어(DCL): 데이터의 사용 권한을 관리하는 데 사용, GRANT/REVOKE
 
 #03 데이터 조작어
- 	SELECT [ALL|DISTINCT]	속성이름(들)
+* SELECT문의 기본 문법
+	SELECT[ALL | DISTINCT]	속성이름(들)
 	FROM 			테이블이름(들)
 	[WHERE			검색조건(들)]
 	[GROUP BY		속성이름]
 	[HAVING			검색조건(들)]
 	[ORDER BY		속성이름[ASC|DESC]]
+
+* 와일드 문자의 종류
+ +	문자열을 연결
+ %	0개 이상의 문자열과 일치
+ []	1개의 문자와 일치
+ [^]	1개의 문자와 불일치
+ _	특정 위치의 1개의 문자와 일치
+
+* 집계 함수의 종류
+ SUM	SUM([ALL | DISTINCT] 속성이름)
+ AVG	AVG([ALL | DISTINCT] 속성이름)
+ COUNT	COUNT({[[ALL | DISTINCT] 속성이름] | *})
+ MAX	MAX([ALL | DISTINCT] 속성이름)
+ MIN	MIN([ALL | DISTINCT] 속성이름)
+
+* GROUP BY, HAVING 문법과 주의사항
+ - GROUP BY <속성>
+	: GROUP BY로 튜플을 그룹으로 묶은 후 SELECT절에는 GROUP BY에서 사용한 <속성>과 집계함수만 나올 수 있음
+ - HAVING <검색조건>
+	: WHERE절과 HAVING절이 같이 포함된 SQL문은 검색조건이 모호해질 수 있음
+	: HAVING절은 반드시 GROUP BY절과 같이 작성해야 하고, WHERE절보다 뒤에 나와야 하고, <검색조건>에는 집계함수가 와야 함
+
