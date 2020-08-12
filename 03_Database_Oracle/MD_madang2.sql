@@ -136,9 +136,33 @@ INSERT INTO Imported_Book VALUES(21, 'Zen Golf', 'Pearson', 12000);
 INSERT INTO Imported_Book VALUES(22, 'Soccer Skills', 'Human Kinetics', 15000);
 
 insert into book(bookid,bookname,price,publisher) select bookid,bookname,price,publisher from Imported_book;
-*/
+
 UPDATE customer SET address='대한민국 부산' WHERE custid=5;
 UPDATE customer SET address=(SELECT address FROM customer WHERE name='김연아') WHERE name LIKE '박세리';
 
 DELETE FROM customer WHERE custid=5;
 DELETE FROM customer;
+*/
+
+--연습문제
+/*
+SELECT distinct name FROM customer c,orders o,book b
+WHERE c.custid=o.custid and o.bookid=b.bookid and
+    name not like '박지성' and publisher in
+    (SELECT publisher FROM customer,orders book
+    WHERE c.custid=o.custid and o.bookid=b.bookid and name like '박지성');
+
+SELECT name FROM Customer c1
+WHERE 2>=
+    (SELECT COUNT(DISTINCT publisher) FROM Customer, Orders, Book 
+    WHERE Customer.custid=Orders.custid AND Orders.bookid=Book.bookid AND (name LIKE c1.name));
+
+SELECT bookname FROM Book b1
+WHERE((SELECT COUNT(Book.bookid) FROM Book, Orders 
+    WHERE Book.bookid=Orders.bookid AND Book.bookid=b1.bookid)>= 0.3*(SELECT COUNT(*) FROM Customer));
+
+insert into book values(17,'스포츠 세계', '대한미디어', 10000);
+delete from book where publisher like '삼성당';
+--3번. 외래키 제약조건에 위배
+update book set publisher='대한출판사' where publisher like '대한미디어';
+*/
