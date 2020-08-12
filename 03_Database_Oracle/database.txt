@@ -303,9 +303,36 @@
  - 속성의 데이터 타입 종류: NUMBER(p,s), CHAR(n), VARCHAR2(n), DATE
 
 * ALTER문
+ - 생성된 테이블의 속성과 속성에 관한 제약을 변경하며 기본키 및 외래키를 변경함
+ - ADD, DROP은 속성을 추가하거나 제거할 때 사용함
+ - MODIFY는 속성의 기본값을 설정하거나 삭제할 때 사용함
+ - ADD <제약이름>, DROP <제약이름>은 제약사항을 추가하거나 삭제할 때 사용함
+
+ ALTER TABLE 테이블이름
+	[ADD 속성이름 데이터타입]
+	[DROP COLUMN 속성이름]
+	[MODIFY 속성이름 데이터타입]
+	[MODIFY 속성이름 [NULL┃NOT NULL]]
+	[ADD PRIMARY KEY(속성이름)]
+	[[ADD┃DROP] 제약이름]
 
 * DROP문
-
+ - 테이블을 삭제하는 명령
+ - 테이블의 구조와 데이터를 모두 삭제하므로 사용에 주의해야 함 (데이터만 삭제하려면 DELETE문을 사용함)
 
 #05 데이터 조작어 - 삽입/수정/삭제
+* INSERT문
+ - 테이블에 새로운 튜플을 삽입하는 명령
+ INSERT INTO 테이블이름[(속성리스트)] VALUES (값리스트);
+ - 대량 삽입(bulk insert)란 한꺼번에 여러 개의 튜플을 삽입하는 방법
 
+* UPDATE문
+ - 특정 속성 값을 수정하는 명령
+ UPDATE 테이블이름 SET 속성이름1=값1[, 속성이름2=값2, ...] [WHERE <검색조건>];
+
+* DELETE문
+ - 테이블에 있는 기존 튜플을 삭제하는 명령
+ DELETE FROM 테이블이름 [WHERE 검색조건];
+
+
+[Chapter04] 
