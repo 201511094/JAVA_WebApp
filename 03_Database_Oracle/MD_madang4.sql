@@ -103,6 +103,7 @@ COMMIT;
 --select * from (select * from book where rownum<=5) b order by price;
 --select * from (select * from book where rownum<=5 order by price) b;
 
+
 /* 스칼라 부속질의 - SELECT문 */
 --select (select name from customer where customer.custid=orders.custid) "이름", sum(saleprice) "합계" from orders group by custid;
 --update orders set bookname = (select bookname from book where book.bookid=orders.bookid);
@@ -135,3 +136,56 @@ COMMIT;
 --select custid, (select address from customer cs where cs.custid=od.custid) "address", sum(saleprice) "total" from orders od group by custid;
 --select cs.name, s from (select custid, avg(saleprice) s from orders group by custid) od, customer cs where cs.custid=od.custid;
 --select sum(saleprice) "total" from orders od where exists (select * from customer cs where cs.custid=od.custid and custid<=3);
+
+
+/* 뷰 */
+--create view vw_book as select * from book where bookname like '%축구%';
+--create view vw_customer as select * from customer where address like '%대한민국%';
+--create view vw_orders(orderid,custid,name,bookid,bookname,saleprice,orderdate)
+--    as select od.orderid,od.custid,cs.name,od.bookid,bk.bookname,od.saleprice,od.orderdate
+--    from orders od, customer cs, book bk where od.custid=cs.custid and od.bookid=bk.bookid;
+--select * from vw_book;
+--select * from vw_customer;
+--select * from vw_orders;
+
+--select orderid,bookname,saleprice from vw_orders where name='김연아';
+--select bookname,orderdate from vw_orders where bookname like '%야구%';
+
+--create or replace view vw_customer(custid,name,address) as select custid,name,address from customer where address like '%영국%';
+--create or replace view vw_orders
+--    as select orderid, customer.custid, name, book.bookid, bookname, saleprice
+--    from book, customer, orders where orders.custid=customer.custid and orders.bookid=book.bookid;
+
+--select * from vw_customer;
+--select * from vw_orders;
+
+--drop view vw_customer;
+--select * from vw_customer;
+
+/* 연습문제 */
+--drop view highorders;
+--create view highorders(bookid, bookname, name, publisher, saleprice)
+--    as select book.bookid, book.bookname, customer.name, book.publisher, orders.saleprice
+--    from orders, customer, book where orders.custid=customer.custid and orders.bookid=book.bookid and saleprice>=20000;
+--select * from highorders;
+--select bookname, name from highorders;
+
+--create or replace view highorders(bookid, bookname, name, publisher)
+--    as select book.bookid, book.bookname, customer.name, book.publisher
+--    from orders, customer, book where orders.custid=customer.custid and orders.bookid=book.bookid and saleprice>=20000;
+--select bookname, name from highorders;
+
+
+/* 인덱스 */
+--create index ix_book on book(bookname);
+--create index ix_book2 on book(publisher,price);
+--select * from book where publisher='대한미디어' and price>30000;
+--select * from book where bookname like '%야구%';
+--alter index ix_book rebuild;
+--drop index ix_book;
+
+/* 연습문제 */
+--select name from customer where name like '박세리';
+--create index ix_name on customer(name);
+--select name from customer where name like '박세리';  --인덱스 생성 후 인덱스를 먼저 검색하여 where조건 수행
+--drop index ix_name;
