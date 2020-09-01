@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>실습</title>
+	<script type="text/javascript">
+		/*
+			[실습] 정수를 하나 입력해서 짝수이면 10을 더하고 홀수면 20을 더해서 결과를 출력하가ㅣ
+		*/
+		var input = prompt('정수를 하나 입력해주세요', '');
+		var result;
+		
+		if (input%2==0) {
+			result = Number(input)+10
+		} else {
+			result = Number(input)+20
+		}
+		
+		document.write('입력받은 수: ' + input + '<br>');
+		document.write('변경된 수: ' + result);
+	</script>
+</head>
+<body>
+
+</body>
+</html>
