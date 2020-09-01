@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>비교연산자</title>
+	<script type="text/javascript">
+	/*
+		연신자		설명
+		===			양 변의 값뿐만 아니라 자료형도 같은지 비교
+		!==			양 변의 값뿐만 아니라 자료형도 다른지 비교
+	*/
+		var a = 20, b = '20', result;
+	
+		result = a == b;	//true
+		document.write('a == b: ' + result + '<br>');
+	
+		result = a > b;	//false
+		document.write('a > b: ' + result + '<br>');
+		
+		result = a >= b;	//true
+		document.write('a >= b: ' + result + '<br>');
+	
+		result = a != b;	//false
+		document.write('a != b: ' + result + '<br>');
+	
+		//값뿐만 아니라 자료형 일치 여부도 ㅔ체크
+		result = a === b;	//false
+		document.write('a === b: ' + result + '<br>');
+	
+		//값뿐만 아니라 자료형도 다른지 여부를 체크
+		result = a !== b;	//true
+		document.write('a !== b: ' + result + '<br>');
+	</script>
+</head>
+<body>
+
+</body>
+</html>
