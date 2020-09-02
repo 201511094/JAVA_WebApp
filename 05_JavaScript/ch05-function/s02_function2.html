@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>익명함수</title>
+	<script type="text/javascript">
+		//익명함수
+		var play = function(){
+			document.write('운동을 좋아해요~~<br>');
+		};
+		play();
+		
+		//매개변수가 있는 경우
+		var play2 = function(item){
+			document.write(item + "을(를) 좋아해요<br>");
+		};
+		//함수 호출
+		play2('축구');
+		
+		var play3 = function(x, y){
+			return x+y;
+		};
+		//함수 호출
+		var result = play3(5,8);
+		document.write('result = ' + result + '<br>');
+	</script>
+</head>
+<body>
+
+</body>
+</html>
