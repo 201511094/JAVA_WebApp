@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>실습</title>
+	<script type="text/javascript">
+		/*
+			[실습] 국어, 영어, 수학 성적을 prompt로 입력 받아서 총점, 평균, 등급을 출력함.
+			총점(getSum), 평균(getAvg), 등급(getGrade)을 구하는 함수를 만들어 사용.
+		*/
+		var input1 = prompt('국어 성적', '');
+		var input2 = prompt('영어 성적', '');
+		var input3 = prompt('수학 성적', '');
+		
+		var kScore = Number(input1);
+		var eScore = Number(input2);
+		var mScore = Number(input3);
+		
+		function getSum(x,y,z) {
+			return x+y+z;
+		}
+		function getAvg(x) {
+			return x/3;
+		}
+		//등급 구하기
+		function getGrade(x) {
+			var grade;
+			if (x>=90 && x<=100) {
+				grade='A';
+			} else if (x>=80 && x<90) {
+				grade='B';
+			} else if (x>=70 && x<80) {
+				grade='C';
+			} else if (x>=60 && x<70) {
+				grade='D';
+			} else {
+				grade='F'
+			}
+			return grade;
+		}
+		
+		var result_sum = getSum(kScore, eScore, mScore);
+		var result_avg = getAvg(result_sum);
+		var result_grade = getGrade(result_avg);
+		
+		document.write('총점: ' + result_sum + '<br>');
+		document.write('평균: ' + result_avg + '<br>');
+		document.write('등급: ' + result_grade);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

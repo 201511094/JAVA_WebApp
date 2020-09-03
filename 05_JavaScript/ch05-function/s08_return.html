@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>return</title>
+	<script type="text/javascript">
+		function returnTest() {
+			document.write('문장A<br>');
+			
+			for (var i=1; i<=10; i++) {
+				if (i==5) {
+					return;
+				}
+				//출력
+				document.write(i + '<br>');
+			}
+			//반복문에서 특정 조건에 return하면 아래 문장은 수행되지 않음
+			document.write('문장B');
+		}
+		//함수 호출
+		returnTest();
+	</script>
+</head>
+<body>
+
+</body>
+</html>

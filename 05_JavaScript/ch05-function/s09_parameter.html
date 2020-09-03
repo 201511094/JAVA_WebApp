@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>함수를 매개변수로 받는 함수</title>
+	<script type="text/javascript">
+		//함수를 10번 호출하는 함수
+		function callFunctionTenTimes(otherFunction) {
+			for (var i=0; i<10; i++) {
+				otherFunction();	//매개변수로 전달된 함수를 실행
+			}
+		}
+		
+		//선언적 함수
+		function justFunction() {
+			document.write('Happy Day!!<br>');
+		}
+		
+		//함수 호출
+		callFunctionTenTimes(justFunction);
+		document.write('----------<br>');
+		
+		//익명함수 전달
+		callFunctionTenTimes(function() {
+			document.write('Hello World!!<br>');
+		});
+	</script>
+</head>
+<body>
+
+</body>
+</html>
