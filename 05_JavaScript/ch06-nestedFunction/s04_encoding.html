@@ -25,6 +25,8 @@
 		output += escape(url) + '<br><br>';	//기호까지 인코딩 대상
 		output += '*encodeURI()<br>';
 		output += encodeURI(url) + '<br><br>';	//한글이 인코딩 대상
+		output += '*encodeURIComponent()<br>';
+		output += encodeURIComponent(url);	//.을 제외한 모든 문자가 인코딩 대상
 		
 		//출력
 		document.write(output);
