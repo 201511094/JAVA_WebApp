@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>실습</title>
+	<script type="text/javascript">
+		/*
+			[실습] 성적을 관리하는 배열을 생성
+			5과목(국어,영어,수학,과학,미술)
+			배열명은 score
+			
+			출력예시)
+				총점 : 368점
+				평균 : 95.345점
+		*/
+		var score = [60,70,80,90,100];
+		var sum = 0;
+		for (var i=0; i<score.length; i++) {
+			sum += score[i];
+		}
+		var avg = sum / score.length;
+		
+		document.write('점수 배열 : ' + score + '<br>');
+		document.write('총점 : ' + sum + '<br>');
+		document.write('평균: ' + avg);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

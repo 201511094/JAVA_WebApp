@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>실습</title>
+	<script type="text/javascript">
+		/*
+			[실습] 아래 제시된 배열에서 최소값과 최대값을 구해서 출력하시오.
+			출력예시)
+				최대값 : 100
+				최소값 : 33
+		*/
+		var score = [79,88,91,33,100,55,95];
+		var max, min;
+		max = min = score[0];
+		
+		for (var i=0; i<score.length; i++) {
+			if (max < score[i])
+				max = score[i];
+			if (min > score[i])
+				min = score[i];
+		}
+		document.write('최대값 : ' + max + '<br>');
+		document.write('최소값 : ' + min + '<br>');
+	</script>
+</head>
+<body>
+
+</body>
+</html>
