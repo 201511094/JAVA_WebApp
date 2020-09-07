@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>실습</title>
+	<script type="text/javascript">
+		/*
+			[실습] 은행 계좌 생성
+			생성자 함수명 : Account
+			속성 : 계좌번호, 예금주, 비밀번호, 잔고
+			메서드 : 입금 deposite, 출금 withdraw, 출력 toString --> 계좌번호, 예금주, 잔고
+			실행예시)
+			1. 계좌 생성 -> 계좌번호, 예금주, 비밀번호, 잔고(1000)
+			2. 계좌 정보 출력
+			3. 500 입금
+			4. 계좌 정보 출력
+			5. 700 출금
+			6. 계좌 정보 출력
+		*/
+		function Account(aNum, aUser, aPwd, aBalance) {
+			this.계좌번호 = aNum;
+			this.예금주 = aUser;
+			this.비밀번호 = aPwd;
+			this.잔고 = aBalance;
+			
+			this.deposite = function(money){
+				this.잔고 += money;
+				return this.잔고;
+			};
+			this.withdraw = function(money) {
+				this.잔고 -= money;
+				return this.잔고;
+			};
+			this.toString = function() {
+				var output = '';
+				output += '계좌번호, 예금주, 잔고<br>';
+				output += this.계좌번호+', '+this.예금주+', '+this.잔고;
+				
+				return output;
+			};
+		};
+		
+		var user = new Account('1111-222-333333', 'user', 1111, 1000);
+		document.write(user.toString() + '<br>');
+		user.deposite(500);
+		document.write(user.toString() + '<br>');
+		user.withdraw(700);
+		document.write(user.toString() + '<br>');
+	</script>
+</head>
+<body>
+
+</body>
+</html>

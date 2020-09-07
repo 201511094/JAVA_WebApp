@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>toString</title>
+	<script type="text/javascript">
+		var student = {};
+		
+		//객체를 생성하면 자동적으로 Object를 상속받게 되고
+		//Object 안의 toString()을 사용할 수 있게 됨.
+		document.write(student.toString() + '<br>');
+		
+		//객체명을 호출하면 자동적으로 객체의 toString() 메서드가 동작함.
+		document.write(student + '<br>');
+		
+		//객체의 속성 추가
+		student.이름 = '홍길동';
+		student.취미 = '악기연주';
+		student.특기 = '프로그래밍';
+		student.장래희망 = '프로그래머';
+		
+		//for in 반복문을 이용한 객체의 속성 출력
+		var output = '';
+		for (var key in student) {
+			output += key + ': ' + this[key] + '<br>';
+		}
+		document.write(output);
+		document.write('----------<br>');
+		
+		//객체의 메서드 추가
+		student.toString = function() {
+			var msg = '';
+			for (var key in this) {
+				//자기 자신인 toString을 제외하고 출력
+				if (key != 'toString') {
+					msg += key + ': ' + this[key] + '<br>';	
+				}
+			}
+			return msg;	//생략하면 undefined로 출력
+		};
+		
+		//출력
+		document.write(student.toString() + '<br>');
+		document.write('----------<br>');
+		document.write(student);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

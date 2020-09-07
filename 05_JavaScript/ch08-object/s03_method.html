@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>객체의 속성과 메서드 사용</title>
+	<script type="text/javascript">
+		var person = {
+				//속성 지정
+				name: '홍길동',
+				//메서드 지정
+				eat:function(food) {
+					//지역변수
+					var name = '강호동';
+					document.write(name + '이 ' + food + '을/를 먹습니다.<br>');
+					
+					//this: 메서드내에서 자기자신이 가지고 있는 속성을 출력하고 싶을 때
+					//객체 내부에서 객체를 참조할 때 사용
+					
+					//this.name이 아니라 name을 호출하면 메소드에 선언한 지역변수를 찾고
+					//없을 경우 객체 밖에 선언된 변수를 찾음
+					document.write(this.name + '이 ' + food + '을/를 먹습니다.<br>');
+					
+					document.write(person.name + '이 ' + food + '을/를 먹습니다.');
+				}
+		};
+		//메서드 호출
+		person.eat('밥');
+	</script>
+</head>
+<body>
+
+</body>
+</html>

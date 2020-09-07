@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>실습</title>
+	<script type="text/javascript">
+		/*
+			[실습] 세금 5%
+			이름		수입		지출		잔액(getBalance, 세금 공제)	세금(getTax, 5%)
+			홍길동	3000	2500	수입-세금-지출				세금
+			박문수	5000	1100
+			이순신	4000	3600
+			김유신	7000	4200
+		*/
+		var list = [];
+		list.push({이름: '홍길동', 수입: 3000, 지출: 2500});
+		list.push({이름: '박문수', 수입: 5000, 지출: 1100});
+		list.push({이름: '이순신', 수입: 4000, 지출: 3600});
+		list.push({이름: '김유신', 수입: 7000, 지출: 4200});
+		
+		for (var i in list) {
+			list[i].getTax = function() {
+				return this.수입*0.05;	
+			},
+			list[i].getBalance = function() {
+				return this.수입-this.getTax()-this.지출;
+			};
+		}
+		
+		var output = '이름, 수입, 지출, 잔액, 세금<br>';
+		for (var i in list) {
+			output += list[i].이름 + ', ' + list[i].수입 + ', ' + list[i].지출 + ', ' +
+			list[i].getBalance() + ', ' + list[i].getTax() + '<br>';
+		}
+		
+		document.write(output);
+	</script>
+</head>
+<body>
+
+</body>
+</html>
