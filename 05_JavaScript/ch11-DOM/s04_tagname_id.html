@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>id와 태그명을 사용해서 문서 객체 탐색</title>
+	<script type="text/javascript">
+		window.onload = function() {
+			var allSpans = document.getElementsByTagName('span');
+			
+			var output = '';
+			for (var i=0; i<allSpans.length; i++) {
+				//HTML에서는 <br>태그가 먹히지 않음, 대신 '\n' 사용
+				output += allSpans[i].innerHTML + '\n';
+			}
+			alert(output);
+			
+			var foo = document.getElementById('foo');
+			var fooSpans = foo.getElementsByTagName('span');
+			
+			var output2 = '';
+			for (var i=0; i<fooSpans.length; i++) {
+				output2 += fooSpans[i].innerHTML + '\n';
+			}
+			alert(output2);
+		};
+	</script>
+</head>
+<body>
+	<p id="foo">
+		<span>a</span>
+		<span>b</span>
+		<span>c</span>
+	</p>
+	<p id="bar">
+		<span>x</span>
+	</p>
+</body>
+</html>
