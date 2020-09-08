@@ -17,35 +17,32 @@
 			5. 700 출금
 			6. 계좌 정보 출력
 		*/
-		function Account(aNum, aUser, aPwd, aBalance) {
+		function Account(aNum, aUser, aPwd, aBal) {
 			this.계좌번호 = aNum;
 			this.예금주 = aUser;
 			this.비밀번호 = aPwd;
-			this.잔고 = aBalance;
+			this.잔고 = aBal;
 			
 			this.deposite = function(money){
 				this.잔고 += money;
-				return this.잔고;
 			};
 			this.withdraw = function(money) {
 				this.잔고 -= money;
-				return this.잔고;
 			};
 			this.toString = function() {
-				var output = '';
-				output += '계좌번호, 예금주, 잔고<br>';
-				output += this.계좌번호+', '+this.예금주+', '+this.잔고;
-				
-				return output;
+				return this.계좌번호+', '+this.예금주+', '+this.잔고+'<br>';
 			};
 		};
 		
-		var user = new Account('1111-222-333333', 'user', 1111, 1000);
-		document.write(user.toString() + '<br>');
+		//객체 생성
+		var user = new Account('1111-222-333333', '홍길동', 1111, 1000);
+		document.write(user);
+		//입금
 		user.deposite(500);
-		document.write(user.toString() + '<br>');
+		document.write(user);
+		//출금
 		user.withdraw(700);
-		document.write(user.toString() + '<br>');
+		document.write(user);
 	</script>
 </head>
 <body>
