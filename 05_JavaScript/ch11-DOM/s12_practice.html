@@ -26,12 +26,34 @@
 				alert('이메일 형식에 맞지 않음');
 			}
 		}
+		
+		//강사님 코드
+		function check2() {
+			var email = document.getElementById('email');
+
+			if (email.value == '') {
+				alert('이메일을 입력하세요!');
+				email.focus();
+				return;
+			}
+			
+			var n = email.value.indexOf('@');
+			alert(n);
+			
+			if (n>0) {
+				alert('이메일 형식에 맞게 입력');
+			} else {
+				alert('이메일 형식에 맞게 입력하세요!!');
+				email.value = '';
+				email.focus();
+			}
+		}
 	</script>
 </head>
 <body>
 	<form>
 		Email : <input type="text" name="email" id="email"><br>
-		<input type="button" value="입력" onclick="check();">
+		<input type="button" value="입력" onclick="check2();">
 	</form>
 </body>
 </html>
