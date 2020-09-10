@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>onsubmit</title>
+	<style type="text/css">
+		
+	</style>
+	<script type="text/javascript">
+		//유효성 체크
+		function check() {
+			var id = document.getElementById('id');
+			if (id.value == '') {
+				alert('id를 입력하세요');
+				id.focus();
+				
+				return false;	//데이터가 전송되지 않도록 처리
+			}
+			var password = document.getElementById('password');
+			if (password.value == '') {
+				alert('비밀번호를 입력하세요!');
+				password.focus();
+				
+				return false;
+			}
+		}
+	</script>
+</head>
+<body>
+	<!-- 반환값이 있을 경우 return을 붙임 -->
+	<form action="a.jsp" method="post" onsubmit="return check();">
+		id <input type="text" name="id" id="id"><br>
+		비밀번호 <input type="password" name="password" id="password"><br>
+		<input type="submit" value="확인">
+	</form>
+</body>
+</html>

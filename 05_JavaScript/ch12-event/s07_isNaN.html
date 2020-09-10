@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>isNaN</title>
+	<script type="text/javascript">
+		function checkNum() {
+			var age = document.getElementById('age');
+			if (isNaN(age.value)) {
+				//숫자가 아닐 경우
+				alert('나이는 숫자만 가능합니다.');
+				age.value = '';
+				age.focus();
+			} else {
+				//숫자일 경우
+				alert('입력한 나이는 ' + age.value);
+			}
+		}
+	</script>
+</head>
+<body>
+	<form>
+		나이 : <input type="text" name="age" id="age">
+		<input type="button" value="확인" onclick="checkNum();">
+	</form>
+</body>
+</html>
