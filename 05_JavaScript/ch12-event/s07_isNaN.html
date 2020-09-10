@@ -6,6 +6,14 @@
 	<script type="text/javascript">
 		function checkNum() {
 			var age = document.getElementById('age');
+			
+			if (age.value == '') {
+				alert('나이를 입력해주세요!');
+				age.focus();
+				return;
+			}
+			
+			//isNaN은 빈문자열의 경우 0으로 인식해서 false 반환
 			if (isNaN(age.value)) {
 				//숫자가 아닐 경우
 				alert('나이는 숫자만 가능합니다.');
