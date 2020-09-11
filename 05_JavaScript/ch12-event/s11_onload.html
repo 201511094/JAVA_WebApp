@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>onload</title>
+	<script type="text/javascript">
+		window.onload = function() {
+			alert('문서가 로드되었습니다.');
+			//body의 배경색 지정
+			document.body.style.backgroundColor = 'yellow';
+			//div
+			var notice = document.getElementById('notice');
+			notice.innerHTML = '날씨 맑음!';
+		};
+	</script>
+</head>
+<body>
+	<div id="notice"></div>
+</body>
+</html>
