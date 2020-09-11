@@ -9,29 +9,34 @@
 			출력은 alert()를 이용함.
 		*/
 		function study() {
-			var s1 = document.getElementById('korean').value;
-			var s2 = document.getElementById('english').value;
-			var s3 = document.getElementById('math').value;
+			var s1 = document.getElementById('korean');
+			var s2 = document.getElementById('english');
+			var s3 = document.getElementById('math');
 			var msg = '';
 			
+			var korean = s1.value;
+			var english = s2.value;
+			var math = s3.value;
+			
 			//공백 제거
-			s1 = s1.trim();
-			s2 = s2.trim();
-			s3 = s3.trim();
+			korean = korean.trim();
+			english = english.trim();
+			math = math.trim();
 			
 			//공백 확인
-			if (s1=='') { msg += '국어 성적을 입력해주세요.\n';}
-			if (s2=='') {msg += '영어 성적을 입력해주세요.\n';}
-			if (s3=='') {msg += '수학 성적을 입력해주세요.';}
+			if (korean=='') {msg += '국어 성적을 입력해주세요.\n';}
+			if (english=='') {msg += '영어 성적을 입력해주세요.\n';}
+			if (math=='') {msg += '수학 성적을 입력해주세요.';}
 			
 			if (msg != '') {
 				alert(msg);
 				return;
 			}
 			else {
-				if (isNaN(s1)) {msg += '국어 성적을 숫자로 입력해주세요.\n'}
-				if (isNaN(s2)) {msg += '영어 성적을 숫자로 입력해주세요.\n'}
-				if (isNaN(s3)) {msg += '수학 성적을 숫자로 입력해주세요.'}
+				//숫자 체크
+				if (isNaN(korean)) {msg += '국어 성적을 숫자로 입력해주세요.\n';}
+				if (isNaN(english)) {msg += '영어 성적을 숫자로 입력해주세요.\n';}
+				if (isNaN(math)) {msg += '수학 성적을 숫자로 입력해주세요.';}
 				
 				if (msg != '') {
 					alert(msg);
@@ -41,16 +46,73 @@
 					var sum = 0, avg;
 					//msg = '';
 					
-					sum = Number(s1)+Number(s2)+Number(s3);
+					sum = Number(korean)+Number(english)+Number(math);
 					avg = sum/3;
 					
-					msg += '국어: '+s1+'점, 수학: '+s2+'점, 영어: '+s3+'점\n';
+					msg += '국어: '+korean+'점, 영어: '+english+'점, 수학: '+math+'점\n';
 					msg += '과목의 총점은 '+sum+'점,\n';
-					msg += '과목의 평균은 '+avg+'점 입니다.';
+					msg += '과목의 평균은 '+avg.toFixed(2)+'점 입니다.';
 					
 					alert(msg);
 				}
 			}
+		}
+		
+		//강사님 코드
+		function study2() {
+			var korean = document.getElementById('korean');
+			var english = document.getElementById('english');			
+			var math = document.getElementById('math');
+			
+			if (korean.value=='') {
+				alert('국어 성적을 입력하세요!');
+				korean.focus();
+				return;
+			}
+			if (english.value=='') {
+				alert('영어 성적을 입력하세요!');
+				english.focus();
+				return;
+			}
+			if (math.value=='') {
+				alert('수학 성적을 입력하세요!');
+				math.focus();
+				return;
+			}
+			
+			//문자인지 숫자인지 체크
+			if (isNaN(korean.value)) {
+				alert('국어 성적은 숫자만 가능');
+				korean.value='';
+				korean.focus();
+				return;
+			}
+			if (isNaN(english.value)) {
+				alert('영어 성적은 숫자만 가능');
+				english.value='';
+				english.focus();
+				return;
+			}
+			if (isNaN(math.value)) {
+				alert('수학 성적은 숫자만 가능');
+				math.value='';
+				math.focus();
+				return;
+			}
+			
+			//총점 구하기
+			var sum = Number(korean.value)+Number(english.value)+Number(math.value);
+			//평균 구하기
+			var avg = sum/3;
+			
+			var msg = '';
+			msg += '국어: '+korean.value+'\n';
+			msg += '영어: '+english.value+'\n';
+			msg += '수학: '+math.value+'\n';
+			msg += '총점: '+sum+'\n';
+			msg += '평균: '+avg.toFixed(2)+'\n';
+			
+			alert(msg);
 		}
 	</script>
 </head>
