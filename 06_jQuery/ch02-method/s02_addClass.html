@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>addClass</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 	<style type="text/css">
+ 		.high_light {
+			background: yellow;
+		}
+ 	</style>
+ 	<script type="text/javascript">
+ 		//$는 jQuery 문법을 사용하겠다는 의미
+		$(function() {
+			//클래스 추가
+			$('h1').addClass('high_light');
+		});
+	</script>
+</head>
+<body>
+	<h1>item - 0</h1>
+	<h1>item - 1</h1>
+	<h1>item - 2</h1>
+	<h1>item - 3</h1>
+	<h1>item - 4</h1>
+</body>
+</html>
