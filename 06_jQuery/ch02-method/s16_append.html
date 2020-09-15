@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>문서 객체 생성</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		/*
+			메서드 이름				설명
+			$(A).append(B)		B를 A의 기존 자식의 뒤에 추가 (부모-자식관계)
+			$(A).prepend(B)		B를 A의 기존 자식의 앞에 추가 (부모-자식관계)
+			$(A).after(B)		B를 A의 뒤에 추가 (형제관계)
+			$(A).before(B)		B를 A의 앞에 추가 (형제관계)
+		*/
+		$(function() {
+			//$('div').append('<h1>Hello jQuery!</h1>');
+			//$('div').prepend('<h1>Hello jQuery!</h1>');
+			//$('div').after('<h1>Hello jQuery!</h1>');
+			$('div').before('<h1>Hello jQuery!</h1>');
+		});
+	</script>
+</head>
+<body>
+	<div>
+		<h1>오늘은 화요일</h1>
+	</div>
+</body>
+</html>

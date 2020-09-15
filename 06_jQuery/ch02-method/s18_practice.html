@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>실습</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<style type="text/css">
+		table {
+			text-align: center;
+		}
+	</style>
+	<script type="text/javascript">
+		/*
+			[문제] 성적을 table에 표시
+			출력 예시)
+				이름		국어	영어	수학
+				홍길동	80	90	98
+				장영실	90	95	88
+				박문수	95	99	78
+				김유신	85	96	68
+		*/
+		$(document).ready(function() {
+			var objectList = [
+				//배열 요소는 일관성있게, 배열에는 성적데이터만 넣고 항목은 따로 빼서 넣기
+				{name: '홍길동', korean: 80, english: 90, math: 98},
+				{name: '장영실', korean: 90, english: 95, math: 88},
+				{name: '박문수', korean: 95, english: 99, math: 78},
+				{name: '김유신', korean: 85, english: 96, math: 68}
+			];
+			
+			var output = '';
+			output += '<tr>';
+			output += '	<th>이름</th>';
+			output += '	<th>국어</th>';
+			output += '	<th>영어</th>';
+			output += '	<th>수학</th>';
+			output += '</tr>';
+			
+			$.each(objectList, function(index, item) {
+				output += '<tr>'
+				output += '	<td>' + item.name + '</td>';
+				output += '	<td>' + item.korean + '</td>';
+				output += '	<td>' + item.english + '</td>';
+				output += '	<td>' + item.math + '</td>';
+				output += '</tr>';
+			});
+			
+			$('#output').append(output);
+		});
+	</script>
+</head>
+<body>
+	<table id="output" border="1"></table>
+</body>
+</html>

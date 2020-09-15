@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>문서 객체 내부에 HTML 태그 추가</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		//문서가 준비가 되면 매개변수를 함수로 한 함수 실행
+		$(document).ready(function() {
+			$('div').html(function(index) {
+				return '<h1>Header - ' + index + '</h1>';
+			});
+		});
+	</script>
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+</body>
+</html>

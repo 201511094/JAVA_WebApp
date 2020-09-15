@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>문서 객체 생성</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			//이미지 크기 조정
+			$('img').css('width', 250);	//가로길이를 지정하면 세로는 비율에 맞춰 자동 조정됨
+			
+			//함수를 2초마다 실행
+			setInterval(function() {
+				//첫번째 이미지를 마지막으로 보냄
+				//첫번째 객체에 접근해서 appendTo 실행
+				$('img').first().appendTo('body');
+			}, 2000);
+		});
+	</script>
+</head>
+<body>
+	<img src="../images/Desert.jpg">
+	<img src="../images/Koala.jpg">
+	<img src="../images/Jellyfish.jpg">
+	<img src="../images/Penguins.jpg">
+	<img src="../images/landscape.jpg">
+</body>
+</html>

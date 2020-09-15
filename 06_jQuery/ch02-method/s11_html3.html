@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>태그의 내용을 읽어들여 가공하기</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('div').html(function(index, html) {
+				//index : 태그 정보를 갖고 있는 배열의 인덱스
+				//html : 태그의 내용
+				return '**' + html + '**';
+			});
+		});
+	</script>
+</head>
+<body>
+	<div>Header-0</div>
+	<div>Header-1</div>
+	<div>Header-2</div>
+</body>
+</html>
