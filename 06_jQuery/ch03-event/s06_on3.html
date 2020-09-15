@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>이벤트 연결 - on</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<style type="text/css">
+		div {
+			margin: 5px;
+			padding: 3px;
+			border-width: 3px;
+			border-style: solid;
+			border-color: black;
+			border-radius: 10px;	//모서리 둥글게
+		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			//현재의 태그에만 이벤트 연결
+			$('div').on('click', function() {
+				//이벤트가 발생한 태그(객체)의 하위 태그 중 h1 태그에 접근
+				//			하위태그(=h1), 이벤트가 발생한 태그(=this)
+				var header = $('h1', this).text();	//정보 읽어오기(=HeaderN)
+				//이벤트가 발생한 태그의 하위 태그 중 p 태그에 접근
+				var paragraph = $('p', this).text();	//정보 읽어오기(=ParagraphN)
+				
+				//alert는 HTML공간이 아닌 응용프로그램이기 때문에 br이 아니라 \n 사용
+				alert(header+'\n'+paragraph);
+			});
+		});
+	</script>
+</head>
+<body>
+	<div>
+		<h1>Header1</h1>
+		<p>Paragraph1</p>
+	</div>
+	<div>
+		<h1>Header2</h1>
+		<p>Paragraph2</p>
+	</div>
+	<div>
+		<h1>Header3</h1>
+		<p>Paragraph3</p>
+	</div>
+</body>
+</html>

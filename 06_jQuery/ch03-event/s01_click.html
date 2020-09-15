@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>이벤트 연결 - click, mouseover, mouseout, hover</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		//메소드를 통해 이벤트 연결
+		$(function() {
+			//click메서드
+			$('#btn1').click(function() {	//이벤트 핸들러: 이벤트를 처리하는 함수
+				//jQuery에서는 '-' 사용 가능
+				$('p').css('background-color', 'yellow');
+			});
+			
+			//mouseover메서드
+			$('#btn2').mouseover(function() {
+				$('p').css('background-color', 'purple');
+			});
+			//mouseout메서드
+			$('#btn2').mouseout(function() {
+				$('p').css('background-color', 'orange');
+			});
+			
+			//hover: mouseover와 mouseout을 동시에 처리
+			$('#btn3').hover(function() {
+				//mouseover
+				$('p').css('background-color', 'green');
+			}, function() {
+				//mouseout
+				$('p').css('background-color', 'blue');
+			});
+		});
+	</script>
+</head>
+<body>
+	<button id="btn1">click</button>
+	<button id="btn2">mouseover/out</button>
+	<button id="btn3">hover</button>
+	<p>내용</p>
+</body>
+</html>

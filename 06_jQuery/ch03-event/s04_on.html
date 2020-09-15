@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>이벤트 연결 - on</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			//이벤트 연결, 현재의 태그에만 이벤트 연결 예시
+			//			이벤트 종류, 이벤트 핸들러(이벤트 발생시 동작하는 함수)
+			$('h1').on('click', function() {
+				$(this).html(function(index, html) {
+					return html + '+';
+				});
+			});
+		});
+		//on메서드는 현재 존재하는 태그뿐만 아니라 미래에 만들어질 태그에도 이벤트 연결이 가능함 -> on2.html
+	</script>
+</head>
+<body>
+	<h1>Header-0</h1>
+	<h1>Header-1</h1>
+	<h1>Header-2</h1>
+</body>
+</html>
