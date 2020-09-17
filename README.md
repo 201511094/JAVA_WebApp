@@ -73,7 +73,7 @@
 			ch04 file
 			ch05 webstorage
 
-		08. Servlet
+		08. Servlet & JSP
 			ch01
 
 
