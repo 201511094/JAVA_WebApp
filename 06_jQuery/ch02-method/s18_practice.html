@@ -5,7 +5,7 @@
 	<title>실습</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<style type="text/css">
-		table {
+		#output {
 			text-align: center;
 		}
 	</style>
@@ -47,9 +47,35 @@
 			
 			$('#output').append(output);
 		});
+				
+		//강사님 코드
+		$(document).ready(function() {
+			var score = [
+				//배열 요소는 일관성있게, 배열에는 성적데이터만 넣고 항목은 따로 빼서 넣기
+				{name: '홍길동', korean: 80, english: 90, math: 98},
+				{name: '장영실', korean: 90, english: 95, math: 88},
+				{name: '박문수', korean: 95, english: 99, math: 78},
+				{name: '김유신', korean: 85, english: 96, math: 68}
+			];
+			
+			var output2 = '<tr><th>이름</th><th>국어</th><th>영어</th><th>수학</th></tr>';
+			
+			$.each(score, function(index, item) {
+				output2 += '<tr>'
+				output2 += '	<td>' + item.name + '</td>';
+				output2 += '	<td>' + item.korean + '</td>';
+				output2 += '	<td>' + item.english + '</td>';
+				output2 += '	<td>' + item.math + '</td>';
+				output2 += '</tr>';
+			});
+			
+			$('#output2').append(output2);
+		});
+		
 	</script>
 </head>
 <body>
-	<table id="output" border="1"></table>
+	<table id="output" border="1"></table><br>
+	<table id="output2" border="1"></table>
 </body>
 </html>

@@ -64,6 +64,13 @@
 		06. jQuery
 			ch01 selector
 			ch02 method
+			ch03 event
+
+		07. HTML5
+			ch01
+			ch02
+			ch03
+			ch04
 
 		[08.31 ~ 09.14: 비대면 수업]
 		08.31 월: 자바스크립트 수업(ch01, ch02, ch03)
@@ -80,6 +87,7 @@
 
 		09.14 월: jQuery(ch01, ch02)
 		09.15 화: jQuery(ch02, ch03)
+		09.16 수: HTML5(ch01, ch02, ch03, ch04)
 
 
 	#기록
