@@ -67,27 +67,20 @@
 			ch03 event
 
 		07. HTML5
+			ch01 semantic
+			ch02 form
+			ch03 media
+			ch04 file
+			ch05 webstorage
+
+		08. Servlet
 			ch01
-			ch02
-			ch03
-			ch04
 
-		[08.31 ~ 09.14: 비대면 수업]
-		08.31 월: 자바스크립트 수업(ch01, ch02, ch03)
-		09.01 화: 자바스크립트(ch03, ch04)
-		09.02 수: 자바스크립트(ch04, ch05)
-		09.03 목: 자바스크립트(ch05, ch06)
-		09.04 금: 자바스크립트(ch06, ch07, ch08)
-
-		09.07 월: 자바스크립트(ch08)
-		09.08 화: 자바스크립트(ch08, ch09, ch10, ch11)
-		09.09 수: 자바스크립트(ch11, ch12)
-		09.10 목: 자바스크립트(ch12)
-		09.11 금: 자바스크립트(ch12)
 
 		09.14 월: jQuery(ch01, ch02)
 		09.15 화: jQuery(ch02, ch03)
 		09.16 수: HTML5(ch01, ch02, ch03, ch04)
+		09.17 목: HTML5(ch05), Servlet(ch01)
 
 
 	#기록
