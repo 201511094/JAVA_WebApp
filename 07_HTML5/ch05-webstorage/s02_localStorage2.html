@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>로컬스토리지</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			//저장된 데이터 읽기
+			load_setting();
+			
+			//이벤트 연결
+			//event는 submit버튼이 아니라 form에서 발생, 따라서 이벤트 연결을 form에서 해주어야 함
+			//태그명#아이디명
+			$('form#frm').submit(function(event) {
+				//기본 이벤트 제거
+				event.preventDefault();
+				
+				//로컬스토리지에 데이터 저장
+				save_setting();
+			});
+		});
+		
+		//함수 - 로컬스토리지에 저장된 데이터 반환
+		function load_setting() {
+			var bgcolor = localStorage.getItem('bg_color');
+			var textcolor = localStorage.getItem('text_color');
+			var textsize = localStorage.getItem('text_size');
+			
+			$('#bg_color').val(bgcolor);
+			$('#text_color').val(textcolor);
+			$('#text_size').val(textsize);	//select에 셋팅
+			
+			//스타일 반영
+			apply_data();
+		}
+		
+		//함수 - 로컬스토리지에 설정값 저장
+		function save_setting() {
+			//			setItem(key, value)
+			//배경색 설정
+			localStorage.setItem('bg_color', $('#bg_color').val());
+			//글자색 설정
+			localStorage.setItem('text_color', $('#text_color').val());
+			//글자크기 설정
+			localStorage.setItem('text_size', $('#text_size').val());
+			
+			//스타일 반영
+			apply_data();
+		}
+		
+		//함수 - 스타일을 태그에 반영
+		function apply_data() {
+			$('body').css({
+				background: $('#bg_color').val(),
+				color: $('#text_color').val(),
+				fontSize: $('#text_size').val()
+			});
+		}
+	</script>
+</head>
+<body>
+	<h2>환경설정 값 기억</h2>
+	<!-- 로컬스토리지를 이용해 개인화 서비스 제공 -->
+	<form id="frm">
+		<fieldset id="colors">
+			<legend>색상/글자 크기 선택</legend>
+			<ul>
+				<li>
+					<label for="bg_color">배경색</label>
+					<!-- name은 서버에 전송할 때 필요 -->
+					<input type="text" name="bg_color" id="bg_color">
+				</li>
+				<li>
+					<label for="text_color">글자색</label>
+					<input type="text" name="text_color" id="text_color">
+				</li>
+				<li>
+					<label for="text_size">글자크기</label>
+					<select name="text_size" id="text_size">
+						<!-- value를 따로 설정하지 않으면 값이 value가 됨, ex)16px -->
+						<option value="16px">16px</option>
+						<option value="20px">20px</option>
+						<option value="24px">24px</option>
+					</select>
+				</li>
+			</ul>
+			<input type="submit" value="저장">
+		</fieldset>
+	</form>
+</body>
+</html>

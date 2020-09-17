@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>file</title>
+	<script type="text/javascript">
+		//밑에 있는 모든 태그를 인식해야 하므로 window.onload
+		window.onload = function() {
+			//이벤트 연결
+			//파일을 선택할 때
+			document.getElementById('file').onchange = function() {
+				//선택한 파일의 File 객체를 취득, 배열 형태로 정보를 담고있기 때문에 인덱스 0번으로부터 정보를 얻어냄
+				var file = this.files[0];
+				
+				//파일의 정보를 취득
+				alert(file.name + '을 선택했습니다.');
+			};
+			
+			//읽기 버튼을 클릭할 때
+			document.getElementById('btnStart').onclick = function() {
+				readProcess();
+			};
+		};
+		
+		function readProcess() {
+			//선택한 파일에 대한 정보 읽기
+			var file = document.getElementById('file').files[0];
+			
+			//파일을 선택하지 않을 경우 file은 undefined이고 undefined를 boolean으로 인식함
+			//따라서 !file은 false가 됨
+			if (!file) {	//if (file==undefined)
+				alert('파일을 선택하세요!');
+				return;
+			}
+			
+			//정보를 읽어서 텍스트로 처리
+			document.getElementById('filename').textContent = file.name;
+			document.getElementById('filesize').textContent = '('+file.size+'bytes)';
+			document.getElementById('filetype').textContent = file.type;
+			document.getElementById('filedate').textContent = file.lastModifiedDate.toLocaleString();
+			
+			//파일 읽기 기능
+			var reader = new FileReader();
+			
+			var encodeList = document.getElementById('encoding');
+			//select태그에서 선택한 option의 value값, EUC-KR 또는 UTF-8
+			var encoding = encodeList.options[encodeList.selectedIndex].value;
+			
+			//선택한 파일을 읽어서 문자열로 저장
+			reader.readAsText(file, encoding);
+			
+			//파일의 내용 읽기가 완료되면 호출
+			reader.onload = function(event) {
+				var disp = document.getElementById('contents');
+				disp.textContent = reader.result;	//읽어들인 내용 출력
+			};
+		}
+	</script>
+</head>
+<body>
+	<h2>현재 시스템의 파일 읽기</h2>
+	<!-- 텍스트 파일만 선택 가능하도록 accept 설정 -->
+	<input type="file" id="file" accept="text/*">
+	<select id="encoding">
+		<option>EUC-KR</option>
+		<option>UTF-8</option>
+	</select>
+	<button id="btnStart">읽기</button><br>
+	<div>
+		<span id="filename">파일명</span>
+		<span id="filesize">파일크기</span>
+		<span id="filetype">파일타입</span>
+		<span id="filedate">파일의 마지막 갱신일시</span>
+	</div>
+	<textarea rows="10" cols="50" id="contents"></textarea>
+</body>
+</html>

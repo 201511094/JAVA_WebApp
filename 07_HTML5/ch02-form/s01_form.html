@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>form</title>
+	<style type="text/css">
+		ul {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+		}
+		ul li {
+			padding: 0;
+			margin: 0 0 10px 0;	/*상 우 하 좌*/
+		}
+		label {
+			width: 150px;
+			float: left;	/*정렬효과*/
+		}
+	</style>
+</head>
+<body>
+	<form action="do.jsp" method="post">
+		<fieldset id="personal_information">
+			<legend>프로젝트 정보</legend>
+			<ul>
+				<li>
+					<!--
+						required : 입력 필수 지정
+						autofocus : 페이지로드시 자동 포커스 지정
+					 -->
+					<!-- label과 input 연결을 위해 input에 id를 지정하고 for에 id값을 지정해줌 -->
+					<!-- type에 필드를 입력 -->
+					<label for="name">이름</label>
+					<input type="text" name="name" id="name" autofocus required>
+				</li>
+				<li>
+					<!-- placeholder : 힌트 기능 -->
+					<label for="id">ID</label>
+					<input type="text" name="id" id="id" placeholder="영문만 입력">
+				</li>
+				<li>
+					<!-- range : 슬라이드 막대로 표시하는 숫자 필드 -->
+					<label for="priority">중요도</label>
+					<input type="range" name="priority" id="priority" min="0" max="10" value="0">
+				</li>
+				<li>
+					<!-- number : 숫자 필드 -->
+					<label for="estimated_hours">예상 시간</label>
+					<input type="number" name="estimated_hours" id="estimated_hours" min="0" max="1000">
+				</li>
+				<li>
+					<!-- date : 날짜 필드 -->
+					<label for="start_date">시작 날짜</label>
+					<input type="date" name="start_date" id="start_date">
+				</li>
+				<li>
+					<!-- email : 이메일 필드, 형식 체크(@의 유무) -->
+					<!-- autocomplete : 자동완성 -->
+					<label for="email">이메일</label>
+					<input type="email" name="email" id="email" autocomplete="off">
+				</li>
+				<li>
+					<!-- url : URL 필드, 형식 체크(http:// 또는 https:// 의 유무) -->
+					<label for="url">URL</label>
+					<input type="url" name="url" id="url">
+				</li>
+				<li>
+					<!-- search : search 필드 -->
+					<label for="search">검색</label>
+					<input type="search" name="search" id="search">
+				</li>
+				<li>
+					<input type="submit" value="전송">
+				</li>
+			</ul>
+		</fieldset>
+	</form>
+</body>
+</html>
