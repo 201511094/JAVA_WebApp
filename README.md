@@ -74,13 +74,19 @@
 			ch05 webstorage
 
 		08. Servlet & JSP
-			ch01
+			01) Servlet
+				ch01
+				ch02
+			02) JSP
+				ch01
+				ch02
 
 
 		09.14 월: jQuery(ch01, ch02)
 		09.15 화: jQuery(ch02, ch03)
 		09.16 수: HTML5(ch01, ch02, ch03, ch04)
 		09.17 목: HTML5(ch05), Servlet(ch01)
+		09.18 금: Servlet(ch02), JSP(ch01, ch02)
 
 
 	#기록
