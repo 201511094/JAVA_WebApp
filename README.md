@@ -46,7 +46,7 @@
 			8.21 금: 중간발표
 			8.26 수: 최종발표
 			
-		05. JavaScript
+		05. JavaScript (08.31 ~ 09.11)
 			ch00 자바 복습
 			ch01 basic
 			ch02 variable
@@ -61,12 +61,12 @@
 			ch11 DOM
 			ch12 event
 
-		06. jQuery
+		06. jQuery (09.14 ~ 09.15)
 			ch01 selector
 			ch02 method
 			ch03 event
 
-		07. HTML5
+		07. HTML5 (09.16 ~ 09.17)
 			ch01 semantic
 			ch02 form
 			ch03 media
@@ -74,10 +74,10 @@
 			ch05 webstorage
 
 		08. Servlet & JSP
-			01) Servlet
+			01) Servlet (09.17 ~ 09.18)
 				ch01
 				ch02
-			02) JSP
+			02) JSP (09.18 ~ )
 				ch01
 				ch02
 
