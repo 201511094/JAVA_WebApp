@@ -78,13 +78,18 @@
 				ch01
 				ch02
 			02) JSP (09.18 ~ )
-				ch01
-				ch02
-				ch03
+				ch01 launch
+				ch02 script
+				ch03 nested object
+				ch04 include
+				ch05 error page
+				ch06 action tag
+				ch07 cookie
 
 		09.17 목: HTML5(ch05), Servlet(ch01)
 		09.18 금: Servlet(ch02), JSP(ch01, ch02)
 		09.21 월: JSP(ch03)
+		09.22 화: JSP(ch03, ch04, ch05, ch06, ch07)
 
 
 	#기록
