@@ -85,11 +85,15 @@
 				ch05 error page
 				ch06 action tag
 				ch07 cookie
+				ch08 session
+				ch09 file upload
+				ch10 jdbc
 
 		09.17 목: HTML5(ch05), Servlet(ch01)
 		09.18 금: Servlet(ch02), JSP(ch01, ch02)
 		09.21 월: JSP(ch03)
 		09.22 화: JSP(ch03, ch04, ch05, ch06, ch07)
+		09.23 수: JSP(ch08, ch09, ch10)
 
 
 	#기록
