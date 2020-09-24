@@ -7,4 +7,4 @@ create table tboard (
 	reg_date date not null
 );
 
-create sequence board_seq;
+create sequence board_seq;	/*중복X, unique한 값을 가져다 쓸 수 있음*/
