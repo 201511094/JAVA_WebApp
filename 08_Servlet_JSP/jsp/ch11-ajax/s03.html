@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery를 이용한 비동기 통신 구현</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			//XML 데이터 읽기
+			$.ajax({
+				url: 'myXMLAction.jsp',	//요청 URL
+				success:function(param) {
+					//person 태그를 찾아 배열로 반환
+					//전체 xml데이터로부터 person태그를 검색하고
+					//검색된 person태그 정보를 배열로 반환
+					$(param).find('person').each(function() {
+						//this는 이벤트가 발생한 태그, 즉 person
+						var name = '<li>' + $(this).find('name').text() + '</li>';
+						var job = '<li>' + $(this).find('job').text() + '</li>';
+						var age = '<li>' + $(this).find('age').text() + '</li>';
+						
+						$('body').append('<ul>' + name + job + age + '</ul>');
+					});
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+
+</body>
+</html>

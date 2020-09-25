@@ -1,0 +1,9 @@
+<%@ page language="java" contentType="text/plain; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%-- DB 설정 정보 --%>
+<%
+	String driverName = "oracle.jdbc.OracleDriver";
+	String jdbcUrl = "jdbc:oracle:thin:@localhost:1521:orcl";
+	String dbId = "c##ezen";
+	String dbPass = "1234";
+%>
