@@ -91,11 +91,7 @@
 				ch11 ajax(1)
 				ch12 ajax(2)
 				
-		09.21 월: JSP(ch03)
-		09.22 화: JSP(ch04, ch05, ch06, ch07)
-		09.23 수: JSP(ch08, ch09, ch10)
-		09.24 목: JSP(ch10)
-		09.25 금: JSP(ch10, ch11, ch12)
+		09.28 월: Oracle Database 복습(SQL문)
 
 
 	#기록
