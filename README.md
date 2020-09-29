@@ -92,6 +92,7 @@
 				ch12 ajax(2)
 				
 		09.28 월: Oracle Database 복습(SQL문)
+		09.29 화: Oracle Database 복습(SQL문)
 
 
 	#기록
