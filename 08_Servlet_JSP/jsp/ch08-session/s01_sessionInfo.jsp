@@ -15,7 +15,7 @@
 </head>
 <body>
 	세션 ID : <%= session.getId() %><br>	
-	세션 생생 시간 : <%= session.getCreationTime() %><br>	<!-- long타입 -->
+	세션 생성 시간 : <%= session.getCreationTime() %><br>	<!-- long타입 -->
 <%
 	time.setTime(session.getCreationTime());
 %>
