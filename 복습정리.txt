@@ -1,0 +1,269 @@
+#HTML5
+ch01 semantic
+	header - 머리말, 회사의 로고, 메뉴, 검색상자 등
+	hgroup - 제목과 부제목 묶기
+	nav - 메뉴, 페이지 연결 링크
+	section - 페이지의 논리적 영역, 내용 부분
+	article - 세부 내용
+	footer - 꼬리말, 저작권이나 사이트 소유자의 정보
+	header - 내용의 작은 제목
+	aside - 인용구, 덧붙이고 싶은 생각, 관련된 링크
+ch02 form
+	fieldset
+	legend - 제목
+	label과 input 연결 - input id값을 label for에 지정
+	input태그 type속성값 - text, range, number, date, email, url, search, submit
+	input태그 속성 - required, autofocus, min/max, value
+ch03 media
+	video태그 속성 - src, width/height, autoplay, controls(제어판), poster
+	audio태그 속성 - src, width/height, alt, controls, autoplay
+ch04 file
+	input type="file" accept="???/*"(특정파일만 선택 가능)
+	this.files[0]로 File객체 획득
+	FileReader()로 파일을 읽음
+	객체.textContent로 읽어들인 내용을 출력
+	readAsDataURL(file.files[0])로 이미지 파일 읽음
+ch05 webstorage
+ s01_localStorage, s02_localStorage.html(jQuery)
+	로컬스토리지
+	- 브라우저를 통해 사용자의 컴퓨터 데이터를 지속적으로 저장할 수 있는 공간
+	- 브라우저가 제공, 로컬스토리지를 이용해 개인화 서비스 제공
+	- 사이트 재방문시 저장된 모든 데이터 사용 가능
+	localStorage.KEY = VALUE 또는 localStorage.setItem(KEY, VALUE)로 데이터 저장
+	localStorage.KEY 또는 localStorage.getItem(KEY)로 데이터 읽어옴
+ s03_sessionStorage.html
+	세션스토리즈
+	- 브라우저 열려있는 동안에만 모든 데이터를 기억하는 저장공간
+	- 임시 데이터 처리
+	sessionStorage.KEY = VALUE 또는 sessionStorage.setItem(KEY, VALUE)로 데이터 저장
+	sessionStorage.KEY 또는 sessionStorage.getItem(KEY)로 데이터 읽어옴
+
+
+#JavaScript
+ch01 basic
+ s01_launch, s02_launch, s03_inline.html
+	실행 위치 - head태그 내부 또는 body태그 내부
+	실행 코드(.js)를 외부에 명시하고 src로 링크 걸기
+	inline형태 - 태그에 자바스크립트 내장
+ s04_write, s05_write2.html
+	한줄 주석 - //
+	여러줄 주석 - /**/
+ch02 variable
+	변수 선언 후 값을 할당하지 않고 출력하면 오류는 발생하지 않고 undefined 출력됨
+	변수명이 겹쳐도 오류가 발생하지 않음
+	 typeof 변수명 - 해당 변수에 저장된 데이터 타입을 알려주는 연산자
+	형변환 - Number(변수)는 문자->숫자로 변환
+ch03 operator
+	산술연산자 - +, -, *, /, %
+	증감연산자 - ++, --
+	대입연산자 - +=, -=, *=, /=, %=
+	비교연산자 - === !== (값과 자료형 비교)
+	논리연산자 - !, &&, ||, 자바스크립트에서는 논리연산자로 숫자(0/1)를 사용할 수 있음
+	삼항연산자
+	- 조건식 ? (참일 때 대입되는 값) : (거짓일 때 대입되는 값),
+	- 조건식 ? (참일 때 수행되는 문장) : (거짓일 때 수행되는 문장)
+ch04 operation
+	if
+	switch - case 10: ... default: , Math.floor(score/10) -> 소수점 절삭
+	for
+	while
+	do-while - 선 처리, 후 비교
+	break - break label을 이용하여 빠져나가고 싶은 반복문을 설정, break 반복문이름;
+	continue
+ch05 function
+	선언적 함수, 익명함수
+	함수의 이름이 같을 경우 마지막 함수가 호출됨
+	변수 선언은 중복될 수 있고 대입한 마지막 함수가 호출됨
+	지역변수 - 함수 안에서 var 선언한 변수, 함수 끝나면 소멸, 함수 밖에서 호출 불가능
+	전역변수 - 함수 밖에서 만들어진 모든 변수, 함수 안에서 var 없이 만들어진 변수, 함수 끝나도 메모리에 남아 있음
+	자바스크립트는 함수 생성 시 지정한 매개변수보다 많거나 적은 매개변수 사용을 허용함
+	- 매개변수 수를 적게 사용하면 미지정 매개변수에는 undefined가 입력됨
+	가변인자 함수 - 매개변수를 선언된 형태와 다르게 사용해도 매개변수를 모두 활용하는 함수
+	자바스크립트의 모든 함수는 내부에 변수 arguments를 갖고 있음, 이는 매개변수의 배열임
+	return
+	함수를 매개변수로 받는 함수 - 매개변수로 전달된 함수를 실행
+	내부함수 - 함수 내부에 있는 함수
+ch06 nestedFunction
+	isFinite() - 0으로 나누었는지 아닌지 검증 가능, 결과값이 true면 유한이고 false면 무한
+	isNaN() - Not a Number, 전달되는 인자의 값이 숫자인지 아닌지 판별, true면 숫자가 아니고 false면 숫자 아님
+	parseInt(), parseFloat() - 숫자를 추출해서 형변환
+	encoding관련
+	- escape(url), encodeURI(url), encodeURIComponent(url)
+	- unescape(url), decodeURI(url), decodeURIComponent(url)
+	eval() - 문자열을 전달하면 시행할 수 있는 코드로 변환
+ch07 array
+	for in 반복문 - for (var 변수 in array) {...}
+	array.length, array.splice(인덱스, 인덱스)
+	array.sort(), array.reverse()
+	array.join(), array.join("") - 구분자를 사용한 문자열 반환
+	array.slice(), array.slice( , )
+	array.concat(n) - 전달되는 인자 또는 배열을 추가하여 새로운 배열 생성
+	array.push(n) - 데이터 삽입
+	array.pop() - 데이터 제거
+ch08 object
+	var object = { 속성 : 값 }
+	this는 객체 내부에서 객체를 참조할 때 사용
+	속성명 in object - in 키워드를 통해 객체 내의 속성 존재 여부 체크
+	객체를 생성하면 자동으로 Object를 상속받으며 toString() 사용 가능
+	delete(object.속성명) - 속성 제거
+	생성자 함수
+	프로토타입
+	- 생성자 함수를 사용해 생성된 객체가 공통으로 가지는 공간
+	- 생성자함수명.prototype.함수이름 = function() {...}
+	- 자바스크립트는 프로토타입을 이용해 상속을 구현, Student.prototype = Human.prototype
+ch09 clientObject
+ s01_window, s02_window2, s03_window3.html
+	브라우저 관련 객체 - window
+	window.alert(), window.prompt(), window.confirm()
+	window.open(url, 새창이름, 옵션)
+	window.setTimeout(함수, 시간) - 일정시간 후에 함수를 한 번 실행
+	window.setInterval(함수, 시간) - 일정시간 마다 함수를 반복해서 실행
+ s04_location, s05_location2.html
+	location객체
+	- href(이동), host, hostname, protocol, port
+	- assign(이동), replace(이동, 전페이지로 이동 불가), reload(새로고침)
+ s06_history.html
+	history객체
+	- back(), go(-1)
+	- forward(), go(1)
+ch10 nestedObject
+	Array
+	Date
+	- toLocaleString(), toLocaleDateString(), toLocaleTimeString()
+	- getFullYear(), getMonth(), getDate(), getDay()
+	- getHours(), getMinutes(), getSeconds(), getMilliseconds()
+	Math - ceil(), floor(), round(), max(), min(), abs(), random()
+	String
+	- typeof(), toUpperCase()
+	- charAt(), indexOf(), lastIndexOf(), substring(), split()
+ch11 DOM
+	문서 객체 탐색
+	- 태그명 : document.getElementsByTagName('tagname'), 복수의 태그가 존재가능하므로 배열로 반환
+	- id : getElementById('id')
+	- name속성 : getElementsByName('name'), 배열로 반환
+	- class : getElementsByClassName('class'), 배열로 반환
+	태그 생성
+	- createElement(tagname), createTextNode(text), appendChild(node)
+	- 태그를 생성(createElement)한 후 노드 연결(appendChild) 필수
+	innerHTML속성에 문자열 할당 - document.태그명.innerHTML = 문자열;
+	문서 객체의 스타일 조작 - 문서객체.style.속성 = '속성값';
+ch12 event
+	인라인 이벤트 처리 - 함수 사용 가능
+	onclick - 클릭 시 이벤트 발생
+	onmouseover, onmouseout - 마우스 위치
+	onchange - 범위를 벗어날 경우 이벤트 발생
+	onsubmit - 전송 시 이벤트 발생
+	window.onload - 문서가 준비된 이후에 실행
+	이벤트 연결 - 변수.onclick = 함수이름;
+	이벤트 제거 - 변수.onclick = null;
+	key 이벤트 - keydown, keypress, keyup
+	이벤트 전달
+	- 이벤트 버블링 : 자식 노드->부모 노드 순으로 이벤트 실행
+	- 이벤트 캡처링 : 부모 노드->자식 노드 순으로 이벤트 실행
+	- event.stopPropagation() : 이벤트 전달 막기
+	표준 이벤트 모델
+	- 이벤트 연결 : addEventListener(이벤트타입, 이벤트핸들러, useCapture) 
+	- 이벤트 제거 : removeEventListener(이벤트타입, 이벤트핸들러)
+
+
+#jQuery
+ch01 selector
+ s01_ready, s02_ready2.html
+	jQuery 연결 방법
+	- js파일 다운로드 연결
+	- CDN방식 : URL을 통해 js 파일 연결
+ s03_selector.html ~ s06_selector4.html
+	태그 선택자 - ex) $('span')
+	클래스 선택자 - ex) $('.class')
+	id 선택자 - 유일 ex) $('#id')
+	여러 개의 태그를 선택할 시 쉼표 사용 - ex) $('h1, p')
+	두 개의 클래스를 모두 가진 태그 선택할 시 점 사용 - ex) $('h1.item.select')
+	자식 선택자 - 직계 자식
+	후손 선택자 - 직계+후손 모두 선택
+ch02 method
+	each - .each(배열, 배열로부터 데이터를 받아 처리하는 함수)
+	addClass - 클래스 추가
+	removeClass - 문서 객체의 클래스 속성을 제거
+	attr - 속성과 관련된 모든 기능을 수행, 복수의 속성 제어 가능, 속성값을 반환
+	removeAttr - 속성 제거
+	prop - 선택한 요소에 속성을 반환, 생성, 변환
+ch03 event
+	jQuery에서는 자바스크립트에서 속성을 사용하는 것과 달리 메소드를 사용
+	val() : value속성의 값을 읽어오는 메소드
+	click, mouseover, mouseout, hover
+	keyup
+	on
+	- .on(이벤트 종류, 이벤트 핸들러(=이벤트 발생 시 동작하는 함수))
+	- .on(이벤트 종류, 이벤트 소스(=이벤트가 발생하는 태그), 이벤트 핸들러)
+	- 현재 존재하는 태그뿐만 아니라 미래에 만들어질 태그에도 이벤트 연결이 가능
+
+#Servlet
+ ch01, ch02
+	Servlet은 HttpServlet을 상속해야 사용 가능 - extends HttpServlet
+	클라이언트가 요청하면 Servlet객체가 생성되고 doGet() 또는 doPost()메소드가 호출됨
+	web.xml에 주소를 매핑해야 주소창에 구조가 공개되지 않음
+	Get방식 : 요청라인에 데이터를 넣어서 보냄 / Post방식 : body에 데이터를 넣어서 보냄
+	1) 문서 타입 및 캐릭터셋 지정 - response.setContentType("text/html; charset=utf-8");
+	2) 전송된 데이터 인코딩 처리 - request.setCharacterEncoding("utf-8");
+	3) 전송된 데이터 반환 - request.getPArameter("name값");
+	4) 출력 스트림 생성 - PrintWriter out = response.getWriter(); out.println(...);
+	5) 출력 스트림 자원 정리 - out.close();
+
+
+#JSP
+ ch01 launch
+	jsp에서는 java만 사용 가능
+	<%@ page 디렉티브 %> - jsp설정, jsp페이지에서 사용할 자바 클래스를 import해서 사용
+	<% 자바 영역 %>
+	<%= 표현식 %>
+ ch02 script
+	<%! 선언부 %> - 변수 선언, 메소드 선언 -> 멤버
+	<% 스크립트릿 %> - 변수 선언, 연산, 제어문, 출력 -> 지역, 스크립트릿 안에 표현식 사용 불가능
+	<%= 표현식 %> - 변수의 값 출력, 메소드 결과값 출력, 연산의 결과 출력
+ ch03 nestedObject
+	s01_makeTestForm, s02_viewParameter.jsp - 폼 생성 후 파라미터 출력
+	s03_orderForm, s04_order.jsp - 고객의 정보와 선택한 상품의 정보를 출력
+	s05_registerForm, s06_register.jsp - 회원가입 후 회원정보 출력
+	s07_requestInfo.jsp - 클라이언트 및 서버 정보
+	s08_viewHeaderList.jsp - 헤더 목록 출력
+	s09_responseA, s10_responseB.jsp - 리다이렉트
+	s11_autoFlushTrue, s12_autoFlushFalse.jsp - page buffer 크기 및 autoFlush 값 수정, 기본값은 buffer="8kb"에 autoFlush="true"
+	s13_bufferInfo.jsp - 버퍼 정보, 바이트 단위
+	s14_scopeA, s15_scopeB.jsp - JSP 4개 기본 객체와 영역, page/request/session영역
+	s16_setApplication.jsp - application 속성 지정, setAttribute(속성명, 속성값)
+	s17_getApplication.jsp - application 기본 객체 속성 보기, getAttribute()
+	s18_orderForm, s19_order.jsp - 주문서를 받아 주문 음식과 가격을 출력
+ ch04 include
+	include 디렉티브
+ ch05 errorPage
+	error폴더 > jsp파일들 - 에러 설명 페이지
+ ch06 actionTag
+	<jsp:forward> <jsp:include> <jsp:param> - 페이지 모듈화
+ ch07 cookie
+	쿠키 생성 - Cookie객체 생성 및 addCookie로 클라이언트에 전송
+	쿠키 값 변경 - 쿠키명이 같은 쿠키 객체를 생성한 후 클라이언트로 전송
+	쿠키 삭제 - 쿠키명이 같은 쿠키 객체를 생성한 후 setMaxAge(0)으로 쿠키 정보 제거 후 클라이언트로 전송
+	쿠키 목록 - getCookies()를 통해 클라이언트로부터 전송된 쿠키 정보를 반환
+ ch08 session
+	세션 정보 - 세션ID, 세션 생성시간, 최근 접근 시간, 세션 유지 시간
+	s02, s03, s04, s05.jsp - 로그인 폼 생성 후 로그인, 로그인 여부 확인 및 로그아웃하기
+ ch09 fileUpload
+	파일 업로드 - 반드시 post방식, enctype 필수, 다중 업로드도 가능
+	MultipartRequest multi = new MultipartRequest(request, realFolder, maxSize, encType, new DefaultFileRenamePolicy());
+	- realFolder는 절대경로, maxSize는 파일 최대 업로드 사이즈, encType은 인코딩 타입
+ ch10 jdbc
+	dbinfo.jspf - DB 설정 정보
+	selectTest.jsp - 게시판 목록
+	detailTest.jsp - 글 상세 정보
+	insertTest.jsp - 글 등록
+	updateTest.jsp - 글 수정
+	deleteTest.jsp - 글 삭제
+ ch11, ch12 ajax
+	AJAX(Asynchronous Javascript And XML)
+	- 자바스크립트와 XML을 이용한 비동기 통신
+	- .ajax(서버의 어플리케이션 URL, 옵션)
+	- 서버에 정보를 요청해서 text정보를 전송받음
+	JSON(Javascript Object Notation)
+	- 자바스크립트 객체 표기법
+	- .getJSON(요청 URL, 데이터를 서버로부터 성공적으로 받았을 때 호출되는 함수)
+	- getJSON이 데이터를 받아 함수 인자에 넣음
