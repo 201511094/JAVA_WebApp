@@ -33,7 +33,7 @@
 			ch14 람다식
 			ch15 컬렉션 프레임워크
 
-		03. Database Oracle (08.07 ~ 08.18)
+		03. Database Oracle (08.07 ~ 08.18, 09.28~ 09.29)
 			ch00 Oracle Database 설치, sSQL Developer 설치
 			ch01 데이터베이스 시스템
 			ch02 관계 데이터 모델
@@ -90,9 +90,6 @@
 				ch10 jdbc
 				ch11 ajax(1)
 				ch12 ajax(2)
-				
-		09.28 월: Oracle Database 복습(SQL문)
-		09.29 화: Oracle Database 복습(SQL문)
 
 
 	#기록
