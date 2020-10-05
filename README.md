@@ -90,6 +90,8 @@
 				ch10 jdbc
 				ch11 ajax(1)
 				ch12 ajax(2)
+				
+		09. member 프로젝트
 
 
 	#기록
