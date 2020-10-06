@@ -77,7 +77,7 @@
 			01) Servlet (09.17 ~ 09.18)
 				ch01
 				ch02
-			02) JSP (09.18 ~ )
+			02) JSP (09.18 ~ 10.06)
 				ch01 launch
 				ch02 script
 				ch03 nested object
