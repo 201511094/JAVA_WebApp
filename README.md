@@ -91,7 +91,9 @@
 				ch11 ajax(1)
 				ch12 ajax(2)
 				
-		09. member 프로젝트
+		09. Model
+			01) member project
+			02) product project
 
 
 	#기록
