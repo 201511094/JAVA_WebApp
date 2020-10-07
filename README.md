@@ -94,8 +94,9 @@
 				ch14 jstl
 				
 		09. Model
-			01) member project
-			02) product project
+			01) Model1방식
+				member project
+				product project
 
 		10.07 수: jsp(ch14-jstl)
 
