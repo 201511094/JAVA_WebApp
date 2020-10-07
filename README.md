@@ -77,7 +77,7 @@
 			01) Servlet (09.17 ~ 09.18)
 				ch01
 				ch02
-			02) JSP (09.18 ~ 10.06)
+			02) JSP (09.18 ~ 10.07)
 				ch01 launch
 				ch02 script
 				ch03 nested object
@@ -90,10 +90,14 @@
 				ch10 jdbc
 				ch11 ajax(1)
 				ch12 ajax(2)
+				ch13 el
+				ch14 jstl
 				
 		09. Model
 			01) member project
 			02) product project
+
+		10.07 수: jsp(ch14-jstl)
 
 
 	#기록
