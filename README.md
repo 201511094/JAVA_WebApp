@@ -92,14 +92,13 @@
 				ch12 ajax(2)
 				ch13 el
 				ch14 jstl
-				
-		09. Model
-			01) Model1 방식
-				member project
-				product project
-			02) Model2 방식
-				mvcMain project
-				mvcBoard project
+			03) MVC (10.06 ~ 10.08)
+				(01) Model1
+					member project
+					product project
+				(02) Model2
+					mvcMain project
+					mvcBoard project
 
 		10.07 수: jsp(ch14-jstl), MVC Model1방식
 		10.08 목: MVC Model2방식
