@@ -94,11 +94,15 @@
 				ch14 jstl
 				
 		09. Model
-			01) Model1방식
+			01) Model1 방식
 				member project
 				product project
+			02) Model2 방식
+				mvcMain project
+				mvcBoard project
 
-		10.07 수: jsp(ch14-jstl)
+		10.07 수: jsp(ch14-jstl), MVC Model1방식
+		10.08 목: MVC Model2방식
 
 
 	#기록
