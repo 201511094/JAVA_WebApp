@@ -103,6 +103,7 @@
 		10.07 수: jsp(ch14-jstl), MVC Model1방식
 		10.08 목: MVC Model2방식 - mvcBoard프로젝트
 		10.12 월: MVC Model2방식 - mvcBoard프로젝트 수정
+		10.13 화: MVC Model2방식 - mvcPage프로젝트
 
 
 	#기록
