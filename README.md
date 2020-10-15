@@ -104,7 +104,8 @@
 		10.08 목: MVC Model2방식 - mvcBoard프로젝트
 		10.12 월: MVC Model2방식 - mvcBoard프로젝트 수정
 		10.13 화: MVC Model2방식 - mvcPage프로젝트
-		10.14 수: MVC Model2방식 - mvcPage프로젝트 수정
+		10.14 수: mvcPage프로젝트 - 사용자 기능 추가
+		10.15 목: mcvPage프로젝트 - 게시판 기능 추가
 
 
 	#기록
