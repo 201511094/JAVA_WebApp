@@ -92,11 +92,11 @@
 				ch12 ajax(2)
 				ch13 el
 				ch14 jstl
-			03) MVC (10.06 ~ 10.08)
-				(01) Model1
+			03) MVC Model
+				(01) Model1 (10.06 ~ 10.08)
 					member project
 					product project
-				(02) Model2
+				(02) Model2 (10.09 ~ 10.16)
 					mvcMain project
 					mvcBoard project
 					mvcPage project
@@ -104,8 +104,9 @@
 		10.08 목: MVC Model2방식 - mvcBoard프로젝트
 		10.12 월: MVC Model2방식 - mvcBoard프로젝트 수정
 		10.13 화: MVC Model2방식 - mvcPage프로젝트
-		10.14 수: mvcPage프로젝트 - 사용자 기능 추가
-		10.15 목: mcvPage프로젝트 - 게시판 기능 추가
+		10.14 수: mvcPage - 사용자 기능 추가
+		10.15 목: mcvPage - 게시판 기능 추가
+		10.16 금: mvcPage - 게시판 게시물 기능 추가
 
 
 	#기록
