@@ -96,17 +96,19 @@
 				(01) Model1 (10.06 ~ 10.08)
 					member project
 					product project
-				(02) Model2 (10.09 ~ 10.16)
+				(02) Model2 (10.08 ~ 10.19)
 					mvcMain project
 					mvcBoard project
 					mvcPage project
+		
+		09. Spring
+			ch01
 
-		10.08 목: MVC Model2방식 - mvcBoard프로젝트
-		10.12 월: MVC Model2방식 - mvcBoard프로젝트 수정
 		10.13 화: MVC Model2방식 - mvcPage프로젝트
 		10.14 수: mvcPage - 사용자 기능 추가
 		10.15 목: mcvPage - 게시판 기능 추가
 		10.16 금: mvcPage - 게시판 게시물 기능 추가
+		10.19 월: mvcPage 마무리, Spring 설치
 
 
 	#기록
