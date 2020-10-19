@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	beans는 applicationContext.xml의 루트태그
+ -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+	<!--
+		객체 생성을 위한 설정: IoC컨테이너에 생성된 객체를 보관
+		컨테이너에 만드는 객체를 빈 객체라고 함
+		IoC컨테이너 = 스프링 컨테이너
+		new 생성자로 객체를 생성하면 스프링을 사용할 수 없음, 스프링의 기능을 사용하기 위해서는 컨테이너에 객체를 보관해야 함
+		컨테이너에 넣고 싶으면 무조건 설정파일에 작성
+	 -->
+	<!-- 
+		name: 빈 객체를 구분할 때 사용할 이름, 식별자
+		class: 빈 객체를 생성할 때 사용할 클래스
+	 -->
+	 
+	 <!-- <bean/>은 단독 태그 -->
+	 <bean name="messageBean" class="kr.spring.ch01.MessageBean"/>
+	 <bean name="studentBean" class="kr.spring.ch02.StudentBean"/>
+</beans>
