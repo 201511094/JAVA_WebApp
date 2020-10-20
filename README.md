@@ -102,13 +102,14 @@
 					mvcPage project
 		
 		09. Spring
-			ch01
+			ch01DI - ch01~ch08
 
 		10.13 화: MVC Model2방식 - mvcPage프로젝트
 		10.14 수: mvcPage - 사용자 기능 추가
 		10.15 목: mcvPage - 게시판 기능 추가
 		10.16 금: mvcPage - 게시판 게시물 기능 추가
 		10.19 월: mvcPage 마무리, Spring 설치
+		10.20 화: Spring ch01DI
 
 
 	#기록
