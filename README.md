@@ -102,7 +102,7 @@
 					mvcPage project
 		
 		09. Spring
-			ch01DI - ch01~ch08
+			ch01DI - ch01~ch013
 
 		10.13 화: MVC Model2방식 - mvcPage프로젝트
 		10.14 수: mvcPage - 사용자 기능 추가
