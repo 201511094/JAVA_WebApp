@@ -17,13 +17,85 @@
 		IoC컨테이너 = 스프링 컨테이너
 		new 생성자로 객체를 생성하면 스프링을 사용할 수 없음, 스프링의 기능을 사용하기 위해서는 컨테이너에 객체를 보관해야 함
 		컨테이너에 넣고 싶으면 무조건 설정파일에 작성
-	 -->
+	-->
 	<!-- 
 		name: 빈 객체를 구분할 때 사용할 이름, 식별자
 		class: 빈 객체를 생성할 때 사용할 클래스
-	 -->
+	-->
+	
+	<!-- <bean/>은 단독 태그 -->
+	<bean name="messageBean" class="kr.spring.ch01.MessageBean"/>
+	
+	<bean name="studentBean" class="kr.spring.ch02.StudentBean"/>
+	
+	<bean name="peopleBean" class="kr.spring.ch03.PeopleBean"/>
 	 
-	 <!-- <bean/>은 단독 태그 -->
-	 <bean name="messageBean" class="kr.spring.ch01.MessageBean"/>
-	 <bean name="studentBean" class="kr.spring.ch02.StudentBean"/>
+	 
+	<!-- DI: 의존관계 주입 -->
+	<!-- 의존관계 주입: 생성자 방식 -->
+	<bean name="writeArticleService" class="kr.spring.ch04.WriteArticleService">
+	<constructor-arg>
+		<!-- ref: 주입할 의존 객체에 해당하는 빈 객체의 식별값 -->
+		<ref bean="writeArticleDAO"/>
+	</constructor-arg>
+	</bean>
+	<bean name="writeArticleDAO" class="kr.spring.ch04.WriteArticleDAO"/>
+	
+	
+	<!-- DI 생성자 설정 방식: 여러 개의 인자 사용 -->
+	<bean id="monitor" class="kr.spring.ch05.SystemMonitor">
+	<!-- 주의! 인자의 순서대로 기재(숫자, 객체) -->
+<!-- 	
+		<constructor-arg>
+			<value>10</value>
+		</constructor-arg>
+		<constructor-arg>
+			<ref bean="smsSender"/>
+		</constructor-arg>
+-->
+	<!-- 속성으로 값 또는 객체 설정 -->
+<!--
+		<constructor-arg value="20"/>
+		<constructor-arg ref="smsSender"/>
+-->
+	<!-- 순서를 무시할 때는 index 표시 -->
+<!--  
+		<constructor-arg index="1" ref="smsSender"/>
+		<constructor-arg index="0" value="30"/>
+-->
+	<!-- 생성자의 인자명 기재 -->
+		<constructor-arg name="periodTime" value="40"/>
+		<constructor-arg name="sender" ref="smsSender"/>
+	</bean>
+	<bean id="smsSender" class="kr.spring.ch05.SmsSender"/>
+	
+	
+	<!-- DI 프로퍼티 설정 방식 -->
+	<bean name="registerService" class="kr.spring.ch06.RegisterService">
+		<!-- name: 의존 객체를 주입할 때 사용할 설정 메소드의 프로퍼티 이름 -->
+		<property name="registerDAO">
+			<!--  ref: 주입할 의존 객체에 해당하는 빈 객체의 식별값 -->
+			<ref bean="registerDAO"/>	<!-- 아래 bean태그의 name값과 일치 -->
+		</property>
+	</bean>
+	<bean name="registerDAO" class="kr.spring.ch06.RegisterDAO"/>
+	
+	
+	<!-- DI 프로퍼티 설정 방식: 프로퍼티가 여러 개 있는 경우 -->
+	<bean id="monitor2" class="kr.spring.ch07.SystemMonitor">
+		<property name="periodTime">
+			<value>10</value>
+		</property>
+		<property name="smsSender">
+			<ref bean="smsSender2"/>	<!-- 아래 bean태그의 id값과 일치 -->
+		</property>
+	</bean>
+	<bean id="smsSender2" class="kr.spring.ch07.SmsSender"/>
+	
+	
+	<!-- DI 프로퍼티 설정: XML 네임스페이스를 이용한 프로퍼티 설정 -->
+	<!-- p는 접두사 -->
+	<bean id="work" class="kr.spring.ch08.WorkControl" p:periodTime="100" p:email-ref="email"/>
+	<bean id="email" class="kr.spring.ch08.EmailSender"/>
+	
 </beans>
