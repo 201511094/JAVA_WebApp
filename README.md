@@ -102,11 +102,12 @@
 					mvcPage project
 		
 		09. Spring
-			ch01DI - ch01~ch013
+			ch01 DI
+			ch02 Annotation
 
 		10.19 월: mvcPage 마무리, Spring 설치
 		10.20 화: Spring ch01DI
-		10.21 수: Spring ch01DI, 
+		10.21 수: Spring ch01DI, Spring ch02Annotation
 
 
 	#기록
