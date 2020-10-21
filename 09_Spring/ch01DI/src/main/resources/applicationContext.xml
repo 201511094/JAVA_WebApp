@@ -14,22 +14,17 @@
 	class: 빈 객체를 생성할 때 사용할 클래스
  -->
 	<bean name="messageBean" class="kr.spring.ch01.MessageBean"/>
-	
 	<bean name="studentBean" class="kr.spring.ch02.StudentBean"/>
-	
 	<bean name="peopleBean" class="kr.spring.ch03.PeopleBean"/>	 
 	
-	
 	<!-- 의존관계 주입 : 생성자 방식 -->
-	<bean name="writeArticleService"
-	      class="kr.spring.ch04.WriteArticleService">
+	<bean name="writeArticleService" class="kr.spring.ch04.WriteArticleService">
 		<constructor-arg>
 			<!-- ref : 주입할 의존 객체에 해당하는 빈 객체의 식별값 -->
 			<ref bean="writeArticleDAO"/>
 		</constructor-arg>
 	</bean>
-	<bean name="writeArticleDAO" 
-	      class="kr.spring.ch04.WriteArticleDAO"/>
+	<bean name="writeArticleDAO" class="kr.spring.ch04.WriteArticleDAO"/>
 	      
 	<!-- DI 생성자 설정 방식 : 여러 개의 인자 사용  -->      
 	<bean id="monitor" class="kr.spring.ch05.SystemMonitor">
@@ -55,7 +50,6 @@
 		<constructor-arg name="periodTime" value="40"/>
 		<constructor-arg name="sender" ref="smsSender"/>	
 	</bean>
-	
 	<bean id="smsSender" class="kr.spring.ch05.SmsSender"/>
 	
 	<!-- DI 프로퍼티 설정 방식 -->
@@ -68,7 +62,6 @@
 	</bean>
 	<bean name="registerDAO" class="kr.spring.ch06.RegisterDAO"/>
 	
-	
 	<!-- DI 프로퍼티 설정 방식 : 프로퍼티가 여러개 있는 경우 -->
 	<bean id="monitor2" class="kr.spring.ch07.SystemMonitor">
 		<property name="periodTime">
@@ -80,12 +73,10 @@
 	</bean>
 	<bean id="smsSender2" class="kr.spring.ch07.SmsSender"/>
 	
-	
 	<!-- DI 프로퍼티 설정 : XML 네임스페이스를 이용한 프로퍼티 설정 -->
 	<bean id="work" class="kr.spring.ch08.WorkControl"
 	      p:periodTime="100" p:email-ref="email"/>
 	<bean id="email" class="kr.spring.ch08.EmailSender"/>
-	
 	
 	<!-- List 타입 프로퍼티 설정 -->
 	<bean id="performanceMonitor" class="kr.spring.ch09.PerformanceMonitor">
@@ -96,7 +87,6 @@
 			</list>
 		</property>
 	</bean>
-	
 	
 	<!-- Map 타입 프로퍼티 설정 -->
 	<bean name="protocolHandlerFactory" class="kr.spring.ch10.ProtocolHandlerFactory">
@@ -116,7 +106,6 @@
 	<bean name="soapHandler" class="kr.spring.ch10.SoapHandler"/>
 	<bean name="restHandler" class="kr.spring.ch10.RestHandler"/>
 	
-	
 	<!-- Set 타입 프로퍼티 설정 -->
 	<bean name="videoClient" class="kr.spring.ch11.VideoClient">
 		<property name="subSet">
@@ -126,7 +115,6 @@
 			</set>
 		</property>
 	</bean>
-	
 	
 	<!-- Properties 타입 프로퍼티 설정 -->
 	<bean name="bookClient" class="kr.spring.ch12.BookClient">
