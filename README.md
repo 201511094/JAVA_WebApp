@@ -101,7 +101,7 @@
 					mvcBoard project
 					mvcPage project
 		
-		09. Spring
+		09. Spring (10.19 ~ )
 			ch01 DI
 			ch02 Annotation
 
