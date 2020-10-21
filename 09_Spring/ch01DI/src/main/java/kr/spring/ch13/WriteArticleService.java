@@ -9,7 +9,8 @@ public class WriteArticleService {
 	}
 	
 	public void write() {
-		System.out.println("WriteArticleService의 write() 메서드 실행");
+		System.out.println("WriteArticleService의 write() 메소드 실행");
 		writeArticleDAO.insert();
 	}
+	
 }
