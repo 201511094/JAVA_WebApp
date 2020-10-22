@@ -104,10 +104,12 @@
 		09. Spring (10.19 ~ )
 			ch01 DI
 			ch02 Annotation
+			ch03 AOP
 
 		10.19 월: mvcPage 마무리, Spring 설치
 		10.20 화: Spring ch01DI
-		10.21 수: Spring ch01DI, Spring ch02Annotation
+		10.21 수: Spring ch01, Spring ch02Annotation
+		10.22 목: Spring ch02, ch03AOP
 
 
 	#기록
