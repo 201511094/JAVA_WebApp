@@ -74,32 +74,32 @@
 			ch05 webstorage
 
 		08. Servlet & JSP
-			01) Servlet (09.17 ~ 09.18)
-				ch01
-				ch02
-			02) JSP (09.18 ~ 10.07)
-				ch01 launch
-				ch02 script
-				ch03 nested object
-				ch04 include
-				ch05 error page
-				ch06 action tag
-				ch07 cookie
-				ch08 session
-				ch09 file upload
-				ch10 jdbc
-				ch11 ajax(1)
-				ch12 ajax(2)
-				ch13 el
-				ch14 jstl
-			03) MVC Model
-				(01) Model1 (10.06 ~ 10.08)
-					member project
-					product project
-				(02) Model2 (10.08 ~ 10.19)
-					mvcMain project
-					mvcBoard project
-					mvcPage project
+		    1) Servlet (09.17 ~ 09.18)
+			ch01
+			ch02
+		    02) JSP (09.18 ~ 10.07)
+			ch01 launch
+			ch02 script
+			ch03 nested object
+			ch04 include
+			ch05 error page
+			ch06 action tag
+			ch07 cookie
+			ch08 session
+			ch09 file upload
+			ch10 jdbc
+			ch11 ajax(1)
+			ch12 ajax(2)
+			ch13 el
+			ch14 jstl
+		    03) MVC Model
+			Model1 (10.07 ~ 10.08)
+			- member project
+			- product project
+			Model2 (10.08 ~ 10.19)
+			- mvcMain project
+			- mvcBoard project
+			- mvcPage project
 		
 		09. Spring (10.19 ~ )
 			ch01 DI
@@ -109,7 +109,7 @@
 		10.19 월: mvcPage 마무리, Spring 설치
 		10.20 화: Spring ch01DI
 		10.21 수: Spring ch01, ch02Annotation
-		10.22 목: Spring ch02, ch03AOP, ch04MVC
+		10.22 목: Spring ch02, ch03AOP, ch04MVC 설정 세팅
 
 
 	#기록
