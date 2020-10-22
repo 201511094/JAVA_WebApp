@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+<!-- 
+	Aspect J의 Pointcut 표현식
+	execution(public void set*(..)) - 리턴 타입이 void, 메소드 이름이 set으로 시작, 파라미터가 0개 이상인 메소드 호출
+	execution(* kr.spring.ch01.*.*()) - kr.spring.ch01패키지의 파라미터가 없는 모든 메소드 호출
+	execution(* kr.spring.ch01..*.*()) - kr.spring.ch01패키지 및 하위 패키지에 있는 파라미터가 0개 이상인 메소드 호출
+	execution(Integer kr.spring.ch01..WriteArticleService.write(..))
+	 - 리턴 타입이 Integer인 WriteArticleService의 write()메소드 호출 
+-->
+
+	<!-- 공통 기능의 메소드를 갖고 있는 클래스 -->
+	<bean id="myFirstAdvice" class="kr.spring.ch01.pojo.MyFirstAdvice"/>
+	
+<!-- AOP 설정 -->
+	<aop:config>
+	<!-- Aspect 설정: Advice를 어떤 Pointcut(어드바이스가 적용되는 시점)에 적용할지 설정 -->
+		<!-- 공통 코드가 있는 클래스를 읽어옴 -> myFirstAdvice -->
+		<aop:aspect id="aspect" ref="myFirstAdvice">
+			<!-- 실제로 Advice가 적용되는 시점 -->
+			<aop:pointcut expression="execution(public String launch())" id="publicMethod"/>
+			
+			<!-- <aop:before method="before" pointcut-ref="publicMethod"/> -->
+			
+			<!-- <aop:after-returning method="afterReturning" pointcut-ref="publicMethod" returning="msg"/> -->
+			
+			<!-- 예외 객체를 ex에 넣음 -->
+			<!-- <aop:after-throwing method="afterThrowing" pointcut-ref="publicMethod" throwing="ex"/> -->
+			
+			<!-- <aop:after method="after" pointcut-ref="publicMethod"/> -->
+			
+			<aop:around method="around" pointcut-ref="publicMethod"/>
+		</aop:aspect>
+	</aop:config>
+	
+	<!-- 핵심 기능의 메소드를 갖고 있는 클래스 -->
+	<bean id="product" class="kr.spring.product.Product"/>
+	
+</beans>
