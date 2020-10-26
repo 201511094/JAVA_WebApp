@@ -108,18 +108,19 @@
 			ch04 MVC
 
 		10.19 월: mvcPage 마무리, Spring 설치
-		10.20 화: Spring ch01DI
-		10.21 수: Spring ch01, ch02Annotation
+		10.20 화: Spring ch01DI - 문법
+		10.21 수: Spring ch01, ch02Annotation - 문법
 		10.22 목: Spring ch02, ch03AOP, ch04MVC 설정 세팅
-		10.23 금: Spring ch04MVC
+		10.23 금: Spring ch04
+		10.26 월: Spring ch04 - 유효성 체크
 
 
 	#기록
 		* 실습파일 깃허브에 정리
 		* 이론 내용 암기, 기본적인 실습코드는 외워두기
-		* 코드 작성시 오타/띄어쓰기 주의
-		* 파일 경로와 확장자 확인
-		* 태그와 괄호 열고 닫는 것 확실히 하기
+		* 오타와 띄어쓰기 주의
+		* 파일 경로와 확장자
+		* 괄호 쌍 체크
 
 
 	#참고사이트
