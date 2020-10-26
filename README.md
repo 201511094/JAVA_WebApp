@@ -111,7 +111,7 @@
 		10.20 화: Spring ch01DI - 문법
 		10.21 수: Spring ch01, ch02Annotation - 문법
 		10.22 목: Spring ch02, ch03AOP, ch04MVC 설정 세팅
-		10.23 금: Spring ch04
+		10.23 금: Spring ch04 - 게시판
 		10.26 월: Spring ch04 - 유효성 체크, 파일 업로드
 
 
