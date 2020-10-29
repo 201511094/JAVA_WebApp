@@ -5,13 +5,15 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>글쓰기</title>
+	<title>글 수정</title>
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css" type="text/css">
 </head>
 <body>
 	<div class="page-main-style">
-		<h2>글쓰기</h2>
-		<form:form action="insert.do" commandName="boardCommand">
+		<h2>글 수정</h2>
+		<!-- boardCommand가 데이터를 읽어오는 역할, path가 바뀌어서 value까지 처리 가능 -->
+		<form:form action="update.do" commandName="boardCommand">
+			<form:hidden path="num"/>	<!-- PK -->
 			<ul>
 				<li>
 					<label for="writer">작성자</label>
@@ -35,7 +37,7 @@
 				</li>
 			</ul>
 			<div class="align-center">
-				<input type="submit" value="등록">
+				<input type="submit" value="수정">
 				<input type="button" value="홈으로" onclick="location.href='list.do'">
 			</div>
 		</form:form>
