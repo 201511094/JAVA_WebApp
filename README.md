@@ -109,9 +109,9 @@
 			ch05 View
 			ch06 JDBC
 
-		10.26 월: Spring ch04 - 유효성 체크, 파일 업로드
 		10.27 화: Spring ch04 - 회원가입, ch05View
 		10.29 목: Spring ch06JDBC - 게시판
+		10.30 금: Spring ch06, MyBatis 시작
 
 
 	#기록
