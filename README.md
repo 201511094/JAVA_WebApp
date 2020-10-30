@@ -112,7 +112,7 @@
 
 		10.27 화: Spring ch04 - 회원가입, ch05View
 		10.29 목: Spring ch06JDBC - 게시판
-		10.30 금: Spring ch06, ch07MyBatis 시작
+		10.30 금: Spring ch06, ch07MyBatis - 게시판
 
 
 	#기록
