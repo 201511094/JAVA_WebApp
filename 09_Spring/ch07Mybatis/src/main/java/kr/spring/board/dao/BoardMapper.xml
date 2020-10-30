@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper   
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+<mapper namespace="BoardDAO">
+
+	<!-- 총 레코드 수 -->
+	<!-- id는 sql문을 구별하는 유일한 값! resultType은 알리아스 형태 사용 가능 -->
+	<select id="getBoardCount" resultType="integer">
+		SELECT COUNT(*)
+		FROM zboard
+	</select>
+	<!-- 목록 --><!-- 인자와 반환값이 하나만 가능하므로 map으로 묶어서 넘김 -->
+	<select id="getBoardList" parameterType="map" resultType="boardCommand">
+		SELECT *
+		FROM (SELECT a.*, rownum rnum
+				FROM (SELECT *
+						FROM zboard
+						ORDER BY num DESC) a)
+	<!-- CDATA 섹션 안의 내용은 문법 검사를 하지 않음, <= 가 여는 괄호로 인식되기 때문에 에러 제거를 위해 WHERE절을 CDATA 섹션 안에 넣어서 처리함 -->
+	<!-- WHERE절의 start와 end는 map의 key -->
+	<![CDATA[
+		WHERE rnum >= #{start} AND rnum <= #{end}	
+	]]>
+	</select>
+	
+	<!-- 글쓰기 -->
+	<!-- 읽어오는 데이터는 프로퍼티명! 자바빈에서 데이터를 가져오지만 타입이 명시되어있기 때문에 boardCommand.writer가 아니라 writer만 명시 -->
+	<insert id="insertBoard" parameterType="boardCommand">
+		INSERT INTO zboard(num,writer,title,passwd,content,reg_date)
+		VALUES (zboard_seq.nextval, #{writer}, #{title}, #{passwd}, #{content}, SYSDATE)
+	</insert>
+	
+	<!-- 글 상세 페이지 -->
+	<select id="getBoard" parameterType="integer" resultType="boardCommand">
+		SELECT *
+		FROM zboard
+		WHERE num = #{num}	<!-- num은 BoardDAOImpl의 getBoard()의 인자 -->
+	</select>
+	
+	<!-- 글 수정 -->
+	<update id="updateBoard" parameterType="boardCommand">
+		UPEATE zboard
+		SET writer=?, title=?, content=?
+		WHERE num = #{num}
+	</update>
+	
+	<!-- 글 삭제 -->
+	<delete id="deleteBoard" parameterType="integer">
+		DELETE FROM zboard WHERE num = #{num}
+	</delete>
+	
+</mapper>
