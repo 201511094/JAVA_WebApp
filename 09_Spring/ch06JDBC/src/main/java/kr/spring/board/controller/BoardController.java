@@ -102,7 +102,7 @@ public class BoardController {
 		return new ModelAndView("selectDetail", "board", board);
 	}
 	
-	//수정 폼
+	//글 수정 폼
 	@RequestMapping(value="/update.do", method=RequestMethod.GET)
 	public String formUpdate(@RequestParam int num, Model model) {
 		BoardCommand boardCommand = boardService.getBoard(num);
@@ -114,6 +114,68 @@ public class BoardController {
 		model.addAttribute("boardCommand", boardCommand);
 		
 		return "updateForm";
+	}
+	
+	@RequestMapping(value="/update.do", method=RequestMethod.POST)
+	public String submitUpdate(BoardCommand boardCommand, BindingResult result) {
+		//유효성 체크
+		new BoardValidator().validate(boardCommand, result);
+		//유효성 체크 결과 오류가 있으면 폼 호출
+		if (result.hasErrors()) {
+			return "updateForm";
+		}
+		
+		//비밀번호 일치 여부 체크
+		//DB에 저장된 비밀번호 구하기
+		BoardCommand dbBoard = boardService.getBoard(boardCommand.getNum());
+		//비밀번호 체크
+		if (!dbBoard.getPasswd().equals(boardCommand.getPasswd())) {
+			result.rejectValue("passwd", "invalidPassword");	//필드, 에러코드
+			return "updateForm";
+		}
+		
+		//글 수정
+		boardService.updateBoard(boardCommand);	
+		
+		return "redirect:/list.do";
+	}
+	
+	//글 삭제 폼
+	@RequestMapping(value="/delete.do", method=RequestMethod.GET)
+	public String formDelete(@RequestParam int num, Model model) {
+		BoardCommand boardCommand = new BoardCommand();
+		boardCommand.setNum(num);
+		
+		//Model에 저장된 데이터는 request에도 저장됨
+		model.addAttribute("boardCommand", boardCommand);
+		
+		return "deleteForm";
+	}
+	
+	//글 삭제 처리
+	@RequestMapping(value="/delete.do", method=RequestMethod.POST)
+	public String submitDelete(BoardCommand boardCommand, BindingResult result) {
+		//유효성 체크
+		new BoardValidator().validate(boardCommand, result);
+		//유효성 체크 결과 오류가 있으면 폼을 호출
+		//비밀번호의 전송 여부만 체크! 원래 4개가 전송되지만 비밀번호만 필요하므로
+		if (result.hasFieldErrors("passwd")) {
+			return "deleteForm";
+		}
+		
+		//비밀번호 일치 여부 체크
+		//DB에 저장된 비밀번호 구하기
+		BoardCommand dbBoard = boardService.getBoard(boardCommand.getNum());
+		if (!dbBoard.getPasswd().equals(boardCommand.getPasswd())) {
+			result.rejectValue("passwd", "invalidPassword");
+			
+			return "deleteForm";
+		}
+		
+		//글 삭제
+		boardService.deleteBoard(boardCommand.getNum());
+		
+		return "redirect:/list.do";
 	}
 	
 }

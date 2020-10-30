@@ -22,6 +22,8 @@ public class BoardDAOImpl implements BoardDAO {
 	private static final String SELECT_LIST_SQL =
 			"SELECT * FROM (SELECT a.*, rownum rnum FROM (SELECT * FROM zboard ORDER BY reg_date DESC) a) WHERE rnum >= ? AND rnum <= ?";
 	private static final String SELECT_DETAIL_SQL = "SELECT * FROM zboard WHERE num=?";
+	private static final String UPDATE_SQL = "UPDATE zboard SET writer=?,title=?,content=? WHERE num=?";
+	private static final String DELETE_SQL = "DELETE FROM zboard WHERE num=?";
 	
 	@Resource
 	private JdbcTemplate jdbcTemplate;
@@ -70,14 +72,12 @@ public class BoardDAOImpl implements BoardDAO {
 
 	@Override
 	public void updateBoard(BoardCommand board) {
-	
-		
+		jdbcTemplate.update(UPDATE_SQL, new Object[] {board.getWriter(), board.getTitle(), board.getContent(), board.getNum()});
 	}
 
 	@Override
 	public void deleteBoard(int num) {
-	
-		
+		jdbcTemplate.update(DELETE_SQL, new Object[] {num});
 	}
 
 }
