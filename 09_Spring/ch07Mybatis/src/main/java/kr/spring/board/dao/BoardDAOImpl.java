@@ -41,8 +41,9 @@ public class BoardDAOImpl implements BoardDAO {
 	//num은 식별자
 	@Override
 	public BoardCommand getBoard(int num) {
+		BoardCommand boardCommand = sqlSession.selectOne("getBoard", num);
 		
-		return null;
+		return boardCommand;
 	}
 
 	@Override
@@ -52,8 +53,7 @@ public class BoardDAOImpl implements BoardDAO {
 
 	@Override
 	public void deleteBoard(int num) {
-		//sqlSession.delete();
-		
+		sqlSession.delete("deleteBoard", num);
 	}
 	
 }

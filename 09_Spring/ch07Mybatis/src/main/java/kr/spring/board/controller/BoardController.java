@@ -9,6 +9,7 @@ import javax.validation.Valid;
 
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -86,14 +87,85 @@ public class BoardController {
 		return "redirect:/list.do";
 	}
 	
-	//글 수정
-	//@RequestMapping(value="/update.do", method=RequestMethod.GET)
-
-
+	//글 상세
+	@RequestMapping("/detail.do")
+	public ModelAndView detail(@RequestParam int num) {
+		BoardCommand board = boardService.getBoard(num);
+		
+		return new ModelAndView("selectDetail", "board", board);
+	}
 	
-	//글 삭제
+	//글 수정 폼
+	@RequestMapping(value="/update.do", method=RequestMethod.GET)
+	public String formUpdate(@RequestParam int num, Model model) {
+		model.addAttribute("boardCommand", boardService.getBoard(num));
+		
+		return "updateForm";
+	}
 	
+	//글 수정 처리
+	@RequestMapping(value="/update.do", method=RequestMethod.POST)
+	public String submitUpdate(@Valid BoardCommand boardCommand, BindingResult result) {
+		
+		//유효성 체크 결과 오류가 있으면 폼을 호출
+		if (result.hasErrors()) {
+			return "updateForm";
+		}
+		
+		//비밀번호 일치 여부 체크
+		//DB에 저장된 비밀번호 구하기
+		BoardCommand dbBoard = boardService.getBoard(boardCommand.getNum());
+		
+		//비밀번호 체크
+		if (!dbBoard.getPasswd().equals(boardCommand.getPasswd())) {
+			result.rejectValue("passwd", "invalidPassword");
+			return "updateForm";
+		}
+		
+		boardService.updateBoard(boardCommand);
+		
+		//업데이트 수행 후 목록으로 돌아가기
+		return "redirect:/list.do";
+	}
 	
+	//글 삭제 폼
+	@RequestMapping(value="/delete.do", method=RequestMethod.GET)
+	public String formDelete(@RequestParam int num, Model model) {
+		BoardCommand boardCommand = new BoardCommand();
+		
+		//유효성 체크
+		boardCommand.setNum(num);
+		model.addAttribute("boardCommand", boardCommand);
+		
+		return "deleteForm";
+	}
+	
+	//글 삭제 처리
+	@RequestMapping(value="/delete.do", method=RequestMethod.POST)
+	public String submitDelete(@Valid BoardCommand boardCommand, BindingResult result) {
+		
+		//유효성 체크 결과 오류가 있으면 폼을 호출
+		//비밀번호 전송 여부만 체크 -> 자바빈을 따로 만들지 않고 passwd만 체크하는 방식
+		if (result.hasFieldErrors("passwd")) {
+			return "deleteForm";
+		}
+		
+		//비밀번호 일치 여부 체크
+		//DB에 저장된 비밀번호 구하기
+		BoardCommand dbBoard = boardService.getBoard(boardCommand.getNum());
+		
+		//비밀번호 체크
+		//update와 방법 일치 
+		if (!dbBoard.getPasswd().equals(boardCommand.getPasswd())) {
+			result.rejectValue("passwd", "invalidPassword");
+			return "deleteForm";
+		}
+		
+		//글 삭제
+		boardService.deleteBoard(boardCommand.getNum());
+		
+		return "redirect:/list.do";
+	}
 	
 	
 }
