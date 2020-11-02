@@ -112,7 +112,6 @@
 			ch08 MybatisAnnot
 			ch09 Tiles
 
-		10.27 화: Spring ch04 - 회원가입, ch05View
 		10.29 목: Spring ch06JDBC - 게시판
 		10.30 금: Spring ch06, ch07Mybatis - 게시판
 		11.02 월: Spring ch07, ch08MybatisAnnot, ch09Tiles
@@ -131,7 +130,10 @@
 		www.w3schools.com  - HTML 관련 사이트
 		color.adobe.com - 색상 관련 사이트
 		noonnu.cc - 상업용 무료한글폰트 사이트
+
 		https://github.com/nolimits4web/swiper - swiperjs 다운로드 사이트
+		https://mvnrepository.com/ - 버전 체크
+		https://mybatis.org/ - 스프링 Mybatis
 
 		1. 디자인에 사용할 이미지, 사진 찾을 수 있는 사이트
 		https://gratisography.com/
