@@ -109,11 +109,13 @@
 			ch05 View
 			ch06 JDBC
 			ch07 Mybatis
+			ch08 MybatisAnnot
+			ch09 Tiles
 
 		10.27 화: Spring ch04 - 회원가입, ch05View
 		10.29 목: Spring ch06JDBC - 게시판
-		10.30 금: Spring ch06, ch07MyBatis - 게시판
-		11.02 월: Spring ch07
+		10.30 금: Spring ch06, ch07Mybatis - 게시판
+		11.02 월: Spring ch07, ch08MybatisAnnot, ch09Tiles
 
 
 	#기록
