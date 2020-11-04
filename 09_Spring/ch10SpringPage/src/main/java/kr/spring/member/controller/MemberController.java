@@ -6,6 +6,7 @@ import javax.validation.Valid;
 
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -61,7 +62,7 @@ public class MemberController {
 	@RequestMapping(value="/member/login.do", method=RequestMethod.POST)
 	public String submitLogin(@Valid MemberVO memberVO, BindingResult result, HttpSession session) {
 		if (log.isDebugEnabled()) {
-			log.debug("<<MemberVO>> : " + memberVO);
+			log.debug("<<MemberVO>>: " + memberVO);
 		}
 		
 		//id와 passwd 필드만 체크
@@ -106,5 +107,104 @@ public class MemberController {
 		
 		return "redirect:/main/main.do";
 	}
+	
+	//회원 상세 정보
+	@RequestMapping("/member/myPage.do")
+	public String process(HttpSession session, Model model) {
+		//회원번호를 얻기 위해 세션에 저장된 회원 정보를 반환
+		MemberVO vo = (MemberVO)session.getAttribute("user");
+		//글 번호를 받아 한 건의 레코드를 가져옴
+		MemberVO member = memberService.selectMember(vo.getMem_num());
+		if (log.isDebugEnabled()) {
+			log.debug("<<회원 상세 정보>>: " + member);
+		}
+		model.addAttribute("member", member);
+		
+		return "memberView";
+	}
+	
+	//회원정보 수정 폼
+	@RequestMapping(value="/member/update.do", method=RequestMethod.GET)
+	public String formUpdate(HttpSession session, Model model) {
+		//회원번호를 구하기 위해 세션에 저장된 회원정보를 반환
+		MemberVO vo = (MemberVO)session.getAttribute("user");
+		MemberVO memberVO = memberService.selectMember(vo.getMem_num());
+		
+		//모델에 저장
+		model.addAttribute("memberVO", memberVO);
+		
+		return "memberModify";
+	}
+	
+	//회원정보 수정 처리
+	@RequestMapping(value="/member/update.do", method=RequestMethod.POST)
+	public String submitUpdate(@Valid MemberVO memberVO, BindingResult result, HttpSession session) {
+		if (log.isDebugEnabled()) {
+			log.debug("<<회원정보 수정 처리>> : " + memberVO);
+		}
+		//유효성 체크 결과 오류가 있으면 폼 호출
+		if (result.hasErrors()) {
+			
+			return "memberModify";
+		}
+		
+		//회원번호를 얻기 위해 세션에 저장된 회원정보 반환
+		MemberVO vo = (MemberVO)session.getAttribute("user");
+		//전송된 데이터가 저장된 자바빈에 회원번호를 저장
+		memberVO.setMem_num(vo.getMem_num());
+		
+		//회원 정보 수정
+		memberService.updateMember(memberVO);
+		
+		return "redirect:/member/myPage.do";
+	}
+	
+	//비밀번호 변경 폼
+	@RequestMapping(value="/member/changePassword.do", method=RequestMethod.GET)
+	public String formChangePassword() {
+		return "memberChangePassword";
+	}
+	
+	//비밀번호 변경 처리
+	@RequestMapping(value="/member/changePassword.do", method=RequestMethod.POST)
+	public String submitChangePassword(@Valid MemberVO memberVO, BindingResult result, HttpSession session) {
+		
+		if (log.isDebugEnabled()) {
+			log.debug("<<비밀번호 변경 처리>> : " + memberVO);
+		}
+		
+		//현재 비밀번호와 변경할 비밀번호가 전송되었는지 확인
+		if (result.hasFieldErrors("now_passwd") || result.hasFieldErrors("passwd")) {
+			return "memberChangePassword";
+		}
+		
+		//회원번호를 얻기 위해서 세션에 저장된 회원정보 반환
+		MemberVO vo = (MemberVO)session.getAttribute("user");
+		//현재 비밀번호와 변경할 비밀번호가 저장된 자바빈에 회원번호를 저장
+		memberVO.setMem_num(vo.getMem_num());
+		
+		//회원번호를 통해 회원정보를 DB로부터 읽어와 입력한 현재 비밀번호와 DB에서 읽어온 현재 비밀번호가 일치하는지 여부 체크
+		//불일치하면 돌려보냄
+		MemberVO member = memberService.selectMember(memberVO.getMem_num());
+		if (!member.getPasswd().equals(memberVO.getNow_passwd())) {
+			//불일치하면
+			result.rejectValue("now_passwd", "invalidPassword");
+			
+			return "memberChangePassword";
+		}
+		
+		//비밀번호 수정 처리
+		memberService.updatePassword(memberVO);
+		
+		return "redirect:/member/myPage.do";
+	}
+	
+	//회원탈퇴 폼
+	@RequestMapping(value="/member/delete.do", method=RequestMethod.GET)
+	public String formDelete() {
+		return "memberDelete";
+	}
+	
+	//회원탈퇴 처리
 	
 }

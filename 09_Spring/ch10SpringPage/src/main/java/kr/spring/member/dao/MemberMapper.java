@@ -2,6 +2,7 @@ package kr.spring.member.dao;
 
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
 import kr.spring.member.vo.MemberVO;
 
@@ -14,10 +15,21 @@ public interface MemberMapper {
 	public void insertMember_detail(MemberVO member);
 	@Select("SELECT m.mem_num,m.id,m.auth,d.passwd,d.photoname,d.email FROM spmember m LEFT OUTER JOIN spmember_detail d ON m.mem_num=d.mem_num WHERE m.id=#{id}")
 	public MemberVO selectCheckMember(String id);
+	@Select("SELECT * FROM spmember m JOIN spmember_detail d ON m.mem_num=d.mem_num WHERE m.mem_num=#{mem_num}")
 	public MemberVO selectMember(Integer mem_num);
+	@Update("UPDATE spmember_detail SET name=#{name},phone=#{phone},email=#{email},zipcode=#{zipcode},address1=#{address1},address2=#{address2},modify_date=SYSDATE WHERE mem_num=#{mem_num}")
 	public void updateMember(MemberVO member);
+	@Update("UPDATE spmember_detail SET passwd=#{passwd} WHERE mem_num=#{mem_num}")
 	public void updatePassword(MemberVO member);
+	
 	public void deleteMember(Integer mem_num);
+	
 	public void deleteMember_detail(Integer mem_num);
 	
 }
+/*
+	MemberMapper에서 함수 선언 및 어노테이션 형식(@)으로 SQL문 작성하고
+	MemberServiceImpl에서 함수를 호출하고
+	MemberController에서 처리 작업 수행
+	작동 순서는??
+*/

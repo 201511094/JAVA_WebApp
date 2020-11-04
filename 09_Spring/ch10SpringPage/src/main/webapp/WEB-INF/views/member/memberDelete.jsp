@@ -2,8 +2,8 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 <div class="page-main-style">
-	<h2>회원 로그인</h2>
-	<form:form action="login.do" commandName="memberVO">
+	<h2>회원탈퇴</h2>
+	<form:form action="delete.do" commandName="memberVO">
 		<form:errors element="div" cssClass="error-color"/>
 		<ul>
 			<li>
@@ -18,7 +18,7 @@
 			</li>
 		</ul>
 		<div class="align-center">
-			<input type="submit" value="로그인">
+			<input type="submit" value="회원탈퇴">
 			<input type="button" value="홈으로" onclick="location.href='${pageContext.request.contextPath}/main/main.do'">
 		</div>
 	</form:form>

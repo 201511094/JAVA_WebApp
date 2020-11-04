@@ -11,13 +11,13 @@ import org.springframework.web.multipart.MultipartFile;
 
 public class MemberVO {
 	private int mem_num;
-	@NotEmpty private String id;
+	@Size(min=4, max=10) private String id;
 	private int auth;
 	@NotEmpty private String name;
-	@Size(min=4,max=10) private String passwd;
+	@Size(min=4, max=10) private String passwd;
 	@NotEmpty private String phone;
 	@Email @NotEmpty private String email;
-	@Size(min=5,max=5) private String zipcode;
+	@Size(min=5, max=5) private String zipcode;
 	@NotEmpty private String address1;
 	@NotEmpty private String address2;
 	private byte[] photo;

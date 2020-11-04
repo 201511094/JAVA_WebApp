@@ -40,6 +40,7 @@ div#main_menu ul li {
 	width: 98%;
 	margin: 0 auto;
 }
+
 .one-page {
 	width: 600px;
 	margin: 0 auto;
@@ -53,12 +54,14 @@ div#main_menu ul li {
 	padding: 100px 0 100px 0;
 	text-align: center;
 }
+
 .align-center {
 	text-align: center;
 }
 .align-right {
 	text-align: right;
 }
+
 .error-color {
 	color: #ff0000;
 }
@@ -69,16 +72,18 @@ div#main_menu ul li {
 	float: left;
 	padding: 5px;
 }
+
 .my-photo {
 	object-fit: cover;
     object-position: top;	/*정사각형이 아니라 직사각형일 경우 원 안에 보여지게 할 중심 이미지의 위치를 지정*/
-    border-radius: 50%;	/*사각형의 모서리 둥근 정도를 지정하는 속성, 50%를 지정하면 완전한 원이 됨*/
+    border-radius: 50%;		/*사각형의 모서리 둥근 정도를 지정하는 속성, 50%를 지정하면 완전한 원이 됨*/
 }
 
 /*목록*/
 form#search_form {
 	border: none;
 }
+
 ul.search {
 	width: 500px;
 	list-style: none;
@@ -90,10 +95,12 @@ ul.search li {
 	padding: 0;
 	display: inline;
 }
+
 .list-space {
 	width: 700px;
 	margin: 10px auto;
 }
+
 table {
 	width: 100%;
 	margin: 5px auto;
@@ -109,11 +116,13 @@ table td, table th {
 .detail-img {
 	max-width: 500px;
 }
+
 div#reply_div {
 	padding: 5px 10px 40px 10px;
 	margin-top: 10px;
 	background-color: #eeeeee;
 }
+
 #output_fav, .output_rfav {
 	cursor: pointer;
 }
@@ -121,10 +130,16 @@ div#reply_div {
 	width: 50px;
 	display: inline-block;
 }
+
 form#re_form {
 	width: 650px;
 	border: none;
 }
+form#mre_form {
+	border: none;
+	margin: 5px;
+}
+
 span.re-title {
 	color: #000;
 	font-size: 12pt;
@@ -138,11 +153,13 @@ span.form-id {
 	padding-left: 93px;
 	color: #000;
 }
+
 textarea.rep-content {
 	width: 90%;
 	height: 50px;
 	margin: 10px 10px;
 }
+
 div#re_first {
 	float: left;
 	width: 70%;
@@ -164,10 +181,7 @@ div.paging-button {
 div#output {
 	clear: both;
 }
-form#mre_form {
-	border: none;
-	margin: 5px;
-}
+
 
 /*등록, 수정폼*/
 form {
@@ -181,19 +195,24 @@ form {
 form#write_form, form#update_form {
 	width: 590px;
 }
+
 ul {
 	list-style: none;
 }
+
 label {
 	width: 130px;
 	float: left;
 }
+
 input[type="text"],input[type="password"],input[type="email"] {
 	width: 200px;
 }
+
 #register_form input[id="id"] {
 	width: 113px;
 }
+
 input[id="zipcode"] {
 	width: 95px;
 }
