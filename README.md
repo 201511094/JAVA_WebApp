@@ -117,7 +117,7 @@
 		10.30 금: Spring ch06, ch07Mybatis - 게시판
 		11.02 월: Spring ch07, ch08MybatisAnnot, ch09Tiles
 		11.03 화: Spring ch10 SpringPage - 회원제 게시판 로그인
-		11.04 수: Spring ch10 - 회원제 게시판 Mypage
+		11.04 수: Spring ch10 - 회원제 게시판
 
 
 	#기록
