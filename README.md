@@ -111,10 +111,13 @@
 			ch07 Mybatis
 			ch08 MybatisAnnot
 			ch09 Tiles
+			ch10 SpringPage
 
 		10.29 목: Spring ch06JDBC - 게시판
 		10.30 금: Spring ch06, ch07Mybatis - 게시판
 		11.02 월: Spring ch07, ch08MybatisAnnot, ch09Tiles
+		11.03 화: Spring ch10 SpringPage - 회원제 게시판 로그인
+		11.04 수: Spring ch10 - 회원제 게시판 Mypage
 
 
 	#기록
