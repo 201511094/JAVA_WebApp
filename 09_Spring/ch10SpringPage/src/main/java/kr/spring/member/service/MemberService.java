@@ -9,5 +9,6 @@ public interface MemberService {
 	public void updateMember(MemberVO member);
 	public void updatePassword(MemberVO member);
 	public void deleteMember(Integer mem_num);
+	public void updateProfile(MemberVO member);
 	
 }

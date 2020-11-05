@@ -1,9 +1,84 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
+<script type="text/javascript" src="${ pageContext.request.contextPath }/resources/js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		var checkId = 0;	//1이면 중복체크를 한 걸로 간주
+		
+		//아이디 중복 체크
+		$('#confirmId').click(function() {
+			if ($('#id').val() == '') {
+				$('#message_id').css('color', 'red').text('아이디를 입력하세요');
+				$('#id').focus();
+				return;
+			}
+			
+			if ($('#id').val().length < 4 || $('#id').val().length > 10) {
+				$('#message_id').css('color', 'red').text('아이디는 4자 이상 10자 이하로 입력');
+				$('#id').focus();
+				return;
+			}
+			
+			$('#message_id').text();	//메시지 초기화
+			$('#loading').show();		//로딩 이미지 노출
+			
+			$.ajax({
+				//ajax통신
+				url: 'confirmId.do',
+				type: 'post',
+				data: {id: $('#id').val()},	//id 데이터를 읽어옴
+				dataType: 'json',
+				cache: false,
+				timeout: 30000,
+				success: function(data) {
+					$('#loading').hide();
+					if (data.result == 'idNotFound') {
+						$('#message_id').css('color', '#000').text('사용 가능한 아이디');
+						checkId = 1;
+					}
+					else if (data.result == 'idDuplicated') {
+						$('#message_id').css('color', 'red').text('사용 불가능한 아이디');
+						$('#id').val('').focus();
+						checkId = 0;
+					}
+					else {
+						checkId = 0;
+						alert('아이디 중복체크 오류');
+					}
+				},
+				error: function() {
+					checkId = 0;
+					$('#loading').hide();	//로딩 이미지 안보이게 감추기
+					alert('네트워크 오류 발생');
+				}
+			});	
+		});
+		
+		//아이디 중복 안내 메시지 초기화 및 아이디 중복값 초기화
+		//키 이벤트 처리
+		$('#register_form #id').keydown(function() {
+			checkId = 0;
+			$('#message_id').text('');
+		});
+		
+		//submit이벤트 발생 시 아이디 중복 체크 여부 확인
+		$('#register_form').submit(function() {
+			//submit이벤트 발생 시 false를 리턴
+			if (checkId == 0) {
+				$('#message_id').css('color', 'red').text('아이디 중복 체크 필수');
+				$('#id').focus();
+				
+				return false;
+			}
+		});
+		
+	});
+</script>
+
 <div class="page-main-style">
 	<h2>회원 가입</h2>
-	<form:form action="registerUser.do" commandName="memberVO">
+	<form:form action="registerUser.do" commandName="memberVO" id="register_form">
 		<form:errors element="div" cssClass="error-color"/>
 		<ul>
 			<li>

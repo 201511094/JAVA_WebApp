@@ -36,11 +36,11 @@ public class MemberVO {
 		return false;
 	}
 	
-	//이미지 BLOB 처리
+	//이미지 BLOB 처리, upload라는 이름으로 전달
 	public void setUpload(MultipartFile upload) throws IOException{
 		//MultipartFile -> byte[]
 		setPhoto(upload.getBytes());
-		//파일 이름
+		//파일 이름 셋팅
 		setPhotoname(upload.getOriginalFilename());
 	}
 	

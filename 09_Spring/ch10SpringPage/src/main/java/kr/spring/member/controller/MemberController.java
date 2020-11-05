@@ -11,6 +11,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 import kr.spring.member.service.MemberService;
 import kr.spring.member.vo.MemberVO;
@@ -206,5 +207,60 @@ public class MemberController {
 	}
 	
 	//회원탈퇴 처리
+	@RequestMapping(value="/member/delete.do", method=RequestMethod.POST)
+	public String submitDelete(@Valid MemberVO memberVO, BindingResult result, HttpSession session) {
+		
+		if (log.isDebugEnabled()) {
+			log.debug("<<회원탈퇴>>" + memberVO);
+		}
+		//아이디와 비밀번호만 유효성 체크 수행
+		if (result.hasFieldErrors("id") || result.hasFieldErrors("passwd")) {
+			return "memberDelete";
+		}
+		
+		//회원번호를 얻기 위해 세션에 저장된 회원정보 반환
+		MemberVO vo = (MemberVO)session.getAttribute("user");
+		memberVO.setMem_num(vo.getMem_num());	//전송된 정보는 아이디와 비밀번호
+		
+		//비밀번호 일치 여부 체크
+		//회원번호를 이용해 회원정보를 읽음, 한 건의 레코드 가져오기
+		MemberVO member = memberService.selectMember(memberVO.getMem_num());
+		boolean check = false;
+		//vo.getId()는 세션에 저장된 아이디, memberVO.getId()는 전송된 아이디
+		if (member != null && memberVO.getId().equals(vo.getId())) {
+			//비밀번호 일치 여부 체크
+			check = member.isCheckedPasswd(memberVO.getPasswd());
+		}
+		
+		if (check) {
+			//인증 성공, 회원정보 삭제
+			memberService.deleteMember(memberVO.getMem_num());
+			//로그아웃
+			session.invalidate();
+			
+			return "redirect:/main/main.do";	//탈퇴 후 로그아웃하고 메인으로
+		}
+		else {
+			//인증 실패
+			result.reject("invalidIdOrPassword");
+			
+			return "memberDelete";
+		}
+		
+	}
+	
+	//이미지 출력
+	@RequestMapping("/member/photoView.do")
+	public ModelAndView viewImage(HttpSession session) {
+		MemberVO user = (MemberVO)session.getAttribute("user");
+		MemberVO memberVO = memberService.selectMember(user.getMem_num());
+		
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("imageView");
+		mav.addObject("imageFile", memberVO.getPhoto());
+		mav.addObject("filename", memberVO.getPhotoname());
+		
+		return mav;
+	}
 	
 }

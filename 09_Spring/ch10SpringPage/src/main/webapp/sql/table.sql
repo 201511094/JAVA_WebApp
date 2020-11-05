@@ -30,3 +30,22 @@ INSERT INTO spmember_detail (mem_num,name,passwd,phone,email,zipcode,address1,ad
 VALUES (1,'관리자','1234','010-1234-5678','test@test.com','12345','서울시','강남구');
 
 COMMIT;
+
+
+/*게시판*/
+create table spboard(
+	board_num number not null,
+	title varchar2(100) not null,
+	content clob not null,
+	hit number(5) default 0 not null,
+	reg_date date default sysdate not null,
+	modify_date date default sysdate not null,
+	uploadfile blob,
+	filename varchar2(100),
+	ip varchar2(40) not null,
+	mem_num number not null,
+	constraint spboard_pk primary key (board_num),
+	constraint spboard_fk foreign key (mem_num) references spmember (mem_num)
+);
+
+create sequence board_seq;
