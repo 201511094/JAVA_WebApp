@@ -17,37 +17,37 @@ public class BoardServiceImp implements BoardService {
 	
 	@Override
 	public List<BoardVO> selectList(Map<String, Object> map) {
-		return null;
+		return boardMapper.selectList(map);
 	}
 
 	@Override
 	public int selectRowCount(Map<String, Object> map) {
-		return 0;
+		return boardMapper.selectRowCount(map);
 	}
 
 	@Override
 	public void insertBoard(BoardVO board) {
-		
+		boardMapper.insertBoard(board);
 	}
 
 	@Override
 	public BoardVO selectBoard(Integer board_num) {
-		return null;
+		return boardMapper.selectBoard(board_num);
 	}
 
 	@Override
 	public void updateHit(Integer board_num) {
-		
+		boardMapper.updateHit(board_num);
 	}
 
 	@Override
 	public void updateBoard(BoardVO board) {
-		
+		boardMapper.updateBoard(board);
 	}
 
 	@Override
 	public void deleteBoard(Integer board_num) {
-		
+		boardMapper.deleteBoard(board_num);
 	}
 	
 }
