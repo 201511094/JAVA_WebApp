@@ -7,10 +7,10 @@
 		<ul class="search">
 			<li>
 				<select name="keyfield" id="keyfield">
-					<option value="1">제목</option>
-					<option value="2">ID</option>
-					<option value="3">내용</option>
-					<option value="4">전체</option>
+					<option value="title">제목</option>
+					<option value="id">ID</option>
+					<option value="content">내용</option>
+					<option value="all">전체</option>
 				</select>
 			</li>
 			<li>

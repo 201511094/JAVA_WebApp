@@ -9,6 +9,22 @@
 				FROM (SELECT *
 						FROM spboard b JOIN spmember m
 						ON b.mem_num = m.mem_num
+						<where>
+							<if test="keyword != '' and keyfield == 'title'">
+								b.title like '%' || #{keyword} || '%'
+							</if>
+							<if test="keyword != '' and keyfield == 'id'">
+								m.id LIKE '%' || #{keyword} || '%'
+							</if>
+							<if test="keyword != '' and keyfield == 'content'">
+								b.content LIKE '%' || #{keyword} || '%'
+							</if>
+							<if test="keyword != '' and keyfield == 'all'">
+								b.title like '%' || #{keyword} || '%' or
+								m.id like '%' || #{keyword} || '%' or
+								b.content like '%' || #{keyword} || '%'
+							</if>
+						</where>
 						ORDER BY b.board_num DESC) a)
 	<![CDATA[
 		WHERE rnum >= #{start} AND rnum <= #{end}
@@ -16,16 +32,33 @@
 	</select>
 	
 	<select id="selectRowCount" parameterType="map" resultType="integer">
-		SELECT COUNT(*)
+		SELECT COUNT(*)	<!-- 페이징 처리에 사용 -->
 		FROM spboard b JOIN spmember m
 		ON b.mem_num = m.mem_num
+		<!-- 동적 SQL, where절이 없을 수도 있기 때문에 동적SQL문을 사용 -->
+		<where>
+			<if test="keyword != '' and keyfield == 'title'">
+				b.title like '%' || #{keyword} || '%'
+			</if>
+			<if test="keyword != '' and keyfield == 'id'">
+				m.id LIKE '%' || #{keyword} || '%'
+			</if>
+			<if test="keyword != '' and keyfield == 'content'">
+				b.content LIKE '%' || #{keyword} || '%'
+			</if>
+			<if test="keyword != '' and keyfield == 'all'">
+				b.title like '%' || #{keyword} || '%' or
+				m.id like '%' || #{keyword} || '%' or
+				b.content like '%' || #{keyword} || '%'
+			</if>
+		</where>
 	</select>
 	
 	<!-- 동적 SQL, jstl방식이랑 비슷 -->
 	<update id="updateBoard" parameterType="boardVO">
 		UPDATE spboard
 		SET
-		<!-- filename 체크 시 null이 아니라 공백으로 -> 이미지를 변경하지 않을 때 유지됨 -->
+		<!-- filename 체크 시 null이 아니라 공백으로 설정 -> 이미지를 변경하지 않을 때 유지됨 -->
 		<if test="filename != ''">
 			uploadfile=#{uploadfile},
 			filename=#{filename},

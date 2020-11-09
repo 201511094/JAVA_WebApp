@@ -5,13 +5,17 @@ import java.sql.Date;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 import org.springframework.web.multipart.MultipartFile;
 
 public class MemberVO {
 	private int mem_num;
-	@Size(min=4, max=10) private String id;
+	//정규표현식을 이용하여 유효성 체크
+	@Pattern(regexp="^[A-Za-z0-9+]{4,10}$")
+	//@Size(min=4, max=10)
+	private String id;
 	private int auth;
 	@NotEmpty private String name;
 	@Size(min=4, max=10) private String passwd;

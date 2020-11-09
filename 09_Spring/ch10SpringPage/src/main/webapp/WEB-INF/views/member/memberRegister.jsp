@@ -14,8 +14,11 @@
 				return;
 			}
 			
-			if ($('#id').val().length < 4 || $('#id').val().length > 10) {
-				$('#message_id').css('color', 'red').text('아이디는 4자 이상 10자 이하로 입력');
+			//정규표현식 시작은 ^, 끝은 $
+			var regMsg = /^[A-Za-z0-9+]{4,10}$/;				//객체 생성 없이
+			//var regMsg = new RegExp('^[A-Za-z0-9+]{4,10}$');	//객체 생성
+			if (!regMsg.test($('#id').val())) {
+				$('#message_id').css('color', 'red').text('영문, 숫자 4자 이상 10자 이하 입력');
 				$('#id').focus();
 				return;
 			}
@@ -32,13 +35,16 @@
 				cache: false,
 				timeout: 30000,
 				success: function(data) {
-					$('#loading').hide();
+					$('#loading').hide();	//로딩 이미지 감추기
+					//서버에서 유효성 체크 결과 오류 메시지 숨기기
+					//$('id.errors').hide();
+					
 					if (data.result == 'idNotFound') {
-						$('#message_id').css('color', '#000').text('사용 가능한 아이디');
+						$('#message_id').css('color', '#000').text('사용 가능 아이디');
 						checkId = 1;
 					}
 					else if (data.result == 'idDuplicated') {
-						$('#message_id').css('color', 'red').text('사용 불가능한 아이디');
+						$('#message_id').css('color', 'red').text('사용 불가능 아이디');
 						$('#id').val('').focus();
 						checkId = 0;
 					}
