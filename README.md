@@ -124,8 +124,13 @@
 			s08EditTextDemo
 			s09CheckBoxDemo
 			s10RadioButtonDemo
+			s11LinearLayoutDemo01
+			s12LinearLayoutDemo02
+			s13LinearLayoutDemo03
+			s14LinearLayoutDemo04
+			s15LinearLayoutDemo05
 			
-
+			
 		11.03 화: 스프링 ch10SpringPage - 회원제 게시판 - 로그인, 마이페이지
 		11.04 수: 스프링 ch10 - 로그아웃, 회원정보수정
 		11.05 목: 스프링 ch10 - 회원탈퇴, 아이디 중복체크, 게시판 메인 폼
