@@ -121,6 +121,8 @@
 			s05ButtonDemo02
 			s06ButtonDemo03
 			s07ImageViewDemo
+			s08EditTextDemo
+			s09CheckBoxDemo
 			
 
 		11.03 화: 스프링 ch10SpringPage - 회원제 게시판 - 로그인, 마이페이지
