@@ -136,7 +136,7 @@
 		11.05 목: 스프링 ch10 - 회원탈퇴, 아이디 중복체크, 게시판 메인 폼
 		11.06 금: 스프링 ch10 - 게시판 기능
 		11.09 월: 스프링 ch10 - 동적SQL, 정규표현식 적용 / Class Diagram/ 안드로이드 설치 및 셋팅
-		11.10 화: 안드로이드 실습 / Usecase Diagram
+		11.10 화: 안드로이드 실습 / Usecase Diagram, Sequence Diagram
 
 
 	#기록
