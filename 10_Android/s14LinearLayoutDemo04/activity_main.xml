@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+<!--
+    layout_margin: view와 view 사이의 간격(여백)
+    padding: view 내부의 간격(여백)
+
+    android:textAllcaps="false" 글자가 모두 대문자로 보이는 것을 방지
+-->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="margin 테스트"
+        android:textAllCaps="false"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="padding 테스트"
+        android:textAllCaps="false"
+        android:paddingTop="50dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="20px"
+        android:paddingBottom="10dp"/>
+
+</LinearLayout>
