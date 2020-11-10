@@ -117,8 +117,11 @@
 			s01TextViewDemo01
 			s02TextViewDemo02
 			s03TextViewDemo03
+			s04ButtonDemo01
+			s05ButtonDemo02
+			s06ButtonDemo03
+			s07ImageViewDemo
 			
-
 
 		11.03 화: 스프링 ch10SpringPage - 회원제 게시판 - 로그인, 마이페이지
 		11.04 수: 스프링 ch10 - 로그아웃, 회원정보수정
