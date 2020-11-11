@@ -9,6 +9,7 @@
     android:paddingRight="5dp"
     tools:context=".MainActivity">
 
+    <!-- 기준 뷰 1 -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -16,6 +17,7 @@
         android:id="@+id/label"/>
 
     <!-- label의 오른쪽에 위치 -->
+    <!-- 기준 뷰 2 -->
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -24,6 +26,7 @@
         android:layout_alignBaseline="@id/label"/>
 
     <!-- entry의 아래쪽에 위치 -->
+    <!-- 기준 뷰 3 -->
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
