@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="10dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="URL: "
+        android:id="@+id/label"/>
+
+    <!-- label의 오른쪽에 위치 -->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/entry"
+        android:layout_toRightOf="@id/label"
+        android:layout_alignBaseline="@id/label"/>
+
+    <!-- entry의 아래쪽에 위치 -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cancel"
+        android:text="취소"
+        android:layout_below="@id/entry"
+        android:layout_alignRight="@id/entry"/>
+
+    <!-- cancel의 왼쪽에 위치 -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ok"
+        android:text="확인"
+        android:layout_toLeftOf="@id/cancel"
+        android:layout_alignTop="@id/cancel"/>
+
+</RelativeLayout>
