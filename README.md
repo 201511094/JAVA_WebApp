@@ -129,6 +129,8 @@
 			s13LinearLayoutDemo03
 			s14LinearLayoutDemo04
 			s15LinearLayoutDemo05
+			s16LinearLayoutDemo06
+			s17LinearLayoutDemo07
 			
 			
 		11.03 화: 스프링 ch10SpringPage - 회원제 게시판 - 로그인, 마이페이지
