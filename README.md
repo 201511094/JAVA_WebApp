@@ -113,36 +113,25 @@
 			ch09 Tiles
 			ch10 SpringPage (+ Diagram)
 
-		10. Android
-			s01TextViewDemo01
-			s02TextViewDemo02
-			s03TextViewDemo03
-			s04ButtonDemo01
-			s05ButtonDemo02
-			s06ButtonDemo03
-			s07ImageViewDemo
-			s08EditTextDemo
-			s09CheckBoxDemo
-			s10RadioButtonDemo
-			s11LinearLayoutDemo01
-			s12LinearLayoutDemo02
-			s13LinearLayoutDemo03
-			s14LinearLayoutDemo04
-			s15LinearLayoutDemo05
-			s16LinearLayoutDemo06
-			s17LinearLayoutDemo07
-			s18FrameLayoutDemo
-			s19TableLayoutDemo			
-			s20GridLayoutDemo
-			s21RelativeLayoutDemo
-			s22ConstraintLayoutDemo
-			s23ScrollViewDemo
-			s24LifeCycleDemo		
+		10. Android (11.09 ~ 11.1x)
+			s01-03 TextViewDemo
+			s04-06 ButtonDemo
+			s07 ImageViewDemo
+			s08 EditTextDemo
+			s09 CheckBoxDemo
+			s10 RadioButtonDemo
+			s11-17 LinearLayoutDemo
+			s18 FrameLayoutDemo
+			s19 TableLayoutDemo			
+			s20 GridLayoutDemo
+			s21 RelativeLayoutDemo
+			s22 ConstraintLayoutDemo
+			s23 ScrollViewDemo
+			s24 LifeCycleDemo
+			s25 IntentMsgDemo
+			s26 ExternalActivityDemo
 
-		11.03 화: 스프링 ch10SpringPage - 회원제 게시판 - 로그인, 마이페이지
-		11.04 수: 스프링 ch10 - 로그아웃, 회원정보수정
-		11.05 목: 스프링 ch10 - 회원탈퇴, 아이디 중복체크, 게시판 메인 폼
-		11.06 금: 스프링 ch10 - 게시판 기능
+
 		11.09 월: 스프링 ch10 - 동적SQL, 정규표현식 적용 / Class Diagram / 안드로이드 설치 및 셋팅
 		11.10 화: 안드로이드 실습 / Usecase Diagram, Sequence Diagram / ER Diagram
 		11.11 수: 안드로이드 실습
