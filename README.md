@@ -134,7 +134,10 @@
 			s18FrameLayoutDemo
 			s19TableLayoutDemo			
 			s20GridLayoutDemo
-			s21RelativeLayoutDemo			
+			s21RelativeLayoutDemo
+			s22ConstraintLayoutDemo
+			s23ScrollViewDemo
+			s24LifeCycleDemo		
 
 		11.03 화: 스프링 ch10SpringPage - 회원제 게시판 - 로그인, 마이페이지
 		11.04 수: 스프링 ch10 - 로그아웃, 회원정보수정
@@ -143,6 +146,7 @@
 		11.09 월: 스프링 ch10 - 동적SQL, 정규표현식 적용 / Class Diagram / 안드로이드 설치 및 셋팅
 		11.10 화: 안드로이드 실습 / Usecase Diagram, Sequence Diagram / ER Diagram
 		11.11 수: 안드로이드 실습
+		11.12 목: 안드로이드 실습
 
 
 	#기록
