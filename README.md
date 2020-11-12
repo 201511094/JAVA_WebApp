@@ -113,7 +113,7 @@
 			ch09 Tiles
 			ch10 SpringPage (+ Diagram)
 
-		10. Android (11.09 ~ 11.1x)
+		10. Android (11.09 ~ 11.xx)
 			s01-03 TextViewDemo
 			s04-06 ButtonDemo
 			s07 ImageViewDemo
