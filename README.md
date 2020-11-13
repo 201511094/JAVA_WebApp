@@ -114,28 +114,31 @@
 			ch10 SpringPage (+ Diagram)
 
 		10. Android (11.09 ~ 11.xx)
-			s01-03 TextViewDemo
-			s04-06 ButtonDemo
-			s07 ImageViewDemo
-			s08 EditTextDemo
-			s09 CheckBoxDemo
-			s10 RadioButtonDemo
-			s11-17 LinearLayoutDemo
-			s18 FrameLayoutDemo
-			s19 TableLayoutDemo			
-			s20 GridLayoutDemo
-			s21 RelativeLayoutDemo
-			s22 ConstraintLayoutDemo
-			s23 ScrollViewDemo
-			s24 LifeCycleDemo
-			s25 IntentMsgDemo
-			s26 ExternalActivityDemo
-			s27ListViewDemo01
+			s01-03 TextView
+			s04-06 Button
+			s07 ImageView
+			s08 EditText
+			s09 CheckBox
+			s10 RadioButton
+			s11-17 LinearLayout
+			s18 FrameLayout
+			s19 TableLayout			
+			s20 GridLayout
+			s21 RelativeLayout
+			s22 ConstraintLayout
+			s23 ScrollView
+			s24 LifeCycle
+			s25 Intent
+			s26 ExternalActivity
+			s27-30 ListView
+			s31 Spinner
+			s32-33 GridView
 
 		11.09 월: 안드로이드 설치 및 셋팅
 		11.10 화: 안드로이드 실습 / Usecase Diagram, Sequence Diagram / ER Diagram
 		11.11 수: 안드로이드 실습
-		11.12 목: 안드로이드 실습
+		11.12 목: 안드로이드 실습, 스프링 프로젝트 시작
+		11.13 금: 안드로이드 실습
 
 
 	#기록
