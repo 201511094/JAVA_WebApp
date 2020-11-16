@@ -133,12 +133,16 @@
 			s27-30 ListView
 			s31 Spinner
 			s32-33 GridView
+			s34 ViewPager
+			s35 ViewFlipper
+			s36 ViewFlipperTouch
 
 		11.09 월: 안드로이드 설치 및 셋팅
 		11.10 화: 안드로이드 실습 / Usecase Diagram, Sequence Diagram / ER Diagram
 		11.11 수: 안드로이드 실습
-		11.12 목: 안드로이드 실습, 스프링 프로젝트 시작
-		11.13 금: 안드로이드 실습
+		11.12 목: 안드로이드 실습, 스프링 프로젝트(주제 선정)
+		11.13 금: 안드로이드 실습, 스프링 프로젝트(사이트 기획서 작성)
+		11.16 월: 안드로이드 실습, 스프링 프로젝트(사이트 기획서 제출, )
 
 
 	#기록
