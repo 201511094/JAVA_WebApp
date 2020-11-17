@@ -136,6 +136,10 @@
 			s34 ViewPager
 			s35 ViewFlipper
 			s36 ViewFlipperTouch
+			s37 AlertDialog
+			s38 Notify
+			s39 ActionBar
+			s40 ActionBarMenu
 
 		11.11 수: 안드로이드 실습
 		11.12 목: 안드로이드 실습, 스프링 프로젝트(주제 선정)
