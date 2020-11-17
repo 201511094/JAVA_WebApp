@@ -111,7 +111,7 @@
 			ch07 Mybatis
 			ch08 MybatisAnnot
 			ch09 Tiles
-			ch10 SpringPage (+ Diagram)
+			ch10 SpringPage (+ Diagram작성: Usecase/Sequence/ER)
 
 		10. Android (11.09 ~ 11.xx)
 			s01-03 TextView
@@ -137,12 +137,10 @@
 			s35 ViewFlipper
 			s36 ViewFlipperTouch
 
-		11.09 월: 안드로이드 설치 및 셋팅
-		11.10 화: 안드로이드 실습 / Usecase Diagram, Sequence Diagram / ER Diagram
 		11.11 수: 안드로이드 실습
 		11.12 목: 안드로이드 실습, 스프링 프로젝트(주제 선정)
 		11.13 금: 안드로이드 실습, 스프링 프로젝트(사이트 기획서 작성)
-		11.16 월: 안드로이드 실습, 스프링 프로젝트(사이트 기획서 제출, 테이블 설계서 작성)
+		11.16 월: 안드로이드 실습, 스프링 프로젝트(사이트 기획서 제출)
 
 
 	#기록
