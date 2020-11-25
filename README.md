@@ -146,7 +146,7 @@
 			s44 XmlPullParser
 			s45 ReadJSON
 			s46-47 WebView
-			s48-49 NetworkRead
+			s48-50 Network
 
 		11. 스프링 프로젝트
 			1) 주제 선정 (11.12)
