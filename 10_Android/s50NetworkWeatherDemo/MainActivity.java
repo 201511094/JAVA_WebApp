@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
+import android.view.View;
 import android.webkit.WebView;
 import android.widget.ProgressBar;
 
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     //기상청 날씨 정보
     private static final String WEATHER_URL = "http://www.kma.go.kr/XML/weather/sfc_web_map.xml";
     private WebView webView;
-    private ProgressBar processBar;
+    private ProgressBar progressBar;
     private List<Forecast> list = new ArrayList<Forecast>();
 
     Handler h  = new Handler();
@@ -35,6 +36,37 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        webView = (WebView)findViewById(R.id.webKit);
+        progressBar = (ProgressBar)findViewById(R.id.progressBar);
+
+        updateForecast();
+    }
+
+    //XML을 읽어들여 파싱한 후 UI 표시
+    private void updateForecast() {
+        //ProgressBar 노출
+        progressBar.setVisibility(View.VISIBLE);
+
+        //스레드 생성
+        new Thread() {
+            @Override
+            public void run() {
+                //XML을 읽어들여 파싱한 후 데이터를 ArrayList에 저장
+                buildForecastsByDOM(getStreamFromUrl());
+
+                //ArrayList에 저장된 데이터를 HTML태그에 표시해 WebView에 나타냄
+                h.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        String page = generatePage();
+                        webView.loadData(page, "text/html", "UTF-8");
+                        //ProgressBar 숨기기
+                        progressBar.setVisibility(View.GONE);
+                    }
+                });
+            }
+        }.start();
     }
 
     //서버로부터 XML을 읽어들여 InputStream으로 반환
@@ -91,6 +123,17 @@ public class MainActivity extends AppCompatActivity {
                 "<th width=50%>날씨</th>" +
                 "<th width=50%>온도</th>" +
                 "</tr>");
+
+        for (Forecast forecast: list) {
+            sb.append("<tr><td align=center>");
+            sb.append(forecast.city);
+            sb.append("</td><td align=center>");
+            sb.append(forecast.desc);
+            sb.append("</td><td>");
+            sb.append(forecast.temp);
+            sb.append("</td></tr>");
+        }
+        sb.append("</table></body></html>");
 
         return sb.toString();
     }
