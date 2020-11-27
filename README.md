@@ -113,7 +113,7 @@
 			ch09 Tiles
 			ch10 SpringPage (+ Diagram작성: Usecase/Sequence/ER)
 
-		10. Android (11.09 ~ 11.xx)
+		10. Android (11.09 ~ 11.27)
 			s01-03 TextView
 			s04-06 Button
 			s07 ImageView
@@ -147,16 +147,18 @@
 			s45 ReadJSON
 			s46-47 WebView
 			s48-50 Network
+			s51 NewsService
 
 		11. 스프링 프로젝트
 			1) 주제 선정 (11.12)
 			2) 사이트기획서 작성 (11.16)
 			3) 테이블설계서 (11.18)
 			4) 화면정의서 (11.20)
-			5) 화면 디자인 (11.23 ~ )
+			5) 화면 디자인 및 코딩 (11.23 ~)
 			
 		11.25 수: 안드로이드, 스프링 프로젝트
 		11.26 목: 안드로이드(NetworkWeather)
+		11.27 금: 안드로이드(NewsService)
 
 
 	#기록
