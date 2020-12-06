@@ -5,12 +5,12 @@
 
 ### 수업내용
  * 화면설계
-  - ch01 태그
-  - ch02 선택자
-  - ch03 속성
-  - ch04 스타벅스 실습 (배경속성 사용)
-  - ch05 loveBook 실습 (float 활용)
-  - ch06 리엔케이 실습
-  - ch07 form (회원가입양식)
-  - ch08 bbs (table과 list를 활용한 게시판)
-  - ch09 미디어쿼리를 활용한 반응형 웹 (pc/mobile)
+ - ch01 태그
+ - ch02 선택자
+ - ch03 속성
+ - ch04 스타벅스 실습 (배경속성 사용)
+ - ch05 loveBook 실습 (float 활용)
+ - ch06 리엔케이 실습
+ - ch07 form (회원가입양식)
+ - ch08 bbs (table과 list를 활용한 게시판)
+ - ch09 미디어쿼리를 활용한 반응형 웹 (pc/mobile)
