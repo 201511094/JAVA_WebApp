@@ -152,41 +152,12 @@
 
 ---
 ### 참고사이트
-* [디자인, 레이아웃 - dbcut.co.kr](dbcut.co.kr)
-* [HTML 관련 - www.w3schools.com](www.w3schools.com)
-* [색상 관련 - color.adobe.com](color.adobe.com)
-* [상업용 무료한글폰트 - noonnu.cc](noonnu.cc)
-* [swiperjs - https://github.com/nolimits4web/swiper](https://github.com/nolimits4web/swiper)
-* [버전 확인 - https://mvnrepository.com](https://mvnrepository.com)
-* [Spring Mybatis - https://mybatis.org](https://mybatis.org)
-
-* 디자인에 사용할 이미지, 사진 찾을 수 있는 사이트
-  - https://gratisography.com/
-  - https://pixabay.com
-  - http://www.freeimages.co.uk
-  - http://www.public-domain-photos.com
-  - http://www.sxc.hu/
-  - http://www.deviantart.com
-  - http://www.morguefile.com/
-  - http://www.everystockphoto.com/
-  - http://www.iclickart.co.kr
-
-* 원하는 이미지나 아이콘을 검색하는 사이트
-  - https://www.flaticon.com/
-  - http://www.iconeden.com
-  - http://vector4free.com
-  - http://www.vecteezy.com
-  
-* jQuery관련 참고사이트
-  - http://idangero.us/swiper/
-  - http://happycgi.com/
-  - http://tympanus.net/codrops/
-  - http://www.openex.co.kr
-  - http://www.htmldrive.net/
-  - http://rwdb.kr/freesource/
-
-* 시안참고
-  - https://www.pinterest.ca/
-  - https://www.behance.net/
+* [디자인, 레이아웃](dbcut.co.kr)
+* [HTML 관련](www.w3schools.com)
+* [색상 관련](color.adobe.com)
+* [상업용 무료한글폰트](noonnu.cc)
+* [swiperjs](https://github.com/nolimits4web/swiper)
+* [버전 확인](https://mvnrepository.com)
+* [Spring Mybatis](https://mybatis.org)
 
 ---
