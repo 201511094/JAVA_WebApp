@@ -151,13 +151,3 @@
    - 코드 작성
 
 ---
-### 참고사이트
-* [디자인, 레이아웃](dbcut.co.kr)
-* [HTML 관련](www.w3schools.com)
-* [색상 관련](color.adobe.com)
-* [상업용 무료한글폰트](noonnu.cc)
-* [swiperjs](https://github.com/nolimits4web/swiper)
-* [버전 확인](https://mvnrepository.com)
-* [Spring Mybatis](https://mybatis.org)
-
----
