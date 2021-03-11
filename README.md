@@ -37,75 +37,72 @@
  * 데이터베이스 (08.07 ~ 08.18, 09.28 ~ 09.29)
    - ch00 Oracle Database 설치, SQL Developer 설치
    - ch01 데이터베이스 시스템
-	- ch02 관계 데이터 모델
-	- ch03 SQL 기초
-	- ch04 SQL 고급
+   - ch02 관계 데이터 모델
+   - ch03 SQL 기초
+   - ch04 SQL 고급
    
- * PROJECT - 자바 (08.18 ~ 08.26)
-   - 프로젝트 주제 선정
-   - 초안발표
-   - 중간발표
-   - 최종발표
+ * 팀프로젝트 - 자바 (08.18 ~ 08.26)
+   - 김주현_JavaProject_ShoppingMall.pdf
    
  * JavaScript (08.31 ~ 09.11)
    - ch00 자바 복습
-	- ch01 basic
-	- ch02 variable
-	- ch03 operator
-	- ch04 operation
-	- ch05 function
-	- ch06 nested function
-	- ch07 array
-	- ch08 object
-	- ch09 client object
-	- ch10 nested object
-	- ch11 DOM
-	- ch12 event
+   - ch01 basic
+   - ch02 variable
+   - ch03 operator
+   - ch04 operation
+   - ch05 function
+   - ch06 nested function
+   - ch07 array
+   - ch08 object
+   - ch09 client object
+   - ch10 nested object
+   - ch11 DOM
+   - ch12 event
    
  * jQuery (09.14 ~ 09.15)
    - ch01 selector
-	- ch02 method
-	- ch03 event
+   - ch02 method
+   - ch03 event
  
  * HTML5 (09.16 ~ 09.17)
    - ch01 semantic
-	- ch02 form
-	- ch03 media
-	- ch04 file
-	- ch05 webstorage
+   - ch02 form
+   - ch03 media
+   - ch04 file
+   - ch05 webstorage
    
  * Servlet & JSP (09.17 ~ 10.19)
    - Servlet
    - JSP
      + ch01 launch
-	  + ch02 script
-	  + ch03 nested object
-	  + ch04 include
-	  + ch05 error page
-	  + ch06 action tag
-	  + ch07 cookie
-	  + ch08 session
-	  + ch09 file upload
-	  + ch10 jdbc
-	  + ch11 ajax(1)
-	  + ch12 ajax(2)
-	  + ch13 el
-	  + ch14 jstl
+     + ch02 script
+     + ch03 nested object
+     + ch04 include
+     + ch05 error page
+     + ch06 action tag
+     + ch07 cookie
+     + ch08 session
+     + ch09 file upload
+     + ch10 jdbc
+     + ch11 ajax(1)
+     + ch12 ajax(2)
+     + ch13 el
+     + ch14 jstl
    - MVC Model
      + Model1 - member, product
-	  + Model2 - mvcMain, mvcBoard, mvcPage
+     + Model2 - mvcMain, mvcBoard, mvcPage
      
  * Spring (10.19 ~ 11.09)
    - ch01 DI
-	- ch02 Annotation
-	- ch03 AOP
-	- ch04 MVC
-	- ch05 View
-	- ch06 JDBC
-	- ch07 Mybatis
-	- ch08 MybatisAnnot
-	- ch09 Tiles
-	- ch10 SpringPage
+   - ch02 Annotation
+   - ch03 AOP
+   - ch04 MVC
+   - ch05 View
+   - ch06 JDBC
+   - ch07 Mybatis
+   - ch08 MybatisAnnot
+   - ch09 Tiles
+   - ch10 SpringPage
       + Diagram 작성 - Usecase, Sequence, ER
       
  * Android (11.09 ~ 11.27)
@@ -143,7 +140,7 @@
    - s48-50 Network
    - s51 NewsService
    
- * PROJECT - Spring (11.12 ~ 12.15)
+ * 팀프로젝트 - Spring (11.12 ~ 12.15)
    - 프로젝트 주제 선정
    - 사이트 기획서
    - 테이블 설계서
