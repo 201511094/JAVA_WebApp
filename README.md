@@ -64,3 +64,10 @@
    - 화면 정의서
 
 ---
+### 참고자료
+ * 1차 자바 프로젝트(쇼핑몰 사이트 구현)
+   - 김주현_JavaProject_ShoppingMall
+ * 2차 자바 스프링 프로젝트(회원제 게시판 구현)
+   - 김주현_JavaProject_Spring_Board
+
+---
