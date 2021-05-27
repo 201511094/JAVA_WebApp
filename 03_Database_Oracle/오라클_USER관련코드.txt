@@ -3,6 +3,7 @@
 
 1. 유저 생성
 CREATE USER [유저 이름] IDENRIFIED BY [비밀번호];
+유저 생성 후 세션 권한 부여가 필요함 GRANT CREATE SESION TO [유저 이름];
 
 2. 생성 유저 확인
 SELECT USERNAME FROM DBA_USERS;
